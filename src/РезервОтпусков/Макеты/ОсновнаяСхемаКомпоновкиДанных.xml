@@ -1,0 +1,1150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МВЗ</dataPath>
+				<field>МВЗ</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СальдоНаКонецПериода_ФСС</dataPath>
+				<field>СальдоНаКонецПериода_ФСС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СальдоНаКонецПериода_ФОМС</dataPath>
+				<field>СальдоНаКонецПериода_ФОМС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СальдоНаКонецПериода_НС</dataPath>
+				<field>СальдоНаКонецПериода_НС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник</dataPath>
+				<field>Сотрудник</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СальдоНаКонецПериода_ОПС</dataPath>
+				<field>СальдоНаКонецПериода_ОПС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СальдоНаКонецПериода</dataPath>
+				<field>СальдоНаКонецПериода</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>PARV_ФСС</dataPath>
+				<field>PARV_ФСС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>VP_НС</dataPath>
+				<field>VP_НС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>PARV_ОПС</dataPath>
+				<field>PARV_ОПС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>VP</dataPath>
+				<field>VP</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>PARV_ФОМС</dataPath>
+				<field>PARV_ФОМС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>VP_ФСС</dataPath>
+				<field>VP_ФСС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>PARV</dataPath>
+				<field>PARV</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>VP_ОПС</dataPath>
+				<field>VP_ОПС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>PARV_НС</dataPath>
+				<field>PARV_НС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>VP_ФОМС</dataPath>
+				<field>VP_ФОМС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NR_Конец_НС</dataPath>
+				<field>NR_Конец_НС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NR_Конец_ФСС</dataPath>
+				<field>NR_Конец_ФСС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NR_Конец_ОПС</dataPath>
+				<field>NR_Конец_ОПС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NR_Конец_ФОМС</dataPath>
+				<field>NR_Конец_ФОМС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NR_Конец</dataPath>
+				<field>NR_Конец</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>AVGS</dataPath>
+				<field>AVGS</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>VD</dataPath>
+				<field>VD</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КонСальдо_НС</dataPath>
+				<field>КонСальдо_НС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КонСальдо_ФСС</dataPath>
+				<field>КонСальдо_ФСС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КонСальдо_ОПС</dataPath>
+				<field>КонСальдо_ОПС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КонСальдо</dataPath>
+				<field>КонСальдо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КонСальдо_ФОМС</dataPath>
+				<field>КонСальдо_ФОМС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исп96_ФОМС</dataPath>
+				<field>Исп96_ФОМС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исп96_НС</dataPath>
+				<field>Исп96_НС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NR_Начало</dataPath>
+				<field>NR_Начало</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NR_Начало_ФОМС</dataPath>
+				<field>NR_Начало_ФОМС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исп26_ФСС</dataPath>
+				<field>Исп26_ФСС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исп26_НС</dataPath>
+				<field>Исп26_НС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исп26_ОПС</dataPath>
+				<field>Исп26_ОПС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исп26_ФОМС</dataPath>
+				<field>Исп26_ФОМС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исп96</dataPath>
+				<field>Исп96</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NR_Начало_НС</dataPath>
+				<field>NR_Начало_НС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NR_Начало_ФСС</dataPath>
+				<field>NR_Начало_ФСС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NR_Начало_ОПС</dataPath>
+				<field>NR_Начало_ОПС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исп26</dataPath>
+				<field>Исп26</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исп96_ФСС</dataPath>
+				<field>Исп96_ФСС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исп96_ОПС</dataPath>
+				<field>Исп96_ОПС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сумма96СВ</dataPath>
+				<field>Сумма96СВ</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сумма96</dataPath>
+				<field>Сумма96</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исп96СВ</dataPath>
+				<field>Исп96СВ</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Исп96 СВ</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NRT_Начало</dataPath>
+				<field>NRT_Начало</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>NRT начало</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>NRT_Конец</dataPath>
+				<field>NRT_Конец</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>NRT конец</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ППФ_РезервОтпусковТЧРаботники.Сотрудник,
+	ППФ_РезервОтпусковТЧРаботники.Должность,
+	ППФ_РезервОтпусковТЧРаботники.Подразделение,
+	ППФ_РезервОтпусковТЧРаботники.МВЗ,
+	ППФ_РезервОтпусковТЧРаботники.СальдоНаКонецПериода,
+	ППФ_РезервОтпусковТЧРаботники.СальдоНаКонецПериода_ОПС,
+	ППФ_РезервОтпусковТЧРаботники.СальдоНаКонецПериода_ФОМС,
+	ППФ_РезервОтпусковТЧРаботники.СальдоНаКонецПериода_ФСС,
+	ППФ_РезервОтпусковТЧРаботники.СальдоНаКонецПериода_НС,
+	ППФ_РезервОтпусковТЧРаботники.VP,
+	ППФ_РезервОтпусковТЧРаботники.VP_ОПС,
+	ППФ_РезервОтпусковТЧРаботники.VP_ФОМС,
+	ППФ_РезервОтпусковТЧРаботники.VP_ФСС,
+	ППФ_РезервОтпусковТЧРаботники.VP_НС,
+	ППФ_РезервОтпусковТЧРаботники.PARV,
+	ППФ_РезервОтпусковТЧРаботники.PARV_ОПС,
+	ППФ_РезервОтпусковТЧРаботники.PARV_ФОМС,
+	ППФ_РезервОтпусковТЧРаботники.PARV_ФСС,
+	ППФ_РезервОтпусковТЧРаботники.PARV_НС,
+	ППФ_РезервОтпусковТЧРаботники.NR_Конец,
+	ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.NR_Конец_ОПС,0) + ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.NR_Конец_ФОМС,0) + ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.NR_Конец_ФСС,0) + ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.NR_Конец_НС,0) КАК NRT_Конец, 	
+	ППФ_РезервОтпусковТЧРаботники.NR_Конец_ОПС,
+	ППФ_РезервОтпусковТЧРаботники.NR_Конец_ФОМС,
+	ППФ_РезервОтпусковТЧРаботники.NR_Конец_ФСС,
+	ППФ_РезервОтпусковТЧРаботники.NR_Конец_НС,
+	ППФ_РезервОтпусковТЧРаботники.VD,
+	ППФ_РезервОтпусковТЧРаботники.AVGS,
+	ППФ_РезервОтпусковТЧРаботники.КонСальдо,
+	ППФ_РезервОтпусковТЧРаботники.КонСальдо_ОПС,
+	ППФ_РезервОтпусковТЧРаботники.КонСальдо_ФОМС,
+	ППФ_РезервОтпусковТЧРаботники.КонСальдо_ФСС,
+	ППФ_РезервОтпусковТЧРаботники.КонСальдо_НС,
+	ППФ_РезервОтпусковТЧРаботники.NR_Начало,
+	ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.NR_Начало_ОПС,0) + ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.NR_Начало_ФОМС,0) + ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.NR_Начало_ФСС,0) + ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.NR_Начало_НС,0) КАК NRT_Начало,
+	ППФ_РезервОтпусковТЧРаботники.NR_Начало_ОПС,
+	ППФ_РезервОтпусковТЧРаботники.NR_Начало_ФОМС,
+	ППФ_РезервОтпусковТЧРаботники.NR_Начало_ФСС,
+	ППФ_РезервОтпусковТЧРаботники.NR_Начало_НС,
+	ППФ_РезервОтпусковТЧРаботники.Исп96,
+	ППФ_РезервОтпусковТЧРаботники.Исп96_ОПС,
+	ППФ_РезервОтпусковТЧРаботники.Исп96_ФОМС,
+	ППФ_РезервОтпусковТЧРаботники.Исп96_ФСС,
+	ППФ_РезервОтпусковТЧРаботники.Исп96_НС,
+	ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.Исп96_ОПС,0) + ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.Исп96_ФОМС,0) + ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.Исп96_ФСС,0) + ЕСТЬNULL(ППФ_РезервОтпусковТЧРаботники.Исп96_НС,0) КАК Исп96СВ,
+	ППФ_РезервОтпусковТЧРаботники.Исп26,
+	ППФ_РезервОтпусковТЧРаботники.Исп26_ОПС,
+	ППФ_РезервОтпусковТЧРаботники.Исп26_ФОМС,
+	ППФ_РезервОтпусковТЧРаботники.Исп26_ФСС,
+	ППФ_РезервОтпусковТЧРаботники.Исп26_НС,
+	ППФ_РезервОтпусковТЧРаботники.Сумма96,
+	ППФ_РезервОтпусковТЧРаботники.Сумма96СВ
+ИЗ
+	Документ.ППФ_РезервОтпусков.ТЧРаботники КАК ППФ_РезервОтпусковТЧРаботники
+ГДЕ
+	ППФ_РезервОтпусковТЧРаботники.Ссылка.Проведен = ИСТИНА
+	И ППФ_РезервОтпусковТЧРаботники.Ссылка.ПериодРегистрации МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода</query>
+		</dataSet>
+		<totalField>
+			<dataPath>СальдоНаКонецПериода</dataPath>
+			<expression>Сумма(СальдоНаКонецПериода)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>СальдоНаКонецПериода_НС</dataPath>
+			<expression>Сумма(СальдоНаКонецПериода_НС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>СальдоНаКонецПериода_ОПС</dataPath>
+			<expression>Сумма(СальдоНаКонецПериода_ОПС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>СальдоНаКонецПериода_ФОМС</dataPath>
+			<expression>Сумма(СальдоНаКонецПериода_ФОМС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>СальдоНаКонецПериода_ФСС</dataPath>
+			<expression>Сумма(СальдоНаКонецПериода_ФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NR_Конец</dataPath>
+			<expression>Сумма(NR_Конец)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NR_Конец_НС</dataPath>
+			<expression>Сумма(NR_Конец_НС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NR_Конец_ОПС</dataPath>
+			<expression>Сумма(NR_Конец_ОПС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NR_Конец_ФОМС</dataPath>
+			<expression>Сумма(NR_Конец_ФОМС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NR_Конец_ФСС</dataPath>
+			<expression>Сумма(NR_Конец_ФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>PARV</dataPath>
+			<expression>Сумма(PARV)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>PARV_НС</dataPath>
+			<expression>Сумма(PARV_НС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>PARV_ОПС</dataPath>
+			<expression>Сумма(PARV_ОПС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>PARV_ФОМС</dataPath>
+			<expression>Сумма(PARV_ФОМС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>PARV_ФСС</dataPath>
+			<expression>Сумма(PARV_ФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>VP</dataPath>
+			<expression>Сумма(VP)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>VP_НС</dataPath>
+			<expression>Сумма(VP_НС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>VP_ОПС</dataPath>
+			<expression>Сумма(VP_ОПС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>VP_ФОМС</dataPath>
+			<expression>Сумма(VP_ФОМС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>VP_ФСС</dataPath>
+			<expression>Сумма(VP_ФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>КонСальдо</dataPath>
+			<expression>Сумма(КонСальдо)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>КонСальдо_НС</dataPath>
+			<expression>Сумма(КонСальдо_НС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>КонСальдо_ОПС</dataPath>
+			<expression>Сумма(КонСальдо_ОПС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>КонСальдо_ФОМС</dataPath>
+			<expression>Сумма(КонСальдо_ФОМС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>КонСальдо_ФСС</dataPath>
+			<expression>Сумма(КонСальдо_ФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NR_Начало</dataPath>
+			<expression>Сумма(NR_Начало)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NR_Начало_НС</dataPath>
+			<expression>Сумма(NR_Начало_НС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NR_Начало_ОПС</dataPath>
+			<expression>Сумма(NR_Начало_ОПС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NR_Начало_ФОМС</dataPath>
+			<expression>Сумма(NR_Начало_ФОМС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NR_Начало_ФСС</dataPath>
+			<expression>Сумма(NR_Начало_ФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Исп26</dataPath>
+			<expression>Сумма(Исп26)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Исп26_НС</dataPath>
+			<expression>Сумма(Исп26_НС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Исп26_ОПС</dataPath>
+			<expression>Сумма(Исп26_ОПС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Исп26_ФОМС</dataPath>
+			<expression>Сумма(Исп26_ФОМС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Исп26_ФСС</dataPath>
+			<expression>Сумма(Исп26_ФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Исп96</dataPath>
+			<expression>Сумма(Исп96)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Исп96_НС</dataPath>
+			<expression>Сумма(Исп96_НС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Исп96_ОПС</dataPath>
+			<expression>Сумма(Исп96_ОПС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Исп96_ФОМС</dataPath>
+			<expression>Сумма(Исп96_ФОМС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Исп96_ФСС</dataPath>
+			<expression>Сумма(Исп96_ФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Сумма96</dataPath>
+			<expression>Сумма(Сумма96)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Сумма96СВ</dataPath>
+			<expression>Сумма(Сумма96СВ)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Исп96СВ</dataPath>
+			<expression>Сумма(Исп96СВ)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NRT_Начало</dataPath>
+			<expression>Сумма(NRT_Начало)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>NRT_Конец</dataPath>
+			<expression>Сумма(NRT_Конец)</expression>
+		</totalField>
+		<parameter>
+			<name>КонецПериода</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Конец периода</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>Date</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;ВыбранныйПериод.ДатаОкончания</expression>
+			<availableAsField>false</availableAsField>
+		</parameter>
+		<parameter>
+			<name>НачалоПериода</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Начало периода</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>Date</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;ВыбранныйПериод.ДатаНачала</expression>
+			<availableAsField>false</availableAsField>
+		</parameter>
+		<parameter>
+			<name>ВыбранныйПериод</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">StandardPeriod</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:StandardPeriod">
+				<d4p1:variant xsi:type="d4p1:StandardPeriodVariant">Custom</d4p1:variant>
+				<d4p1:startDate>0001-01-01T00:00:00</d4p1:startDate>
+				<d4p1:endDate>0001-01-01T00:00:00</d4p1:endDate>
+			</value>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Резерв отпуска (вариант 1)</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной1</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Резерв отпуска (вариант 2)</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник.Код</field>
+			<title>Таб. номер</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Подразделение</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>МВЗ</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>VD</field>
+			<title>Кол. дней неисп. отпуска</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>AVGS</field>
+			<title>Средний заработок</title>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<title>Резерв на начало месяца NR</title>
+			<item xsi:type="SelectedItemField">
+				<field>NR_Начало</field>
+				<title>Сумма</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>NR_Начало_ОПС</field>
+				<title>ОПС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>NR_Начало_ФОМС</field>
+				<title>ФОМС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>NR_Начало_ФСС</field>
+				<title>ФСС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>NR_Начало_НС</field>
+				<title>ФСС НС</title>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<title>Конечное сальдо резерва</title>
+			<item xsi:type="SelectedItemField">
+				<field>КонСальдо</field>
+				<title>Сумма</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>КонСальдо_ОПС</field>
+				<title>ОПС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>КонСальдо_ФОМС</field>
+				<title>ФОМС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>КонСальдо_ФСС</field>
+				<title>ФСС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>КонСальдо_НС</field>
+				<title>ФСС НС</title>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<title>Отпуск за период VP</title>
+			<item xsi:type="SelectedItemField">
+				<field>VP</field>
+				<title>Сумма</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>VP_ОПС</field>
+				<title>ОПС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>VP_ФОМС</field>
+				<title>ФОМС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>VP_ФСС</field>
+				<title>ФСС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>VP_НС</field>
+				<title>ФСС НС</title>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<title>Резерв на конец месяца (NR)</title>
+			<item xsi:type="SelectedItemField">
+				<field>NR_Конец</field>
+				<title>Сумма</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>NR_Конец_ОПС</field>
+				<title>ОПС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>NR_Конец_ФОМС</field>
+				<title>ФОМС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>NR_Конец_ФСС</field>
+				<title>ФСС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>NR_Конец_НС</field>
+				<title>ФСС НС</title>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<title>Сумма отпускных и резерва PARV</title>
+			<item xsi:type="SelectedItemField">
+				<field>PARV</field>
+				<title>Сумма</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>PARV_ОПС</field>
+				<title>ОПС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>PARV_ФОМС</field>
+				<title>ФОМС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>PARV_ФСС</field>
+				<title>ФСС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>PARV_НС</field>
+				<title>ФСС НС</title>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<title>Сальдо на конец периода</title>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоНаКонецПериода</field>
+				<title>Сумма</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоНаКонецПериода_ОПС</field>
+				<title>ОПС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоНаКонецПериода_ФОМС</field>
+				<title>ФОМС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоНаКонецПериода_ФСС</field>
+				<title>ФСС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоНаКонецПериода_НС</field>
+				<title>ФСС НС</title>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма в проводку по сч. 96</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemField">
+				<field>Сумма96</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>Сумма96СВ</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Страховые взносы</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<title>96</title>
+			<item xsi:type="SelectedItemField">
+				<field>Исп96</field>
+				<title>Сумма</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>Исп96_ОПС</field>
+				<title>ОПС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>Исп96_ФОМС</field>
+				<title>ФОМС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>Исп96_ФСС</field>
+				<title>ФСС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>Исп96_НС</field>
+				<title>ФСС НС</title>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<title>26</title>
+			<item xsi:type="SelectedItemField">
+				<field>Исп26</field>
+				<title>Сумма</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>Исп26_ОПС</field>
+				<title>ОПС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>Исп26_ФОМС</field>
+				<title>ФОМС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>Исп26_ФСС</field>
+				<title>ФСС</title>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>Исп26_НС</field>
+				<title>ФСС НС</title>
+			</item>
+			<placement>Auto</placement>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыбранныйПериод</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+			</dcscor:value>
+			<userSettingID>5b213b65-3cd9-473f-adf1-b6bf3b09f8df</userSettingID>
+			<userSettingPresentation xsi:type="xs:string">Период</userSettingPresentation>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Сотрудник</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionAttributesPlacement">Separately</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Заголовок</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">Резерв отпуска</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>МВЗ</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<item xsi:type="StructureItemGroup">
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник.Код</field>
+			<title>Таб. номер</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>VD</field>
+			<title>Кол. дней неисп. отпуска</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>AVGS</field>
+			<title>Средний заработок</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>NR_Начало</field>
+			<title>Резерв на начало месяца</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>NRT_Начало</field>
+			<title>Страховые взносы на резерв на начало месяца</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>VP</field>
+			<title>Начисление отпуска за месяц</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>VP_ОПС</field>
+			<title>Взносы ОПС с отпуска за месяц</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>VP_ФОМС</field>
+			<title>Взносы ФОМС с отпуска за месяц</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>VP_ФСС</field>
+			<title>Взносы ФСС с отпуска за месяц</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>VP_НС</field>
+			<title>Взносы НС с отпуска </title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>NR_Конец</field>
+			<title>Резерв на конец месяца</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>NRT_Конец</field>
+			<title>Страховые взносы на резерв на конец месяца</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сумма96</field>
+			<title>Сумма в проводку сч. 96</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сумма96СВ</field>
+			<title>Сумма сч. 96 страховые взносы</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Исп96</field>
+			<title>Сумма в проводку исп. 96</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Исп96СВ</field>
+			<title>Сумма исп. 96 Страховые взносы</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Исп26</field>
+			<title>Сумма в проводку сч. 26.02</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Исп26_ОПС</field>
+			<title>Сумма ОПС в проводку сч. 26.02</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Исп26_ФОМС</field>
+			<title>Сумма ФОМС в проводку сч. 26.02</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Исп26_ФСС</field>
+			<title>Сумма ФСС в проводку сч. 26.02</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Исп26_НС</field>
+			<title>Сумма НС в проводку сч. 26.02</title>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сальдо на конец периода</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоНаКонецПериода</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоНаКонецПериода_ОПС</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма ОПС</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоНаКонецПериода_ФОМС</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма ФОМС</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоНаКонецПериода_ФСС</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма ФСС</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоНаКонецПериода_НС</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма ФСС НС</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<placement>Auto</placement>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыбранныйПериод</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+			</dcscor:value>
+			<userSettingID>5b213b65-3cd9-473f-adf1-b6bf3b09f8df</userSettingID>
+			<userSettingPresentation xsi:type="xs:string">Период</userSettingPresentation>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Сотрудник</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<conditionalAppearance>
+		<item>
+			<selection>
+				<item>
+					<field>Сумма96</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Сумма96</left>
+					<comparisonType>Less</comparisonType>
+					<right xsi:type="xs:decimal">0</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Сумма96СВ</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Сумма96СВ</left>
+					<comparisonType>Less</comparisonType>
+					<right xsi:type="xs:decimal">0</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Исп26</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Исп26</left>
+					<comparisonType>Less</comparisonType>
+					<right xsi:type="xs:decimal">0</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Исп26_НС</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Исп26_НС</left>
+					<comparisonType>Less</comparisonType>
+					<right xsi:type="xs:decimal">0</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Исп26_ОПС</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Исп26_ОПС</left>
+					<comparisonType>Less</comparisonType>
+					<right xsi:type="xs:decimal">0</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+	</conditionalAppearance>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionAttributesPlacement">Separately</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Заголовок</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">Резерв отпуска</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>МВЗ</field>
+				<groupType>Hierarchy</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<item xsi:type="StructureItemGroup">
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

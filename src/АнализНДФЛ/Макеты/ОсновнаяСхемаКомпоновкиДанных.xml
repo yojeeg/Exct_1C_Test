@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Удержано</dataPath>
+				<field>Удержано</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Удержано</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РегистрацияВНалоговомОргане</dataPath>
+				<field>РегистрацияВНалоговомОргане</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Перечислено</dataPath>
+				<field>Перечислено</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Перечислено</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Исчислено</dataPath>
+				<field>Исчислено</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Исчислено</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОтпускБольничный</dataPath>
+				<field>ОтпускБольничный</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Отпуск больничный</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.РегистрацияВНалоговомОргане КАК РегистрацияВНалоговомОргане,
+	СУММА(ВЫБОР
+			КОГДА РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+				ТОГДА ЕСТЬNULL(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Сумма, 0)
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Исчислено,
+	СУММА(ВЫБОР
+			КОГДА РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+				ТОГДА ЕСТЬNULL(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Сумма, 0)
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Удержано,
+	СУММА(0) КАК Перечислено,
+	ВЫБОР
+		КОГДА РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.БольничныйЛист
+			ТОГДА ИСТИНА
+		ИНАЧЕ ВЫБОР
+				КОГДА РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.Отпуск
+					ТОГДА ИСТИНА
+				ИНАЧЕ ВЫБОР
+						КОГДА РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.ВедомостьНаВыплатуЗарплатыВБанк
+							ТОГДА ВЫБОР
+									КОГДА ВЫРАЗИТЬ(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВБанк).СпособВыплаты.Наименование = "Отпуска"
+											ИЛИ ВЫРАЗИТЬ(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВБанк).СпособВыплаты.Наименование = "Больничные листы"
+										ТОГДА ИСТИНА
+									ИНАЧЕ ЛОЖЬ
+								КОНЕЦ
+						ИНАЧЕ ВЫБОР
+								КОГДА РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.ВедомостьНаВыплатуЗарплатыВКассу
+									ТОГДА ВЫБОР
+											КОГДА ВЫРАЗИТЬ(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВКассу).СпособВыплаты.Наименование = "Отпуска"
+													ИЛИ ВЫРАЗИТЬ(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВКассу).СпособВыплаты.Наименование = "Больничные листы"
+												ТОГДА ИСТИНА
+											ИНАЧЕ ЛОЖЬ
+										КОНЕЦ
+								ИНАЧЕ ЛОЖЬ
+							КОНЕЦ
+					КОНЕЦ
+			КОНЕЦ
+	КОНЕЦ КАК ОтпускБольничный
+ПОМЕСТИТЬ ВТ_ДоГруппировки
+ИЗ
+	РегистрНакопления.РасчетыНалогоплательщиковСБюджетомПоНДФЛ КАК РасчетыНалогоплательщиковСБюджетомПоНДФЛ
+ГДЕ
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.МесяцНалоговогоПериода МЕЖДУ НАЧАЛОПЕРИОДА(&amp;МесяцНалоговогоПериода, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;МесяцНалоговогоПериода, МЕСЯЦ)
+
+СГРУППИРОВАТЬ ПО
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.РегистрацияВНалоговомОргане,
+	ВЫБОР
+		КОГДА РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.БольничныйЛист
+			ТОГДА ИСТИНА
+		ИНАЧЕ ВЫБОР
+				КОГДА РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.Отпуск
+					ТОГДА ИСТИНА
+				ИНАЧЕ ВЫБОР
+						КОГДА РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.ВедомостьНаВыплатуЗарплатыВБанк
+							ТОГДА ВЫБОР
+									КОГДА ВЫРАЗИТЬ(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВБанк).СпособВыплаты.Наименование = "Отпуска"
+											ИЛИ ВЫРАЗИТЬ(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВБанк).СпособВыплаты.Наименование = "Больничные листы"
+										ТОГДА ИСТИНА
+									ИНАЧЕ ЛОЖЬ
+								КОНЕЦ
+						ИНАЧЕ ВЫБОР
+								КОГДА РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.ВедомостьНаВыплатуЗарплатыВКассу
+									ТОГДА ВЫБОР
+											КОГДА ВЫРАЗИТЬ(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВКассу).СпособВыплаты.Наименование = "Отпуска"
+													ИЛИ ВЫРАЗИТЬ(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВКассу).СпособВыплаты.Наименование = "Больничные листы"
+												ТОГДА ИСТИНА
+											ИНАЧЕ ЛОЖЬ
+										КОНЕЦ
+								ИНАЧЕ ЛОЖЬ
+							КОНЕЦ
+					КОНЕЦ
+			КОНЕЦ
+	КОНЕЦ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.РегистрацияВНалоговомОргане,
+	СУММА(0),
+	СУММА(0),
+	СУММА(ВЫБОР
+			КОГДА РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+				ТОГДА ЕСТЬNULL(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Сумма, 0)
+			ИНАЧЕ 0
+		КОНЕЦ),
+	ВЫБОР
+		КОГДА РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.ППФ_ПеречислениеНДФЛВБюджет
+			ТОГДА ВЫБОР
+					КОГДА ВЫРАЗИТЬ(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор КАК Документ.ППФ_ПеречислениеНДФЛВБюджет).ОтпускаБольничные
+						ТОГДА ИСТИНА
+					ИНАЧЕ ЛОЖЬ
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.ВедомостьНаВыплатуЗарплатыВБанк
+					ТОГДА ВЫБОР
+							КОГДА ВЫРАЗИТЬ(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВБанк).СпособВыплаты.Наименование = "Отпуска"
+									ИЛИ ВЫРАЗИТЬ(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВБанк).СпособВыплаты.Наименование = "Больничные листы"
+								ТОГДА ИСТИНА
+							ИНАЧЕ ЛОЖЬ
+						КОНЕЦ
+				ИНАЧЕ ВЫБОР
+						КОГДА РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.ВедомостьНаВыплатуЗарплатыВКассу
+							ТОГДА ВЫБОР
+									КОГДА ВЫРАЗИТЬ(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВКассу).СпособВыплаты.Наименование = "Отпуска"
+											ИЛИ ВЫРАЗИТЬ(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВКассу).СпособВыплаты.Наименование = "Больничные листы"
+										ТОГДА ИСТИНА
+									ИНАЧЕ ЛОЖЬ
+								КОНЕЦ
+						ИНАЧЕ ЛОЖЬ
+					КОНЕЦ
+			КОНЕЦ
+	КОНЕЦ
+ИЗ
+	РегистрНакопления.РасчетыНалоговыхАгентовСБюджетомПоНДФЛ КАК РасчетыНалоговыхАгентовСБюджетомПоНДФЛ
+ГДЕ
+	РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.МесяцНалоговогоПериода МЕЖДУ НАЧАЛОПЕРИОДА(&amp;МесяцНалоговогоПериода, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;МесяцНалоговогоПериода, МЕСЯЦ)
+
+СГРУППИРОВАТЬ ПО
+	РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.РегистрацияВНалоговомОргане,
+	ВЫБОР
+		КОГДА РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.ППФ_ПеречислениеНДФЛВБюджет
+			ТОГДА ВЫБОР
+					КОГДА ВЫРАЗИТЬ(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор КАК Документ.ППФ_ПеречислениеНДФЛВБюджет).ОтпускаБольничные
+						ТОГДА ИСТИНА
+					ИНАЧЕ ЛОЖЬ
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.ВедомостьНаВыплатуЗарплатыВБанк
+					ТОГДА ВЫБОР
+							КОГДА ВЫРАЗИТЬ(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВБанк).СпособВыплаты.Наименование = "Отпуска"
+									ИЛИ ВЫРАЗИТЬ(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВБанк).СпособВыплаты.Наименование = "Больничные листы"
+								ТОГДА ИСТИНА
+							ИНАЧЕ ЛОЖЬ
+						КОНЕЦ
+				ИНАЧЕ ВЫБОР
+						КОГДА РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор ССЫЛКА Документ.ВедомостьНаВыплатуЗарплатыВКассу
+							ТОГДА ВЫБОР
+									КОГДА ВЫРАЗИТЬ(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВКассу).СпособВыплаты.Наименование = "Отпуска"
+											ИЛИ ВЫРАЗИТЬ(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Регистратор КАК Документ.ВедомостьНаВыплатуЗарплатыВКассу).СпособВыплаты.Наименование = "Больничные листы"
+										ТОГДА ИСТИНА
+									ИНАЧЕ ЛОЖЬ
+								КОНЕЦ
+						ИНАЧЕ ЛОЖЬ
+					КОНЕЦ
+			КОНЕЦ
+	КОНЕЦ
+
+ИМЕЮЩИЕ
+	СУММА(ВЫБОР
+			КОГДА РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+				ТОГДА ЕСТЬNULL(РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Сумма, 0)
+			ИНАЧЕ 0
+		КОНЕЦ) &gt; 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДоГруппировки.РегистрацияВНалоговомОргане,
+	СУММА(ВТ_ДоГруппировки.Исчислено) КАК Исчислено,
+	СУММА(ВТ_ДоГруппировки.Удержано) КАК Удержано,
+	СУММА(ВТ_ДоГруппировки.Перечислено) КАК Перечислено,
+	ВТ_ДоГруппировки.ОтпускБольничный
+ИЗ
+	ВТ_ДоГруппировки КАК ВТ_ДоГруппировки
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ДоГруппировки.РегистрацияВНалоговомОргане,
+	ВТ_ДоГруппировки.ОтпускБольничный</query>
+		</dataSet>
+		<calculatedField>
+			<dataPath>ОсталосьПеречислить</dataPath>
+			<expression>Удержано - перечислено</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Осталось перечислить</d4p1:content>
+				</d4p1:item>
+			</title>
+			<appearance/>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>0</Digits>
+					<FractionDigits>0</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+		</calculatedField>
+		<totalField>
+			<dataPath>Исчислено</dataPath>
+			<expression>Сумма(Исчислено)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ОсталосьПеречислить</dataPath>
+			<expression>Сумма(ОсталосьПеречислить)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Перечислено</dataPath>
+			<expression>Сумма(Перечислено)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Удержано</dataPath>
+			<expression>Сумма(Удержано)</expression>
+		</totalField>
+		<parameter>
+			<name>МесяцНалоговогоПериода</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Месяц налогового периода</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;Период.ДатаОкончания</expression>
+		</parameter>
+		<parameter>
+			<name>Период</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">StandardPeriod</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:StandardPeriod">
+				<d4p1:variant xsi:type="d4p1:StandardPeriodVariant">ThisMonth</d4p1:variant>
+			</value>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="xs:string">Основной</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>РегистрацияВНалоговомОргане</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>РегистрацияВНалоговомОргане.КодПоОКТМО</field>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОКТМО</v8:content>
+				</v8:item>
+			</lwsTitle>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>РегистрацияВНалоговомОргане.КПП</field>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КПП</v8:content>
+				</v8:item>
+			</lwsTitle>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Исчислено</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Удержано</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Перечислено</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ОсталосьПеречислить</field>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>МесяцНалоговогоПериода</dcscor:parameter>
+			<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+			<userSettingID>2a0e1f3c-bd5a-43bf-8f98-071f0cc9a1ef</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Период</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+			</dcscor:value>
+			<userSettingID>1c427f72-a1db-4581-8d88-5518208cc18f</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>РегистрацияВНалоговомОргане</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<conditionalAppearance>
+		<item>
+			<selection>
+				<item>
+					<field>ОсталосьПеречислить</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ОсталосьПеречислить</left>
+					<comparisonType>Less</comparisonType>
+					<right xsi:type="xs:decimal">0</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInHierarchicalGroup>DontUse</useInHierarchicalGroup>
+			<useInFieldsHeader>DontUse</useInFieldsHeader>
+			<useInHeader>DontUse</useInHeader>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+		</item>
+	</conditionalAppearance>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>МакетОформления</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+			<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Auto</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>РасположениеГруппировки</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionGroupPlacement">None</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionAttributesPlacement">Separately</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<outputParameters/>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

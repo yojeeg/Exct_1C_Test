@@ -1,0 +1,1013 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НачислениеУдержание</dataPath>
+				<field>НачислениеУдержание</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник</dataPath>
+				<field>Сотрудник</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтатьяФинансирования</dataPath>
+				<field>СтатьяФинансирования</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизическоеЛицо</dataPath>
+				<field>ФизическоеЛицо</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтатьяРасходов</dataPath>
+				<field>СтатьяРасходов</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ГруппаНачисленияУдержанияВыплаты</dataPath>
+				<field>ГруппаНачисленияУдержанияВыплаты</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Группа</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РегистрацияВНалоговомОргане</dataPath>
+				<field>РегистрацияВНалоговомОргане</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВключатьВДекларациюПоНалогуНаПрибыль</dataPath>
+				<field>ВключатьВДекларациюПоНалогуНаПрибыль</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ставка</dataPath>
+				<field>Ставка</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МесяцНалоговогоПериода</dataPath>
+				<field>МесяцНалоговогоПериода</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИсчисленоПоДивидендам</dataPath>
+				<field>ИсчисленоПоДивидендам</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодВзаиморасчетов</dataPath>
+				<field>ПериодВзаиморасчетов</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДокументОснование</dataPath>
+				<field>ДокументОснование</field>
+				<role>
+					<periodNumber xmlns="http://v8.1c.ru/8.1/data-composition-system/common">1</periodNumber>
+					<periodType xmlns="http://v8.1c.ru/8.1/data-composition-system/common">Main</periodType>
+				</role>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Начислено</dataPath>
+				<field>Начислено</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Начислено</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДФЛНачислено</dataPath>
+				<field>НДФЛНачислено</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>НДФЛНачислено</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаВыплаченногоДохода</dataPath>
+				<field>СуммаВыплаченногоДохода</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДФЛУдержано</dataPath>
+				<field>НДФЛУдержано</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>НДФЛУдержано</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="dcsset:SettingsParameterValue">
+						<parameter>Формат</parameter>
+						<value xsi:type="xs:string">ЧДЦ=2</value>
+					</item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДФЛПеречисленно</dataPath>
+				<field>НДФЛПеречисленно</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>НДФЛПеречисленно</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Удержано</dataPath>
+				<field>Удержано</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Удержано</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаКВыплате</dataPath>
+				<field>СуммаКВыплате</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Сумма к выплате</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Выплачено</dataPath>
+				<field>Выплачено</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Выплачено</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ГоловнаяОрганизация</dataPath>
+				<field>ГоловнаяОрганизация</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КодВычета</dataPath>
+				<field>КодВычета</field>
+				<role>
+					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
+				</role>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>УдалитьКодВычета</dataPath>
+				<field>УдалитьКодВычета</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СуммаВычета</dataPath>
+				<field>СуммаВычета</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Сумма вычета</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	НачисленияУдержанияПоСотрудникам.Регистратор КАК ДокументОснование,
+	НачисленияУдержанияПоСотрудникам.Организация КАК Организация,
+	НачисленияУдержанияПоСотрудникам.ФизическоеЛицо КАК ФизическоеЛицо,
+	НачисленияУдержанияПоСотрудникам.Сотрудник КАК Сотрудник,
+	НачисленияУдержанияПоСотрудникам.Подразделение КАК Подразделение,
+	НачисленияУдержанияПоСотрудникам.НачислениеУдержание КАК НачислениеУдержание,
+	СУММА(НачисленияУдержанияПоСотрудникам.Сумма) КАК Оборот,
+	НачисленияУдержанияПоСотрудникам.РегистрацияВНалоговомОргане КАК РегистрацияВНалоговомОргане,
+	НачисленияУдержанияПоСотрудникам.ГруппаНачисленияУдержанияВыплаты КАК ГруппаНачисленияУдержанияВыплаты
+ПОМЕСТИТЬ НачисленияУдержания
+ИЗ
+	РегистрНакопления.НачисленияУдержанияПоСотрудникам КАК НачисленияУдержанияПоСотрудникам
+ГДЕ
+	НачисленияУдержанияПоСотрудникам.Регистратор.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И НачисленияУдержанияПоСотрудникам.Сотрудник.ППФ_Агент
+
+СГРУППИРОВАТЬ ПО
+	НачисленияУдержанияПоСотрудникам.Организация,
+	НачисленияУдержанияПоСотрудникам.Регистратор,
+	НачисленияУдержанияПоСотрудникам.ФизическоеЛицо,
+	НачисленияУдержанияПоСотрудникам.Сотрудник,
+	НачисленияУдержанияПоСотрудникам.Подразделение,
+	НачисленияУдержанияПоСотрудникам.НачислениеУдержание,
+	НачисленияУдержанияПоСотрудникам.РегистрацияВНалоговомОргане,
+	НачисленияУдержанияПоСотрудникам.ГруппаНачисленияУдержанияВыплаты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо КАК ФизическоеЛицо,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.РегистрацияВНалоговомОргане КАК РегистрацияВНалоговомОргане,
+	СУММА(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.СуммаВыплаченногоДохода) КАК СуммаВыплаченногоДохода,
+	СУММА(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Сумма) КАК СуммаУдержаногоНДФЛ,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ДокументОснование КАК ДокументОснование,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Период КАК Период
+ПОМЕСТИТЬ РасчетыНалогоплательщиковСБюджетомПоНДФЛ
+ИЗ
+	РегистрНакопления.РасчетыНалогоплательщиковСБюджетомПоНДФЛ КАК РасчетыНалогоплательщиковСБюджетомПоНДФЛ
+ГДЕ
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Период МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+
+СГРУППИРОВАТЬ ПО
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.РегистрацияВНалоговомОргане,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ДокументОснование,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.СуммаРасход) КАК СуммаНДФЛПеречисленно,
+	РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.Период КАК Период,
+	РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.ФизическоеЛицо КАК ФизическоеЛицо,
+	РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.РегистрацияВНалоговомОргане КАК РегистрацияВНалоговомОргане
+ПОМЕСТИТЬ РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты
+ИЗ
+	РегистрНакопления.РасчетыНалоговыхАгентовСБюджетомПоНДФЛ.Обороты(, , Регистратор, ) КАК РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты
+ГДЕ
+	РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.Период МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+СГРУППИРОВАТЬ ПО
+	РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.Период,
+	РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.ФизическоеЛицо,
+	РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.РегистрацияВНалоговомОргане
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛОбороты.ФизическоеЛицо КАК ФизическоеЛицо,
+	ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛОбороты.КодВычета КАК КодВычета,
+	ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛОбороты.РегистрацияВНалоговомОргане КАК РегистрацияВНалоговомОргане,
+	ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛОбороты.Организация КАК Организация,
+	ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛОбороты.СуммаОборот КАК СуммаВычета,
+	ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛОбороты.Регистратор КАК ДокументОснование
+ПОМЕСТИТЬ ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛ
+ИЗ
+	РегистрНакопления.ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛ.Обороты(&amp;ДатаНачала, &amp;ДатаОкончания, Регистратор, ) КАК ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗарплатаКВыплатеОбороты.ФизическоеЛицо КАК ФизическоеЛицо,
+	ЗарплатаКВыплатеОбороты.Сотрудник КАК Сотрудник,
+	ЗарплатаКВыплатеОбороты.ДокументОснование КАК ДокументОснование,
+	СУММА(ЗарплатаКВыплатеОбороты.СуммаКВыплатеПриход) КАК СуммаКВыплате,
+	СУММА(ЗарплатаКВыплатеОбороты.СуммаКВыплатеРасход) КАК Выплачено
+ПОМЕСТИТЬ ЗарплатаКВыплате
+ИЗ
+	РегистрНакопления.ЗарплатаКВыплате.Обороты(НАЧАЛОПЕРИОДА(&amp;ДатаНачала, МЕСЯЦ), НАЧАЛОПЕРИОДА(&amp;ДатаОкончания, МЕСЯЦ), Регистратор, Сотрудник.ППФ_Агент) КАК ЗарплатаКВыплатеОбороты
+
+СГРУППИРОВАТЬ ПО
+	ЗарплатаКВыплатеОбороты.Сотрудник,
+	ЗарплатаКВыплатеОбороты.ФизическоеЛицо,
+	ЗарплатаКВыплатеОбороты.ДокументОснование
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НачисленияУдержания.ДокументОснование КАК ДокументОснование,
+	НачисленияУдержания.Организация КАК Организация,
+	НачисленияУдержания.ФизическоеЛицо КАК ФизическоеЛицо,
+	НачисленияУдержания.Сотрудник КАК Сотрудник,
+	НачисленияУдержания.Подразделение КАК Подразделение,
+	НачисленияУдержания.НачислениеУдержание КАК НачислениеУдержание,
+	"Начислено" КАК ГруппаНачисленияУдержанияВыплаты,
+	НачисленияУдержания.Оборот КАК Начислено,
+	ЗНАЧЕНИЕ(Справочник.РегистрацииВНалоговомОргане.ПустаяСсылка) КАК РегистрацияВНалоговомОргане,
+	0 КАК НДФЛНачислено,
+	0 КАК СуммаВыплаченногоДохода,
+	0 КАК НДФЛУдержано,
+	0 КАК НДФЛПеречисленно,
+	NULL КАК КодВычета,
+	0 КАК СуммаВычета,
+	0 КАК Удержано,
+	0 КАК СуммаКВыплате,
+	0 КАК Выплачено
+ПОМЕСТИТЬ ВТ
+ИЗ
+	НачисленияУдержания КАК НачисленияУдержания
+ГДЕ
+	НачисленияУдержания.ГруппаНачисленияУдержанияВыплаты = ЗНАЧЕНИЕ(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НачисленияУдержания.ДокументОснование,
+	НачисленияУдержания.Организация,
+	НачисленияУдержания.ФизическоеЛицо,
+	НачисленияУдержания.Сотрудник,
+	НачисленияУдержания.Подразделение,
+	НачисленияУдержания.НачислениеУдержание,
+	"НДФЛ",
+	0,
+	НачисленияУдержания.РегистрацияВНалоговомОргане,
+	НачисленияУдержания.Оборот,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.СуммаВыплаченногоДохода,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.СуммаУдержаногоНДФЛ,
+	0,
+	NULL,
+	0,
+	0,
+	0,
+	0
+ИЗ
+	НачисленияУдержания КАК НачисленияУдержания
+		ЛЕВОЕ СОЕДИНЕНИЕ РасчетыНалогоплательщиковСБюджетомПоНДФЛ КАК РасчетыНалогоплательщиковСБюджетомПоНДФЛ
+		ПО НачисленияУдержания.ДокументОснование = РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ДокументОснование
+			И НачисленияУдержания.ФизическоеЛицо = РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо
+			И НачисленияУдержания.РегистрацияВНалоговомОргане = РасчетыНалогоплательщиковСБюджетомПоНДФЛ.РегистрацияВНалоговомОргане
+ГДЕ
+	НачисленияУдержания.НачислениеУдержание = ЗНАЧЕНИЕ(Перечисление.ВидыОсобыхНачисленийИУдержаний.НДФЛ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВложенныйЗапрос.Поле1,
+	ВложенныйЗапрос.Организация,
+	ВложенныйЗапрос.ФизическоеЛицо,
+	ВложенныйЗапрос.Сотрудник,
+	ВложенныйЗапрос.Подразделение,
+	ВложенныйЗапрос.НачислениеУдержание,
+	ВложенныйЗапрос.Поле2,
+	ВложенныйЗапрос.Поле3,
+	ВложенныйЗапрос.РегистрацияВНалоговомОргане,
+	ВложенныйЗапрос.Поле4,
+	ВложенныйЗапрос.Поле5,
+	ВложенныйЗапрос.Поле6,
+	ВложенныйЗапрос.СуммаНДФЛПеречисленно,
+	ВложенныйЗапрос.Поле7,
+	ВложенныйЗапрос.Поле8,
+	ВложенныйЗапрос.Поле9,
+	ВложенныйЗапрос.Поле10,
+	ВложенныйЗапрос.Поле11
+ИЗ
+	(ВЫБРАТЬ
+		NULL КАК Поле1,
+		НачисленияУдержания.Организация КАК Организация,
+		НачисленияУдержания.ФизическоеЛицо КАК ФизическоеЛицо,
+		НачисленияУдержания.Сотрудник КАК Сотрудник,
+		НачисленияУдержания.Подразделение КАК Подразделение,
+		НачисленияУдержания.НачислениеУдержание КАК НачислениеУдержание,
+		"НДФЛ" КАК Поле2,
+		0 КАК Поле3,
+		НачисленияУдержания.РегистрацияВНалоговомОргане КАК РегистрацияВНалоговомОргане,
+		0 КАК Поле4,
+		0 КАК Поле5,
+		0 КАК Поле6,
+		МАКСИМУМ(РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.СуммаНДФЛПеречисленно) КАК СуммаНДФЛПеречисленно,
+		NULL КАК Поле7,
+		0 КАК Поле8,
+		0 КАК Поле9,
+		0 КАК Поле10,
+		0 КАК Поле11
+	ИЗ
+		РасчетыНалогоплательщиковСБюджетомПоНДФЛ КАК РасчетыНалогоплательщиковСБюджетомПоНДФЛ
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ НачисленияУдержания КАК НачисленияУдержания
+			ПО (НачисленияУдержания.ДокументОснование = РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ДокументОснование)
+				И (НачисленияУдержания.ФизическоеЛицо = РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо)
+				И (НачисленияУдержания.РегистрацияВНалоговомОргане = РасчетыНалогоплательщиковСБюджетомПоНДФЛ.РегистрацияВНалоговомОргане)
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты КАК РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты
+			ПО РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо = РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.ФизическоеЛицо
+				И РасчетыНалогоплательщиковСБюджетомПоНДФЛ.РегистрацияВНалоговомОргане = РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.РегистрацияВНалоговомОргане
+				И РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Период = РасчетыНалоговыхАгентовСБюджетомПоНДФЛОбороты.Период
+	ГДЕ
+		НачисленияУдержания.НачислениеУдержание = ЗНАЧЕНИЕ(Перечисление.ВидыОсобыхНачисленийИУдержаний.НДФЛ)
+	
+	СГРУППИРОВАТЬ ПО
+		НачисленияУдержания.Сотрудник,
+		НачисленияУдержания.НачислениеУдержание,
+		НачисленияУдержания.Организация,
+		НачисленияУдержания.РегистрацияВНалоговомОргане,
+		НачисленияУдержания.ФизическоеЛицо,
+		НачисленияУдержания.Подразделение) КАК ВложенныйЗапрос
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НачисленияУдержания.ДокументОснование,
+	НачисленияУдержания.Организация,
+	НачисленияУдержания.ФизическоеЛицо,
+	НачисленияУдержания.Сотрудник,
+	НачисленияУдержания.Подразделение,
+	НачисленияУдержания.НачислениеУдержание,
+	"НДФЛ",
+	0,
+	НачисленияУдержания.РегистрацияВНалоговомОргане,
+	0,
+	0,
+	0,
+	0,
+	ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛ.КодВычета,
+	ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛ.СуммаВычета,
+	0,
+	0,
+	0
+ИЗ
+	НачисленияУдержания КАК НачисленияУдержания
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛ КАК ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛ
+		ПО НачисленияУдержания.ДокументОснование = ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛ.ДокументОснование
+			И НачисленияУдержания.ФизическоеЛицо = ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛ.ФизическоеЛицо
+			И НачисленияУдержания.РегистрацияВНалоговомОргане = ПредоставленныеСтандартныеИСоциальныеВычетыНДФЛ.РегистрацияВНалоговомОргане
+ГДЕ
+	НачисленияУдержания.НачислениеУдержание = ЗНАЧЕНИЕ(Перечисление.ВидыОсобыхНачисленийИУдержаний.НДФЛ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НачисленияУдержания.ДокументОснование,
+	НачисленияУдержания.Организация,
+	НачисленияУдержания.ФизическоеЛицо,
+	НачисленияУдержания.Сотрудник,
+	НачисленияУдержания.Подразделение,
+	НачисленияУдержания.НачислениеУдержание,
+	"Удержано",
+	0,
+	ЗНАЧЕНИЕ(Справочник.РегистрацииВНалоговомОргане.ПустаяСсылка),
+	0,
+	0,
+	0,
+	0,
+	NULL,
+	0,
+	НачисленияУдержания.Оборот,
+	0,
+	0
+ИЗ
+	НачисленияУдержания КАК НачисленияУдержания
+ГДЕ
+	НачисленияУдержания.ГруппаНачисленияУдержанияВыплаты = ЗНАЧЕНИЕ(Перечисление.ГруппыНачисленияУдержанияВыплаты.Удержано)
+	И НЕ НачисленияУдержания.НачислениеУдержание = ЗНАЧЕНИЕ(Перечисление.ВидыОсобыхНачисленийИУдержаний.НДФЛ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВложенныйЗапрос.ДокументОснование,
+	ВложенныйЗапрос.Организация,
+	ВложенныйЗапрос.ФизическоеЛицо,
+	ВложенныйЗапрос.Сотрудник,
+	ВложенныйЗапрос.Подразделение,
+	ВложенныйЗапрос.Поле1,
+	ВложенныйЗапрос.Поле2,
+	ВложенныйЗапрос.Поле3,
+	ВложенныйЗапрос.Поле4,
+	ВложенныйЗапрос.Поле5,
+	ВложенныйЗапрос.Поле6,
+	ВложенныйЗапрос.Поле7,
+	ВложенныйЗапрос.Поле8,
+	ВложенныйЗапрос.Поле9,
+	ВложенныйЗапрос.Поле10,
+	ВложенныйЗапрос.Поле11,
+	ВложенныйЗапрос.СуммаКВыплате,
+	ВложенныйЗапрос.Выплачено
+ИЗ
+	(ВЫБРАТЬ
+		НачисленияУдержания.ДокументОснование КАК ДокументОснование,
+		НачисленияУдержания.Организация КАК Организация,
+		НачисленияУдержания.ФизическоеЛицо КАК ФизическоеЛицо,
+		НачисленияУдержания.Сотрудник КАК Сотрудник,
+		НачисленияУдержания.Подразделение КАК Подразделение,
+		"Выплата" КАК Поле1,
+		"Выплата" КАК Поле2,
+		0 КАК Поле3,
+		ЗНАЧЕНИЕ(Справочник.РегистрацииВНалоговомОргане.ПустаяСсылка) КАК Поле4,
+		0 КАК Поле5,
+		0 КАК Поле6,
+		0 КАК Поле7,
+		0 КАК Поле8,
+		NULL КАК Поле9,
+		0 КАК Поле10,
+		0 КАК Поле11,
+		МАКСИМУМ(ЗарплатаКВыплате.СуммаКВыплате) КАК СуммаКВыплате,
+		МАКСИМУМ(ЗарплатаКВыплате.Выплачено) КАК Выплачено
+	ИЗ
+		НачисленияУдержания КАК НачисленияУдержания
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЗарплатаКВыплате КАК ЗарплатаКВыплате
+			ПО НачисленияУдержания.ДокументОснование = ЗарплатаКВыплате.ДокументОснование
+				И НачисленияУдержания.Сотрудник = ЗарплатаКВыплате.Сотрудник
+	
+	СГРУППИРОВАТЬ ПО
+		НачисленияУдержания.Подразделение,
+		НачисленияУдержания.ДокументОснование,
+		НачисленияУдержания.Организация,
+		НачисленияУдержания.Сотрудник,
+		НачисленияУдержания.ФизическоеЛицо) КАК ВложенныйЗапрос
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ.ДокументОснование КАК ДокументОснование,
+	ВТ.Организация КАК Организация,
+	ВТ.ФизическоеЛицо КАК ФизическоеЛицо,
+	ВТ.Сотрудник КАК Сотрудник,
+	ВТ.Подразделение КАК Подразделение,
+	ВТ.НачислениеУдержание КАК НачислениеУдержание,
+	ВТ.ГруппаНачисленияУдержанияВыплаты КАК ГруппаНачисленияУдержанияВыплаты,
+	СУММА(ВТ.Начислено) КАК Начислено,
+	ВТ.РегистрацияВНалоговомОргане КАК РегистрацияВНалоговомОргане,
+	СУММА(ВТ.НДФЛНачислено) КАК НДФЛНачислено,
+	СУММА(ВТ.СуммаВыплаченногоДохода) КАК СуммаВыплаченногоДохода,
+	СУММА(ВТ.НДФЛУдержано) КАК НДФЛУдержано,
+	СУММА(ВТ.НДФЛПеречисленно) КАК НДФЛПеречисленно,
+	ВТ.КодВычета КАК КодВычета,
+	СУММА(ВТ.СуммаВычета) КАК СуммаВычета,
+	СУММА(ВТ.Удержано) КАК Удержано,
+	СУММА(ВТ.СуммаКВыплате) КАК СуммаКВыплате,
+	СУММА(ВТ.Выплачено) КАК Выплачено
+ИЗ
+	ВТ КАК ВТ
+
+СГРУППИРОВАТЬ ПО
+	ВТ.Организация,
+	ВТ.ФизическоеЛицо,
+	ВТ.ДокументОснование,
+	ВТ.Подразделение,
+	ВТ.РегистрацияВНалоговомОргане,
+	ВТ.НачислениеУдержание,
+	ВТ.ГруппаНачисленияУдержанияВыплаты,
+	ВТ.Сотрудник,
+	ВТ.КодВычета,
+	ВТ.СуммаВычета</query>
+		</dataSet>
+		<calculatedField>
+			<dataPath>ПроверкаНачислений</dataPath>
+			<expression>0</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Проверка начислений</d4p1:content>
+				</d4p1:item>
+			</title>
+			<appearance/>
+		</calculatedField>
+		<totalField>
+			<dataPath>Выплачено</dataPath>
+			<expression>Сумма(Выплачено)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Начислено</dataPath>
+			<expression>Сумма(Начислено)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НДФЛНачислено</dataPath>
+			<expression>Сумма(НДФЛНачислено)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НДФЛПеречисленно</dataPath>
+			<expression>Сумма(НДФЛПеречисленно)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НДФЛУдержано</dataPath>
+			<expression>Сумма(НДФЛУдержано)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>СуммаВыплаченногоДохода</dataPath>
+			<expression>Сумма(СуммаВыплаченногоДохода)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>СуммаКВыплате</dataPath>
+			<expression>Сумма(СуммаКВыплате)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>Удержано</dataPath>
+			<expression>Сумма(Удержано)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>СуммаВычета</dataPath>
+			<expression>Сумма(СуммаВычета)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПроверкаНачислений</dataPath>
+			<expression>Сумма(Начислено) - Сумма(НДФЛНачислено) - Сумма(Удержано) = Сумма(СуммаКВыплате)</expression>
+		</totalField>
+		<parameter>
+			<name>Период</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">StandardPeriod</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:StandardPeriod">
+				<d4p1:variant xsi:type="d4p1:StandardPeriodVariant">ThisMonth</d4p1:variant>
+			</value>
+			<useRestriction>true</useRestriction>
+		</parameter>
+		<parameter>
+			<name>ДатаНачала</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дата начала</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+		</parameter>
+		<parameter>
+			<name>ДатаОкончания</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дата окончания</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+		</parameter>
+		<parameter>
+			<name>ПериодОтчета</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период отчета</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">StandardPeriod</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:StandardPeriod">
+				<d4p1:variant xsi:type="d4p1:StandardPeriodVariant">LastMonth</d4p1:variant>
+			</value>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<parameter>
+			<name>НачалоПериода</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Начало периода</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<parameter>
+			<name>КонецПериода</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Конец периода</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">АгентскиеВознаграждения</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Агентские вознаграждения</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Начислено</field>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДФЛ</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemField">
+				<field>НДФЛНачислено</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>СуммаВычета</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<use>false</use>
+				<field>КодВычета</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<use>false</use>
+				<field>СуммаВыплаченногоДохода</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>НДФЛУдержано</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>НДФЛПеречисленно</field>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Удержано</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>СуммаКВыплате</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Выплачено</field>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>Период</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+			</dcscor:value>
+			<userSettingID>1c427f72-a1db-4581-8d88-5518208cc18f</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Today</v8:variant>
+			</dcscor:value>
+			<userSettingID>c4a6f942-0d81-4e45-a2e7-3fc8a69410d7</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<conditionalAppearance>
+		<item>
+			<use>false</use>
+			<selection>
+				<item>
+					<field>СуммаКВыплате</field>
+				</item>
+				<item>
+					<field>Выплачено</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">СуммаКВыплате</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:Field">Выплачено</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">0:b8c4aff0-a36d-4be9-9a5e-b0873d83ff15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<use>false</use>
+			<selection>
+				<item>
+					<field>СуммаВыплаченногоДохода</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Начислено</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:Field">СуммаВыплаченногоДохода</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">0:b8c4aff0-a36d-4be9-9a5e-b0873d83ff15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<use>false</use>
+			<selection>
+				<item>
+					<field>НДФЛНачислено</field>
+				</item>
+				<item>
+					<field>НДФЛУдержано</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">НДФЛНачислено</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:Field">НДФЛУдержано</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">0:b8c4aff0-a36d-4be9-9a5e-b0873d83ff15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<use>false</use>
+			<selection>
+				<item>
+					<field>НДФЛУдержано</field>
+				</item>
+				<item>
+					<field>НДФЛПеречисленно</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">НДФЛУдержано</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:Field">НДФЛПеречисленно</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">0:b8c4aff0-a36d-4be9-9a5e-b0873d83ff15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<use>false</use>
+			<selection>
+				<item>
+					<field>СуммаКВыплате</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ПроверкаНачислений</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">0:b8c4aff0-a36d-4be9-9a5e-b0873d83ff15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+	</conditionalAppearance>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>МакетОформления</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>РасположениеГруппировки</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionGroupPlacement">None</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionAttributesPlacement">Separately</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>Организация</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<outputParameters/>
+		<item xsi:type="StructureItemGroup">
+			<groupItems>
+				<item xsi:type="GroupItemField">
+					<field>Сотрудник</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<outputParameters/>
+			<item xsi:type="StructureItemGroup">
+				<use>false</use>
+				<order>
+					<item xsi:type="OrderItemAuto"/>
+				</order>
+				<selection>
+					<item xsi:type="SelectedItemAuto"/>
+					<item xsi:type="SelectedItemField">
+						<field>ДокументОснование</field>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>НачислениеУдержание</field>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Подразделение</field>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>РегистрацияВНалоговомОргане</field>
+					</item>
+				</selection>
+				<outputParameters/>
+			</item>
+		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

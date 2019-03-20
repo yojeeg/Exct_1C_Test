@@ -1,0 +1,947 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetObject">
+			<name>ИтоговаяТаблица</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФИО</dataPath>
+				<field>ФИО</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ФИО</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>150</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СНИЛС</dataPath>
+				<field>СНИЛС</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>СНИЛС</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+					<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Length>20</Length>
+						<AllowedLength>Variable</AllowedLength>
+					</StringQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДоходыШтатногоСотрудникаСНачалаГода</dataPath>
+				<field>ДоходыШтатногоСотрудникаСНачалаГода</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Доходы штатного сотрудника с начала года</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДоходыАгентаСНачалаГода</dataPath>
+				<field>ДоходыАгентаСНачалаГода</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Доходы агента с начала года</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_22_СНачалаГода</dataPath>
+				<field>ПФР_22_СНачалаГода</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР 22 с начала года</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_10_СНачалаГода</dataPath>
+				<field>ПФР_10_СНачалаГода</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР 10 с начала года</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_22_10_СНачалаГода</dataPath>
+				<field>ПФР_22_10_СНачалаГода</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР 22 10 с начала года</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДоходШтатногоСотрудника_ВТекущемМесяце</dataPath>
+				<field>ДоходШтатногоСотрудника_ВТекущемМесяце</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Доход штатного сотрудника в текущем месяце</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДоходАгента_ВТекущемМесяце</dataPath>
+				<field>ДоходАгента_ВТекущемМесяце</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Доход агента в текущем месяце</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_22_ВТекущемМесяце</dataPath>
+				<field>ПФР_22_ВТекущемМесяце</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР 22 в текущем месяце</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_10_ВТекущемМесяце</dataPath>
+				<field>ПФР_10_ВТекущемМесяце</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР 10 в текущем месяце</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_22_10_ВТекущемМесяце</dataPath>
+				<field>ПФР_22_10_ВТекущемМесяце</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР 22 10 в текущем месяце</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_ШтатногоСотрудника_22_ВТекущемМесяце</dataPath>
+				<field>ПФР_ШтатногоСотрудника_22_ВТекущемМесяце</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР штатного сотрудника 22 в текущем месяце</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_ШтатногоСотрудника_10_ВТекущемМесяце</dataPath>
+				<field>ПФР_ШтатногоСотрудника_10_ВТекущемМесяце</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР штатного сотрудника 10 в текущем месяце</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_ШтатногоСотрудника_22_10_ВТекущемМесяце</dataPath>
+				<field>ПФР_ШтатногоСотрудника_22_10_ВТекущемМесяце</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР штатного сотрудника 22 10 в текущем месяце</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_Агента_22_ВТекущемМесяце</dataPath>
+				<field>ПФР_Агента_22_ВТекущемМесяце</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР агента 22 в текущем месяце</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_Агента_10_ВТекущемМесяце</dataPath>
+				<field>ПФР_Агента_10_ВТекущемМесяце</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР агента 10 в текущем месяце</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_Агента_22_10_ВТекущемМесяце</dataPath>
+				<field>ПФР_Агента_22_10_ВТекущемМесяце</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР агента 22 10 в текущем месяце</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НеОблагаемаяБазаВТекущемМесяцеШтат</dataPath>
+				<field>НеОблагаемаяБазаВТекущемМесяцеШтат</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Не облагаемая база в текущем месяце штат</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НеОблагаемаяБазаВТекущемМесяцеАгент</dataPath>
+				<field>НеОблагаемаяБазаВТекущемМесяцеАгент</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Не облагаемая база в текущем месяце агент</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НеОблагаемаяБазаСНачалаГодаШтат</dataPath>
+				<field>НеОблагаемаяБазаСНачалаГодаШтат</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Не облагаемая база с начала года штат</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НеОблагаемаяБазаСНачалаГодаАгент</dataPath>
+				<field>НеОблагаемаяБазаСНачалаГодаАгент</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Не облагаемая база с начала года агент</d5p1:content>
+					</d5p1:item>
+				</title>
+				<valueType>
+					<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+					<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+						<Digits>15</Digits>
+						<FractionDigits>2</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</valueType>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<objectName>ИтоговаяТаблица</objectName>
+		</dataSet>
+		<calculatedField>
+			<dataPath>ОбщийОблагаемыйДоходВТекущемМесяце</dataPath>
+			<expression>ДоходШтатногоСотрудника_ВТекущемМесяце + ДоходАгента_ВТекущемМесяце</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Общий облагаемый доход в текущем месяце</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>15</Digits>
+					<FractionDigits>2</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+		</calculatedField>
+		<calculatedField>
+			<dataPath>ОбщийОблагаемыйДоходСНачалаГода</dataPath>
+			<expression>ДоходыШтатногоСотрудникаСНачалаГода + ДоходыАгентаСНачалаГода</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Общий облагаемый доход с начала года</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>15</Digits>
+					<FractionDigits>2</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+		</calculatedField>
+		<calculatedField>
+			<dataPath>ОбщаяНеОблагаемаяБазаСНачалаГода</dataPath>
+			<expression>НеОблагаемаяБазаСНачалаГодаШтат + НеОблагаемаяБазаСНачалаГодаАгент</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Общая не облагаемая база с начала года</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>15</Digits>
+					<FractionDigits>2</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+		</calculatedField>
+		<calculatedField>
+			<dataPath>ОбщаяНеОблагаемаяБазаВТекущемМесяце</dataPath>
+			<expression>НеОблагаемаяБазаВТекущемМесяцеШтат + НеОблагаемаяБазаВТекущемМесяцеАгент</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Общая не облагаемая база в текущем месяце</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>15</Digits>
+					<FractionDigits>2</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+		</calculatedField>
+		<calculatedField>
+			<dataPath>НачисленныйДоходСНачалаГода</dataPath>
+			<expression>ДоходыШтатногоСотрудникаСНачалаГода + ДоходыАгентаСНачалаГода + НеОблагаемаяБазаСНачалаГодаШтат + НеОблагаемаяБазаСНачалаГодаАгент</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Начисленный доход с начала года</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>15</Digits>
+					<FractionDigits>2</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+		</calculatedField>
+		<calculatedField>
+			<dataPath>НачисленныйДоходВТекущемМесяце</dataPath>
+			<expression>ДоходШтатногоСотрудника_ВТекущемМесяце + ДоходАгента_ВТекущемМесяце + НеОблагаемаяБазаВТекущемМесяцеШтат + НеОблагаемаяБазаВТекущемМесяцеАгент</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Начисленный доход в текущем месяце</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>15</Digits>
+					<FractionDigits>2</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+		</calculatedField>
+		<totalField>
+			<dataPath>ДоходАгента_ВТекущемМесяце</dataPath>
+			<expression>Сумма(ДоходАгента_ВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ДоходШтатногоСотрудника_ВТекущемМесяце</dataPath>
+			<expression>Сумма(ДоходШтатногоСотрудника_ВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ДоходыАгентаСНачалаГода</dataPath>
+			<expression>Сумма(ДоходыАгентаСНачалаГода)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ДоходыШтатногоСотрудникаСНачалаГода</dataPath>
+			<expression>Сумма(ДоходыШтатногоСотрудникаСНачалаГода)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_10_ВТекущемМесяце</dataPath>
+			<expression>Сумма(ПФР_10_ВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_10_СНачалаГода</dataPath>
+			<expression>Сумма(ПФР_10_СНачалаГода)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_22_10_ВТекущемМесяце</dataPath>
+			<expression>Сумма(ПФР_22_10_ВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_22_10_СНачалаГода</dataPath>
+			<expression>Сумма(ПФР_22_10_СНачалаГода)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_22_ВТекущемМесяце</dataPath>
+			<expression>Сумма(ПФР_22_ВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_22_СНачалаГода</dataPath>
+			<expression>Сумма(ПФР_22_СНачалаГода)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_Агента_10_ВТекущемМесяце</dataPath>
+			<expression>Сумма(ПФР_Агента_10_ВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_Агента_22_10_ВТекущемМесяце</dataPath>
+			<expression>Сумма(ПФР_Агента_22_10_ВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_Агента_22_ВТекущемМесяце</dataPath>
+			<expression>Сумма(ПФР_Агента_22_ВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_ШтатногоСотрудника_10_ВТекущемМесяце</dataPath>
+			<expression>Сумма(ПФР_ШтатногоСотрудника_10_ВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_ШтатногоСотрудника_22_10_ВТекущемМесяце</dataPath>
+			<expression>Сумма(ПФР_ШтатногоСотрудника_22_10_ВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_ШтатногоСотрудника_22_ВТекущемМесяце</dataPath>
+			<expression>Сумма(ПФР_ШтатногоСотрудника_22_ВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НеОблагаемаяБазаВТекущемМесяцеАгент</dataPath>
+			<expression>Сумма(НеОблагаемаяБазаВТекущемМесяцеАгент)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НеОблагаемаяБазаВТекущемМесяцеШтат</dataPath>
+			<expression>Сумма(НеОблагаемаяБазаВТекущемМесяцеШтат)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НеОблагаемаяБазаСНачалаГодаАгент</dataPath>
+			<expression>Сумма(НеОблагаемаяБазаСНачалаГодаАгент)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НеОблагаемаяБазаСНачалаГодаШтат</dataPath>
+			<expression>Сумма(НеОблагаемаяБазаСНачалаГодаШтат)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ОбщийОблагаемыйДоходВТекущемМесяце</dataPath>
+			<expression>Сумма(ОбщийОблагаемыйДоходВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ОбщийОблагаемыйДоходСНачалаГода</dataPath>
+			<expression>Сумма(ОбщийОблагаемыйДоходСНачалаГода)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ОбщаяНеОблагаемаяБазаСНачалаГода</dataPath>
+			<expression>Сумма(ОбщаяНеОблагаемаяБазаСНачалаГода)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ОбщаяНеОблагаемаяБазаВТекущемМесяце</dataPath>
+			<expression>Сумма(ОбщаяНеОблагаемаяБазаВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НачисленныйДоходВТекущемМесяце</dataPath>
+			<expression>Сумма(НачисленныйДоходВТекущемМесяце)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НачисленныйДоходСНачалаГода</dataPath>
+			<expression>Сумма(НачисленныйДоходСНачалаГода)</expression>
+		</totalField>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="xs:string">Основной</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>ФИО</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>СНИЛС</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ИНН</field>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>За период</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemField">
+				<field>НачисленныйДоходСНачалаГода</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Начисленный доход</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ДоходыШтатногоСотрудникаСНачалаГода</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Облагаемый доход штатного сотрудника</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ДоходыАгентаСНачалаГода</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Облагаемый доход агента</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ОбщийОблагаемыйДоходСНачалаГода</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Облагаемый доход</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>НеОблагаемаяБазаСНачалаГодаШтат</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Не облагаемый доход штатного сотрудника</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>НеОблагаемаяБазаСНачалаГодаАгент</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Не облагаемый доход агента</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ОбщаяНеОблагаемаяБазаСНачалаГода</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Не облагаемый доход</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ПФР_22_СНачалаГода</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ПФР(22%)</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ПФР_10_СНачалаГода</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ПФР(10%)</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ПФР_22_10_СНачалаГода</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ПФР(22%+10%)</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<use>false</use>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>За месяц</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemFolder">
+				<use>false</use>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Штатный сотрудник</v8:content>
+					</v8:item>
+				</lwsTitle>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ДоходШтатногоСотрудника_ВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Облагаемый доход</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>НеОблагаемаяБазаВТекущемМесяцеШтат</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не облагаемый доход</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ПФР_ШтатногоСотрудника_22_ВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПФР(22%)</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ПФР_ШтатногоСотрудника_10_ВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПФР(10%)</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ПФР_ШтатногоСотрудника_22_10_ВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПФР(22%+10%)</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<placement>Auto</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<use>false</use>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Агент</v8:content>
+					</v8:item>
+				</lwsTitle>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ДоходАгента_ВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Облагаемый доход</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>НеОблагаемаяБазаВТекущемМесяцеАгент</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не облагаемый доход</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ПФР_Агента_22_ВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПФР(22%)</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ПФР_Агента_10_ВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПФР(10%)</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ПФР_Агента_22_10_ВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПФР(22%+10%)</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<placement>Auto</placement>
+			</item>
+			<item xsi:type="SelectedItemFolder">
+				<use>false</use>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Итого</v8:content>
+					</v8:item>
+				</lwsTitle>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>НачисленныйДоходВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начисленный доход</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ОбщийОблагаемыйДоходВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Облагаемый доход</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ОбщаяНеОблагаемаяБазаВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не облагаемый доход</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ПФР_22_ВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПФР(22%)</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ПФР_10_ВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПФР(10%)</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<item xsi:type="SelectedItemField">
+					<use>false</use>
+					<field>ПФР_22_10_ВТекущемМесяце</field>
+					<lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПФР(22%+10%)</v8:content>
+						</v8:item>
+					</lwsTitle>
+				</item>
+				<placement>Auto</placement>
+			</item>
+			<placement>Auto</placement>
+		</item>
+	</selection>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

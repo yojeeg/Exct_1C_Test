@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник</dataPath>
+				<field>Сотрудник</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Категория</dataPath>
+				<field>Категория</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Фамилия</dataPath>
+				<field>Фамилия</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СотрудникКод</dataPath>
+				<field>СотрудникКод</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Отчество</dataPath>
+				<field>Отчество</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Имя</dataPath>
+				<field>Имя</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаПриема</dataPath>
+				<field>ДатаПриема</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПодразделениеРодитель</dataPath>
+				<field>ПодразделениеРодитель</field>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	СостоянияСотрудниковСрезПоследних.Сотрудник
+ПОМЕСТИТЬ ВТ_РАБОТАЮЩИЕ_СОТРУДНИКИ
+ИЗ
+	РегистрСведений.СостоянияСотрудников.СрезПоследних КАК СостоянияСотрудниковСрезПоследних
+ГДЕ
+	СостоянияСотрудниковСрезПоследних.Состояние &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СостоянияСотрудника.Увольнение)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ППФ_ДанныеПремированияСотрудниковСрезПоследних.Сотрудник,
+	ППФ_ДанныеПремированияСотрудниковСрезПоследних.Категория
+ПОМЕСТИТЬ ВТ_КАТЕГОРИЯ_ПРЕМИРОВАНИЯ
+ИЗ
+	РегистрСведений.ППФ_ДанныеПремированияСотрудников.СрезПоследних КАК ППФ_ДанныеПремированияСотрудниковСрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	КадроваяИсторияСотрудниковСрезПоследних.Сотрудник,
+	КадроваяИсторияСотрудниковСрезПоследних.Подразделение,
+	КадроваяИсторияСотрудниковСрезПоследних.Должность
+ПОМЕСТИТЬ ВТ_ПОДРАЗДЕЛЕНИЕ_СОТРУДНИКА
+ИЗ
+	РегистрСведений.КадроваяИсторияСотрудников.СрезПоследних КАК КадроваяИсторияСотрудниковСрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_РАБОТАЮЩИЕ_СОТРУДНИКИ.Сотрудник,
+	ВТ_КАТЕГОРИЯ_ПРЕМИРОВАНИЯ.Категория,
+	ВТ_ПОДРАЗДЕЛЕНИЕ_СОТРУДНИКА.Подразделение,
+	ВТ_РАБОТАЮЩИЕ_СОТРУДНИКИ.Сотрудник.Код,
+	ФИОФизическихЛицСрезПоследних.Фамилия,
+	ФИОФизическихЛицСрезПоследних.Имя,
+	ФИОФизическихЛицСрезПоследних.Отчество,
+	ВТ_ПОДРАЗДЕЛЕНИЕ_СОТРУДНИКА.Должность,
+	ВТ_ПОДРАЗДЕЛЕНИЕ_СОТРУДНИКА.Подразделение.Родитель,
+	ПриемНаРаботу.ДатаПриема
+ИЗ
+	ВТ_РАБОТАЮЩИЕ_СОТРУДНИКИ КАК ВТ_РАБОТАЮЩИЕ_СОТРУДНИКИ
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_КАТЕГОРИЯ_ПРЕМИРОВАНИЯ КАК ВТ_КАТЕГОРИЯ_ПРЕМИРОВАНИЯ
+		ПО ВТ_РАБОТАЮЩИЕ_СОТРУДНИКИ.Сотрудник = ВТ_КАТЕГОРИЯ_ПРЕМИРОВАНИЯ.Сотрудник
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПОДРАЗДЕЛЕНИЕ_СОТРУДНИКА КАК ВТ_ПОДРАЗДЕЛЕНИЕ_СОТРУДНИКА
+		ПО ВТ_РАБОТАЮЩИЕ_СОТРУДНИКИ.Сотрудник = ВТ_ПОДРАЗДЕЛЕНИЕ_СОТРУДНИКА.Сотрудник
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизическихЛиц.СрезПоследних КАК ФИОФизическихЛицСрезПоследних
+		ПО ВТ_РАБОТАЮЩИЕ_СОТРУДНИКИ.Сотрудник.ФизическоеЛицо = ФИОФизическихЛицСрезПоследних.ФизическоеЛицо
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПриемНаРаботу КАК ПриемНаРаботу
+		ПО ВТ_РАБОТАЮЩИЕ_СОТРУДНИКИ.Сотрудник = ПриемНаРаботу.Сотрудник
+ГДЕ
+	ВТ_ПОДРАЗДЕЛЕНИЕ_СОТРУДНИКА.Подразделение В ИЕРАРХИИ(&amp;Подразделение)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_РАБОТАЮЩИЕ_СОТРУДНИКИ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_КАТЕГОРИЯ_ПРЕМИРОВАНИЯ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_ПОДРАЗДЕЛЕНИЕ_СОТРУДНИКА</query>
+		</dataSet>
+		<parameter>
+			<name>Период</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+		</parameter>
+		<parameter>
+			<name>Подразделение</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Подразделение</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core" xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ПодразделенияОрганизаций</Type>
+			</valueType>
+			<useRestriction>false</useRestriction>
+			<valueListAllowed>true</valueListAllowed>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Категории премирования работающих сотрудников</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>СистемныеПоля.НомерПоПорядку</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>СотрудникКод</field>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТабНомер</v8:content>
+				</v8:item>
+			</lwsTitle>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаПриема</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Должность</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Подразделение</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПодразделениеРодитель</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Категория</field>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>Подразделение</dcscor:parameter>
+			<userSettingID>2f432fe5-8c66-4483-a200-125d6551c5d0</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

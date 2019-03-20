@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодРегистрации</dataPath>
+				<field>ПериодРегистрации</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник</dataPath>
+				<field>Сотрудник</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ППФ_МВЗКод</dataPath>
+				<field>ППФ_МВЗКод</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Код МВЗ</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ГоловнаяОрганизация</dataPath>
+				<field>ГоловнаяОрганизация</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СальдоПредПериода</dataPath>
+				<field>СальдоПредПериода</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Сальдо на начало</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизическоеЛицо</dataPath>
+				<field>ФизическоеЛицо</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СальдоТекПериода</dataPath>
+				<field>СальдоТекПериода</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Сальдо</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МВЗ</dataPath>
+				<field>МВЗ</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФСС_НС_Пред</dataPath>
+				<field>ФСС_НС_Пред</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ФСС НС и ПЗ  на начало</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР_Пред</dataPath>
+				<field>ПФР_Пред</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ПФР  на начало</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФСС_Пред</dataPath>
+				<field>ФСС_Пред</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ФСС  на начало</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФСС</dataPath>
+				<field>ФСС</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФОМС_Пред</dataPath>
+				<field>ФОМС_Пред</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ФОМС  на начало</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НачислениеРезерва</dataPath>
+				<field>НачислениеРезерва</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НачислениеРезерва_ПФР</dataPath>
+				<field>НачислениеРезерва_ПФР</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НачислениеРезерва_ФСС</dataPath>
+				<field>НачислениеРезерва_ФСС</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НачислениеРезерва_ФОМС</dataPath>
+				<field>НачислениеРезерва_ФОМС</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НачислениеРезерва_ФСС_НС</dataPath>
+				<field>НачислениеРезерва_ФСС_НС</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВыплатыЗаПериод</dataPath>
+				<field>ВыплатыЗаПериод</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Выплаты за период</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ППФЗаПериод</dataPath>
+				<field>ППФЗаПериод</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ППФ за период</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФССЗаПериод</dataPath>
+				<field>ФССЗаПериод</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ФСС за период</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФОМСЗаПериод</dataPath>
+				<field>ФОМСЗаПериод</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ФОМС за период</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФСС_НС</dataPath>
+				<field>ФСС_НС</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФР</dataPath>
+				<field>ПФР</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФОМС</dataPath>
+				<field>ФОМС</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФСС_НСЗаПериод</dataPath>
+				<field>ФСС_НСЗаПериод</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ФСС НС и ПЗ за период</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ППФ_РезервБонусов1ТЧНачисление.Ссылка.ПериодРегистрации КАК ПериодРегистрации,
+	ППФ_РезервБонусов1ТЧНачисление.Сотрудник.ФизическоеЛицо КАК ФизическоеЛицо,
+	ППФ_СоответствиеПодразделенийИМВЗСрезПоследних.МВЗ КАК МВЗ,
+	ППФ_СоответствиеПодразделенийИМВЗСрезПоследних.МВЗ.Код КАК ППФ_МВЗКод,
+	ППФ_РезервБонусов1ТЧНачисление.СальдоПредПериода КАК СальдоПредПериода,
+	ППФ_РезервБонусов1ТЧНачисление.ПФР_Пред КАК ПФР_Пред,
+	ППФ_РезервБонусов1ТЧНачисление.ФСС_Пред КАК ФСС_Пред,
+	ППФ_РезервБонусов1ТЧНачисление.ФОМС_Пред КАК ФОМС_Пред,
+	ППФ_РезервБонусов1ТЧНачисление.ФСС_НС_Пред КАК ФСС_НС_Пред,
+	ППФ_РезервБонусов1ТЧНачисление.НачислениеРезерва КАК НачислениеРезерва,
+	ППФ_РезервБонусов1ТЧНачисление.НачислениеРезерва_ПФР КАК НачислениеРезерва_ПФР,
+	ППФ_РезервБонусов1ТЧНачисление.НачислениеРезерва_ФСС КАК НачислениеРезерва_ФСС,
+	ППФ_РезервБонусов1ТЧНачисление.НачислениеРезерва_ФОМС КАК НачислениеРезерва_ФОМС,
+	ППФ_РезервБонусов1ТЧНачисление.НачислениеРезерва_ФСС_НС КАК НачислениеРезерва_ФСС_НС,
+	0 КАК ВыплатыЗаПериод,
+	0 КАК ППФЗаПериод,
+	0 КАК ФССЗаПериод,
+	0 КАК ФОМСЗаПериод,
+	NULL КАК ФСС_НСЗаПериод,
+	ППФ_РезервБонусов1ТЧНачисление.СальдоТекПериода КАК СальдоТекПериода,
+	ППФ_РезервБонусов1ТЧНачисление.ПФР КАК ПФР,
+	ППФ_РезервБонусов1ТЧНачисление.ФСС КАК ФСС,
+	ППФ_РезервБонусов1ТЧНачисление.ФОМС КАК ФОМС,
+	ППФ_РезервБонусов1ТЧНачисление.ФСС_НС КАК ФСС_НС
+ПОМЕСТИТЬ ВТ
+ИЗ
+	Документ.ППФ_РезервБонусов1.ТЧНачисление КАК ППФ_РезервБонусов1ТЧНачисление
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КадроваяИсторияСотрудников.СрезПоследних(КОНЕЦПЕРИОДА(&amp;Дата, МЕСЯЦ), ) КАК КадроваяИсторияСотрудниковСрезПоследних
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ППФ_СоответствиеПодразделенийИМВЗ.СрезПоследних(КОНЕЦПЕРИОДА(&amp;Дата, МЕСЯЦ), ) КАК ППФ_СоответствиеПодразделенийИМВЗСрезПоследних
+			ПО КадроваяИсторияСотрудниковСрезПоследних.Подразделение = ППФ_СоответствиеПодразделенийИМВЗСрезПоследних.Подразделение
+		ПО ППФ_РезервБонусов1ТЧНачисление.Сотрудник = КадроваяИсторияСотрудниковСрезПоследних.Сотрудник
+ГДЕ
+	ППФ_РезервБонусов1ТЧНачисление.Ссылка.ПериодРегистрации = НАЧАЛОПЕРИОДА(&amp;Дата, МЕСЯЦ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.Ссылка.ПериодРегистрации,
+	ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.ФизическоеЛицо,
+	ППФ_СоответствиеПодразделенийИМВЗСрезПоследних.МВЗ,
+	ППФ_СоответствиеПодразделенийИМВЗСрезПоследних.МВЗ.Код,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.Сумма,
+	ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.ПФРДоПредельнойВеличины + ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.ПФРСПревышения,
+	ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.ФСС,
+	ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.ФФОМС + ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.ТФОМС,
+	ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.ФССНесчастныеСлучаи,
+	0,
+	0,
+	0,
+	0,
+	0
+ИЗ
+	Документ.ОтражениеЗарплатыВБухучете.НачисленнаяЗарплатаИВзносы КАК ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ППФ_СоответствиеПодразделенийИМВЗ.СрезПоследних(КОНЕЦПЕРИОДА(&amp;Дата, МЕСЯЦ), ) КАК ППФ_СоответствиеПодразделенийИМВЗСрезПоследних
+		ПО ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.Подразделение = ППФ_СоответствиеПодразделенийИМВЗСрезПоследних.Подразделение
+ГДЕ
+	ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.СпособОтраженияЗарплатыВБухучете.Наименование В ("Премия ежемесячная суммой", "Премия за квартал (суммой)", "Премия за год (суммой)")
+	И ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.Ссылка.Проведен
+	И ОтражениеЗарплатыВБухучетеНачисленнаяЗарплатаИВзносы.Ссылка.ПериодРегистрации = НАЧАЛОПЕРИОДА(&amp;Дата, МЕСЯЦ)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ.ПериодРегистрации КАК ПериодРегистрации,
+	ВТ.ФизическоеЛицо КАК ФизическоеЛицо,
+	ВТ.МВЗ КАК МВЗ,
+	ВТ.ППФ_МВЗКод КАК ППФ_МВЗКод,
+	СУММА(ВТ.СальдоПредПериода) КАК СальдоПредПериода,
+	СУММА(ВТ.ПФР_Пред) КАК ПФР_Пред,
+	СУММА(ВТ.ФСС_Пред) КАК ФСС_Пред,
+	СУММА(ВТ.ФОМС_Пред) КАК ФОМС_Пред,
+	СУММА(ВТ.ФСС_НС_Пред) КАК ФСС_НС_Пред,
+	СУММА(ВТ.НачислениеРезерва) КАК НачислениеРезерва,
+	СУММА(ВТ.НачислениеРезерва_ПФР) КАК НачислениеРезерва_ПФР,
+	СУММА(ВТ.НачислениеРезерва_ФСС) КАК НачислениеРезерва_ФСС,
+	СУММА(ВТ.НачислениеРезерва_ФОМС) КАК НачислениеРезерва_ФОМС,
+	СУММА(ВТ.НачислениеРезерва_ФСС_НС) КАК НачислениеРезерва_ФСС_НС,
+	СУММА(ВТ.ВыплатыЗаПериод) КАК ВыплатыЗаПериод,
+	СУММА(ВТ.ППФЗаПериод) КАК ППФЗаПериод,
+	СУММА(ВТ.ФССЗаПериод) КАК ФССЗаПериод,
+	ВТ.ФОМСЗаПериод КАК ФОМСЗаПериод,
+	СУММА(ВТ.СальдоТекПериода) КАК СальдоТекПериода,
+	СУММА(ВТ.ПФР) КАК ПФР,
+	СУММА(ВТ.ФСС) КАК ФСС,
+	СУММА(ВТ.ФОМС) КАК ФОМС,
+	СУММА(ВТ.ФСС_НС) КАК ФСС_НС,
+	ВТ.ФСС_НСЗаПериод КАК ФСС_НСЗаПериод
+ИЗ
+	ВТ КАК ВТ
+
+СГРУППИРОВАТЬ ПО
+	ВТ.ППФ_МВЗКод,
+	ВТ.ПериодРегистрации,
+	ВТ.ФизическоеЛицо,
+	ВТ.МВЗ,
+	ВТ.ФОМСЗаПериод,
+	ВТ.ФСС_НСЗаПериод
+
+УПОРЯДОЧИТЬ ПО
+	ВТ.ФизическоеЛицо.ФИО</query>
+		</dataSet>
+		<totalField>
+			<dataPath>ВыплатыЗаПериод</dataPath>
+			<expression>Сумма(ВыплатыЗаПериод)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НачислениеРезерва</dataPath>
+			<expression>Сумма(НачислениеРезерва)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НачислениеРезерва_ПФР</dataPath>
+			<expression>Сумма(НачислениеРезерва_ПФР)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НачислениеРезерва_ФОМС</dataPath>
+			<expression>Сумма(НачислениеРезерва_ФОМС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НачислениеРезерва_ФСС</dataPath>
+			<expression>Сумма(НачислениеРезерва_ФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НачислениеРезерва_ФСС_НС</dataPath>
+			<expression>Сумма(НачислениеРезерва_ФСС_НС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ППФЗаПериод</dataPath>
+			<expression>Сумма(ППФЗаПериод)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР</dataPath>
+			<expression>Сумма(ПФР)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФР_Пред</dataPath>
+			<expression>Сумма(ПФР_Пред)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>СальдоПредПериода</dataPath>
+			<expression>Сумма(СальдоПредПериода)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>СальдоТекПериода</dataPath>
+			<expression>Сумма(СальдоТекПериода)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФОМС</dataPath>
+			<expression>Сумма(ФОМС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФОМС_Пред</dataPath>
+			<expression>Сумма(ФОМС_Пред)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФОМСЗаПериод</dataPath>
+			<expression>Сумма(ФОМСЗаПериод)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФСС</dataPath>
+			<expression>Сумма(ФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФСС_НС</dataPath>
+			<expression>Сумма(ФСС_НС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФСС_НС_Пред</dataPath>
+			<expression>Сумма(ФСС_НС_Пред)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФСС_НСЗаПериод</dataPath>
+			<expression>Сумма(ФСС_НСЗаПериод)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФСС_Пред</dataPath>
+			<expression>Сумма(ФСС_Пред)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФССЗаПериод</dataPath>
+			<expression>Сумма(ФССЗаПериод)</expression>
+		</totalField>
+		<parameter>
+			<name>Дата</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дата</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<parameter>
+			<name>Период</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Резерв бонусов сверка</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>Дата</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</dcscor:value>
+			<userSettingID>2c674567-cc00-4624-ab51-124bf25ed2fc</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<conditionalAppearance>
+		<item>
+			<selection/>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+	</conditionalAppearance>
+	<outputParameters/>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+			<item xsi:type="SelectedItemField">
+				<field>ФизическоеЛицо</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ППФ_МВЗКод</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>МВЗ</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоПредПериода</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ПФР_Пред</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ФОМС_Пред</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ФСС_Пред</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ФСС_НС_Пред</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ВыплатыЗаПериод</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ППФЗаПериод</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ФОМСЗаПериод</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ФССЗаПериод</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ФСС_НСЗаПериод</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>СальдоТекПериода</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ПФР</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ФОМС</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ФСС</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ФСС_НС</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>НачислениеРезерва</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>НачислениеРезерва_ПФР</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>НачислениеРезерва_ФОМС</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>НачислениеРезерва_ФСС</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>НачислениеРезерва_ФСС_НС</field>
+			</item>
+		</selection>
+		<outputParameters/>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

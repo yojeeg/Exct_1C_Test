@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Подразделение</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Должность</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаУвольнения</dataPath>
+				<field>ДатаУвольнения</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТабНомер</dataPath>
+				<field>ТабНомер</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Таб номер</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаПриема</dataPath>
+				<field>ДатаПриема</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Местонахождение</dataPath>
+				<field>Местонахождение</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Местонахождение</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФИО</dataPath>
+				<field>ФИО</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ФИО</d5p1:content>
+					</d5p1:item>
+				</title>
+				<role>
+					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФИОСорт</dataPath>
+				<field>ФИОСорт</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>ФИОСорт</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ДополнительныеСведения.Объект КАК Объект,
+	ДополнительныеСведения.Значение
+ПОМЕСТИТЬ ВТ_ДОПОЛНИТЕЛЬНЫЕ_СВЕДЕНИЯ
+ИЗ
+	РегистрСведений.ДополнительныеСведения КАК ДополнительныеСведения
+ГДЕ
+	ДополнительныеСведения.Свойство.Наименование = "Местонахождение (Подразделения)"
+
+ИНДЕКСИРОВАТЬ ПО
+	Объект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТекущиеКадровыеДанныеСотрудников.Сотрудник.Код КАК ТабНомер,
+	ТекущиеКадровыеДанныеСотрудников.Сотрудник КАК ФИО,
+	ТекущиеКадровыеДанныеСотрудников.ДатаПриема,
+	ТекущиеКадровыеДанныеСотрудников.ДатаУвольнения,
+	ТекущиеКадровыеДанныеСотрудников.ТекущаяДолжность КАК Должность,
+	ТекущиеКадровыеДанныеСотрудников.ТекущееПодразделение КАК Подразделение,
+	ВТ_ДОПОЛНИТЕЛЬНЫЕ_СВЕДЕНИЯ.Значение КАК Местонахождение,
+	ТекущиеКадровыеДанныеСотрудников.Сотрудник.Наименование КАК ФИОСорт
+ИЗ
+	РегистрСведений.ТекущиеКадровыеДанныеСотрудников КАК ТекущиеКадровыеДанныеСотрудников
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДОПОЛНИТЕЛЬНЫЕ_СВЕДЕНИЯ КАК ВТ_ДОПОЛНИТЕЛЬНЫЕ_СВЕДЕНИЯ
+		ПО ТекущиеКадровыеДанныеСотрудников.ТекущееПодразделение = ВТ_ДОПОЛНИТЕЛЬНЫЕ_СВЕДЕНИЯ.Объект
+
+УПОРЯДОЧИТЬ ПО
+	ТекущиеКадровыеДанныеСотрудников.Сотрудник.Наименование
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_ДОПОЛНИТЕЛЬНЫЕ_СВЕДЕНИЯ</query>
+		</dataSet>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Местонахождение сотрудников организации</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>СистемныеПоля.НомерПоПорядку</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ТабНомер</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ФИО</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаПриема</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаУвольнения</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Должность</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Подразделение</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Местонахождение</field>
+		</item>
+	</selection>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Заголовок</dcscor:parameter>
+			<dcscor:value xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Местонахождение сотрудников организации</v8:content>
+				</v8:item>
+			</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

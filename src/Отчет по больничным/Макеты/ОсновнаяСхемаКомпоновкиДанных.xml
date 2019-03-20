@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ссылка</dataPath>
+				<field>Ссылка</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КонецПериода</dataPath>
+				<field>КонецПериода</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Конец периода</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПроцентОплаты</dataPath>
+				<field>ПроцентОплаты</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПричинаНетрудоспособности</dataPath>
+				<field>ПричинаНетрудоспособности</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НачалоПериода</dataPath>
+				<field>НачалоПериода</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Начало периода</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НомерВходящегоДокумента</dataPath>
+				<field>НомерВходящегоДокумента</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Номер входящего документа</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Номер</dataPath>
+				<field>Номер</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТабельныйНомер</dataPath>
+				<field>ТабельныйНомер</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Табельный номер</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник</dataPath>
+				<field>Сотрудник</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НарушениеРежимаС</dataPath>
+				<field>НарушениеРежимаС</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Нарушение режима С</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЗаСчетРаботодателяПо202ФЗ</dataPath>
+				<field>ЗаСчетРаботодателяПо202ФЗ</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>За счет работодателя по202 ФЗ</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОплаченоДнейЗаСчетРаботодателяПо202ФЗ</dataPath>
+				<field>ОплаченоДнейЗаСчетРаботодателяПо202ФЗ</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Оплачено дней за счет работодателя по202 ФЗ</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДнейСНарушениемРежима</dataPath>
+				<field>ДнейСНарушениемРежима</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Дней с нарушением режима</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОплаченоДнейБольничныйВсего</dataPath>
+				<field>ОплаченоДнейБольничныйВсего</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Оплачено дней больничный всего</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>БольничныйВсего</dataPath>
+				<field>БольничныйВсего</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Больничный всего</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МесяцНачисления</dataPath>
+				<field>МесяцНачисления</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Месяц начисления</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОплаченоДнейЗаСчетФСС</dataPath>
+				<field>ОплаченоДнейЗаСчетФСС</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Оплачено дней за счет ФСС</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЗаСчетФСС</dataPath>
+				<field>ЗаСчетФСС</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>За счет ФСС</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Дата</dataPath>
+				<field>Дата</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПервичныйБольничныйЛист</dataPath>
+				<field>ПервичныйБольничныйЛист</field>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	БольничныйЛистНачисления.Ссылка КАК Ссылка,
+	БольничныйЛистНачисления.Начисление КАК Начисление,
+	БольничныйЛистНачисления.Сотрудник КАК Сотрудник,
+	СУММА(БольничныйЛистНачисления.ОплаченоДней) КАК ОплаченоДнейЧасов,
+	СУММА(БольничныйЛистНачисления.Результат) КАК Результат
+ПОМЕСТИТЬ ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ
+ИЗ
+	Документ.БольничныйЛист.Начисления КАК БольничныйЛистНачисления
+ГДЕ
+	БольничныйЛистНачисления.Ссылка.Проведен = ИСТИНА
+	И БольничныйЛистНачисления.Начисление = &amp;ОтпускПоБеременности
+
+СГРУППИРОВАТЬ ПО
+	БольничныйЛистНачисления.Ссылка,
+	БольничныйЛистНачисления.Начисление,
+	БольничныйЛистНачисления.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	БольничныйЛистНачисленияПерерасчет.Ссылка КАК Ссылка,
+	БольничныйЛистНачисленияПерерасчет.Начисление КАК Начисление,
+	БольничныйЛистНачисленияПерерасчет.Сотрудник КАК Сотрудник,
+	СУММА(БольничныйЛистНачисленияПерерасчет.ОплаченоДней) КАК ОплаченоДнейЧасов,
+	СУММА(БольничныйЛистНачисленияПерерасчет.Результат) КАК Результат
+ПОМЕСТИТЬ ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_ПЕРЕРАСЧЕТ
+ИЗ
+	Документ.БольничныйЛист.НачисленияПерерасчет КАК БольничныйЛистНачисленияПерерасчет
+ГДЕ
+	БольничныйЛистНачисленияПерерасчет.Ссылка.Проведен = ИСТИНА
+	И БольничныйЛистНачисленияПерерасчет.Начисление = &amp;ОтпускПоБеременности
+
+СГРУППИРОВАТЬ ПО
+	БольничныйЛистНачисленияПерерасчет.Ссылка,
+	БольничныйЛистНачисленияПерерасчет.Начисление,
+	БольничныйЛистНачисленияПерерасчет.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ.Ссылка,
+	ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ.Начисление,
+	ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ.Сотрудник,
+	СУММА(ЕСТЬNULL(ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ.ОплаченоДнейЧасов, 0) + ЕСТЬNULL(ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_ПЕРЕРАСЧЕТ.ОплаченоДнейЧасов, 0)) КАК ОплаченоДнейЧасов,
+	СУММА(ЕСТЬNULL(ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ.Результат, 0) + ЕСТЬNULL(ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_ПЕРЕРАСЧЕТ.Результат, 0)) КАК Результат
+ПОМЕСТИТЬ ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_1
+ИЗ
+	ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ КАК ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_ПЕРЕРАСЧЕТ КАК ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_ПЕРЕРАСЧЕТ
+		ПО ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ.Ссылка = ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_ПЕРЕРАСЧЕТ.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ.Сотрудник,
+	ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ.Ссылка,
+	ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ.Начисление
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	БольничныйЛистНачисления.Ссылка КАК Ссылка,
+	БольничныйЛистНачисления.Сотрудник КАК Сотрудник,
+	БольничныйЛистНачисления.Начисление,
+	СУММА(БольничныйЛистНачисления.ОплаченоДней) КАК ОплаченоДнейЧасов,
+	БольничныйЛистНачисления.Подразделение,
+	СУММА(БольничныйЛистНачисления.Результат) КАК Результат
+ПОМЕСТИТЬ ВТ_НАЧИСЛЕНИЯ
+ИЗ
+	Документ.БольничныйЛист.Начисления КАК БольничныйЛистНачисления
+ГДЕ
+	БольничныйЛистНачисления.Начисление &lt;&gt; &amp;ОкладПоДням
+	И БольничныйЛистНачисления.Ссылка.Проведен = ИСТИНА
+
+СГРУППИРОВАТЬ ПО
+	БольничныйЛистНачисления.Ссылка,
+	БольничныйЛистНачисления.Сотрудник,
+	БольничныйЛистНачисления.Начисление,
+	БольничныйЛистНачисления.Подразделение
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка,
+	Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	БольничныйЛистНачисленияПерерасчет.Ссылка КАК Ссылка,
+	БольничныйЛистНачисленияПерерасчет.Сотрудник КАК Сотрудник,
+	БольничныйЛистНачисленияПерерасчет.Начисление,
+	СУММА(БольничныйЛистНачисленияПерерасчет.ОплаченоДней) КАК ОплаченоДнейЧасов,
+	БольничныйЛистНачисленияПерерасчет.Подразделение,
+	СУММА(БольничныйЛистНачисленияПерерасчет.Результат) КАК Результат
+ПОМЕСТИТЬ ВТ_НАЧИСЛЕНИЯ_ПЕРЕРАСЧЕТ
+ИЗ
+	Документ.БольничныйЛист.НачисленияПерерасчет КАК БольничныйЛистНачисленияПерерасчет
+ГДЕ
+	БольничныйЛистНачисленияПерерасчет.Начисление &lt;&gt; &amp;ОкладПоДням
+	И БольничныйЛистНачисленияПерерасчет.Ссылка.Проведен = ИСТИНА
+
+СГРУППИРОВАТЬ ПО
+	БольничныйЛистНачисленияПерерасчет.Ссылка,
+	БольничныйЛистНачисленияПерерасчет.Сотрудник,
+	БольничныйЛистНачисленияПерерасчет.Начисление,
+	БольничныйЛистНачисленияПерерасчет.Подразделение
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка,
+	Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_НАЧИСЛЕНИЯ.Ссылка,
+	ВТ_НАЧИСЛЕНИЯ.Сотрудник,
+	ВТ_НАЧИСЛЕНИЯ.Начисление,
+	СУММА(ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ.ОплаченоДнейЧасов, 0) + ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ_ПЕРЕРАСЧЕТ.ОплаченоДнейЧасов, 0)) КАК ОплаченоДнейЧасов,
+	ВТ_НАЧИСЛЕНИЯ.Подразделение,
+	СУММА(ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ.Результат, 0) + ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ_ПЕРЕРАСЧЕТ.Результат, 0)) КАК Результат
+ПОМЕСТИТЬ ВТ_НАЧИСЛЕНИЯ1
+ИЗ
+	ВТ_НАЧИСЛЕНИЯ КАК ВТ_НАЧИСЛЕНИЯ
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_НАЧИСЛЕНИЯ_ПЕРЕРАСЧЕТ КАК ВТ_НАЧИСЛЕНИЯ_ПЕРЕРАСЧЕТ
+		ПО ВТ_НАЧИСЛЕНИЯ.Ссылка = ВТ_НАЧИСЛЕНИЯ_ПЕРЕРАСЧЕТ.Ссылка
+			И ВТ_НАЧИСЛЕНИЯ.Начисление = ВТ_НАЧИСЛЕНИЯ_ПЕРЕРАСЧЕТ.Начисление
+
+СГРУППИРОВАТЬ ПО
+	ВТ_НАЧИСЛЕНИЯ.Ссылка,
+	ВТ_НАЧИСЛЕНИЯ.Сотрудник,
+	ВТ_НАЧИСЛЕНИЯ.Начисление,
+	ВТ_НАЧИСЛЕНИЯ.Подразделение
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	БольничныйЛист.Ссылка КАК Ссылка,
+	БольничныйЛист.Дата КАК Дата,
+	БольничныйЛист.Номер КАК Номер,
+	БольничныйЛист.Сотрудник КАК Сотрудник,
+	БольничныйЛист.Сотрудник.Код КАК ТабельныйНомер,
+	БольничныйЛист.ДатаНачала КАК НачалоПериода,
+	БольничныйЛист.ДатаОкончания КАК КонецПериода,
+	БольничныйЛист.ПериодРегистрации КАК МесяцНачисления,
+	БольничныйЛист.ПервичныйБольничныйЛист КАК ПервичныйБольничныйЛист,
+	БольничныйЛист.НомерЛисткаНетрудоспособности КАК НомерВходящегоДокумента,
+	БольничныйЛист.ПричинаНетрудоспособности КАК ПричинаНетрудоспособности,
+	БольничныйЛист.ПроцентОплаты КАК ПроцентОплаты,
+	ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ_1.Результат, 0) + ЕСТЬNULL(ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_1.Результат, 0) + ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ_2.Результат, 0) КАК БольничныйВсего,
+	ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ_1.Результат, 0) + ЕСТЬNULL(ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_1.Результат, 0) КАК ЗаСчетФСС,
+	ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ_2.Результат, 0) КАК ЗаСчетРаботодателяПо202ФЗ,
+	ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ_2.ОплаченоДнейЧасов, 0) + ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ_1.ОплаченоДнейЧасов, 0) + ЕСТЬNULL(ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_1.ОплаченоДнейЧасов, 0) КАК ОплаченоДнейБольничныйВсего,
+	ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ_2.ОплаченоДнейЧасов, 0) КАК ОплаченоДнейЗаСчетРаботодателяПо202ФЗ,
+	ЕСТЬNULL(ВТ_НАЧИСЛЕНИЯ_1.ОплаченоДнейЧасов, 0) + ЕСТЬNULL(ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_1.ОплаченоДнейЧасов, 0) КАК ОплаченоДнейЗаСчетФСС,
+	ВЫБОР
+		КОГДА БольничныйЛист.ДатаНарушенияРежима &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА РАЗНОСТЬДАТ(БольничныйЛист.ДатаНарушенияРежима, БольничныйЛист.ДатаОкончания, ДЕНЬ) + 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ДнейСНарушениемРежима,
+	БольничныйЛист.ДатаНарушенияРежима КАК НарушениеРежимаС
+ИЗ
+	Документ.БольничныйЛист КАК БольничныйЛист
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_1 КАК ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_1
+		ПО БольничныйЛист.Ссылка = ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_1.Ссылка
+			И БольничныйЛист.Сотрудник = ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_1.Сотрудник
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_НАЧИСЛЕНИЯ1 КАК ВТ_НАЧИСЛЕНИЯ_1
+		ПО (ВТ_НАЧИСЛЕНИЯ_1.Начисление = &amp;БольничныйФСС)
+			И БольничныйЛист.Ссылка = ВТ_НАЧИСЛЕНИЯ_1.Ссылка
+			И БольничныйЛист.Сотрудник = ВТ_НАЧИСЛЕНИЯ_1.Сотрудник
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_НАЧИСЛЕНИЯ1 КАК ВТ_НАЧИСЛЕНИЯ_2
+		ПО (ВТ_НАЧИСЛЕНИЯ_2.Начисление = &amp;БольничныйРаботодатель)
+			И БольничныйЛист.Ссылка = ВТ_НАЧИСЛЕНИЯ_2.Ссылка
+			И БольничныйЛист.Сотрудник = ВТ_НАЧИСЛЕНИЯ_2.Сотрудник
+ГДЕ
+	БольничныйЛист.Проведен = ИСТИНА
+	И БольничныйЛист.Дата &gt;= &amp;ДатаНачала
+	И БольничныйЛист.Дата &lt;= &amp;ДатаОкончания
+
+УПОРЯДОЧИТЬ ПО
+	БольничныйЛист.Сотрудник.Наименование
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_НАЧИСЛЕНИЯ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_ПЕРЕРАСЧЕТ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_НАЧИСЛЕНИЕ_БЕРЕМЕННОСТЬ_И_РОДЫ_1</query>
+		</dataSet>
+		<totalField>
+			<dataPath>БольничныйВсего</dataPath>
+			<expression>Сумма(БольничныйВсего)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ДнейСНарушениемРежима</dataPath>
+			<expression>Сумма(ДнейСНарушениемРежима)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ЗаСчетРаботодателяПо202ФЗ</dataPath>
+			<expression>Сумма(ЗаСчетРаботодателяПо202ФЗ)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ЗаСчетФСС</dataPath>
+			<expression>Сумма(ЗаСчетФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ОплаченоДнейБольничныйВсего</dataPath>
+			<expression>Сумма(ОплаченоДнейБольничныйВсего)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ОплаченоДнейЗаСчетРаботодателяПо202ФЗ</dataPath>
+			<expression>Сумма(ОплаченоДнейЗаСчетРаботодателяПо202ФЗ)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ОплаченоДнейЗаСчетФСС</dataPath>
+			<expression>Сумма(ОплаченоДнейЗаСчетФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПроцентОплаты</dataPath>
+			<expression>Сумма(ПроцентОплаты)</expression>
+		</totalField>
+		<parameter>
+			<name>ОтпускПоБеременности</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Отпуск по беременности</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core" xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:ChartOfCalculationTypesRef.Начисления</Type>
+			</valueType>
+			<value xsi:nil="true"/>
+			<useRestriction>true</useRestriction>
+		</parameter>
+		<parameter>
+			<name>ОкладПоДням</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Оклад по дням</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core" xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:ChartOfCalculationTypesRef.Начисления</Type>
+			</valueType>
+			<value xsi:nil="true"/>
+			<useRestriction>true</useRestriction>
+		</parameter>
+		<parameter>
+			<name>ДатаНачала</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дата начала</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;Период.ДатаНачала</expression>
+		</parameter>
+		<parameter>
+			<name>ДатаОкончания</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дата окончания</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;Период.ДатаОкончания</expression>
+		</parameter>
+		<parameter>
+			<name>Период</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">StandardPeriod</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:StandardPeriod">
+				<d4p1:variant xsi:type="d4p1:StandardPeriodVariant">Custom</d4p1:variant>
+				<d4p1:startDate>0001-01-01T00:00:00</d4p1:startDate>
+				<d4p1:endDate>0001-01-01T00:00:00</d4p1:endDate>
+			</value>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<parameter>
+			<name>БольничныйРаботодатель</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Больничный работодатель</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core" xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:ChartOfCalculationTypesRef.Начисления</Type>
+			</valueType>
+			<value xsi:nil="true"/>
+			<useRestriction>true</useRestriction>
+		</parameter>
+		<parameter>
+			<name>БольничныйФСС</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Больничный ФСС</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core" xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:ChartOfCalculationTypesRef.Начисления</Type>
+			</valueType>
+			<value xsi:nil="true"/>
+			<useRestriction>true</useRestriction>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Отчет по больничным</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>ТабельныйНомер</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПричинаНетрудоспособности</field>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemField">
+				<field>МесяцНачисления</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>Дата</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>Номер</field>
+			</item>
+			<placement>Horizontally</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период нетрудоспособности</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemField">
+				<field>НачалоПериода</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>КонецПериода</field>
+			</item>
+			<placement>Horizontally</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Больничный всего</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemField">
+				<field>ОплаченоДнейБольничныйВсего</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество опл. дней</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>БольничныйВсего</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<placement>Horizontally</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>За счет ФСС</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemField">
+				<field>ОплаченоДнейЗаСчетФСС</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество опл. дней</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ЗаСчетФСС</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<placement>Horizontally</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>За счет работодателя по 202 ФЗ</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemField">
+				<field>ОплаченоДнейЗаСчетРаботодателяПо202ФЗ</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество опл. дней</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ЗаСчетРаботодателяПо202ФЗ</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сумма</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<placement>Horizontally</placement>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>НарушениеРежимаС</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДнейСНарушениемРежима</field>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Период</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+			</dcscor:value>
+			<userSettingID>a003472a-8fc6-423a-b69c-acbdf23778a9</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

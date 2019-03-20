@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаРождения</dataPath>
+				<field>ДатаРождения</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизическоеЛицо</dataPath>
+				<field>ФизическоеЛицо</field>
+				<role>
+					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
+				</role>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтепеньРодства</dataPath>
+				<field>СтепеньРодства</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТабельныйНомер</dataPath>
+				<field>ТабельныйНомер</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Табельный номер</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ИмяРодственника</dataPath>
+				<field>ИмяРодственника</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Имя родственника</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник</dataPath>
+				<field>Сотрудник</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Сотрудник</d5p1:content>
+					</d5p1:item>
+				</title>
+				<role>
+					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
+				</role>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТекущееПодразделение</dataPath>
+				<field>ТекущееПодразделение</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТекущаяДолжность</dataPath>
+				<field>ТекущаяДолжность</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ГоловнаяОрганизация</dataPath>
+				<field>ГоловнаяОрганизация</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Состояние</dataPath>
+				<field>Состояние</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Состояние</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	СостоянияСотрудников.Сотрудник КАК Сотрудник,
+	МАКСИМУМ(СостоянияСотрудников.Период) КАК Период
+ПОМЕСТИТЬ ВТСостояние
+ИЗ
+	РегистрСведений.СостоянияСотрудников КАК СостоянияСотрудников
+
+СГРУППИРОВАТЬ ПО
+	СостоянияСотрудников.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СостоянияСотрудников.Сотрудник КАК Сотрудник,
+	ВЫБОР
+		КОГДА СостоянияСотрудников.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияСотрудника.ОтпускПоБеременностиИРодам)
+				ИЛИ СостоянияСотрудников.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияСотрудника.ОтпускПоУходуЗаРебенком)
+			ТОГДА СостоянияСотрудников.Состояние
+		ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.СостоянияСотрудника.Работа)
+	КОНЕЦ КАК Состояние,
+	СоставыСемейФизическихЛиц.Владелец КАК ФизическоеЛицо,
+	СоставыСемейФизическихЛиц.СтепеньРодства КАК СтепеньРодства,
+	СоставыСемейФизическихЛиц.Наименование КАК ИмяРодственника,
+	СоставыСемейФизическихЛиц.ДатаРождения КАК ДатаРождения,
+	СостоянияСотрудников.Сотрудник.Код КАК ТабельныйНомер,
+	КадроваяИсторияСотрудниковСрезПоследних.Должность КАК ТекущаяДолжность,
+	КадроваяИсторияСотрудниковСрезПоследних.Подразделение КАК ТекущееПодразделение
+ИЗ
+	ВТСостояние КАК ВТСостояние
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияСотрудников КАК СостоянияСотрудников
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КадроваяИсторияСотрудников.СрезПоследних КАК КадроваяИсторияСотрудниковСрезПоследних
+			ПО СостоянияСотрудников.Сотрудник = КадроваяИсторияСотрудниковСрезПоследних.Сотрудник
+		ПО ВТСостояние.Сотрудник = СостоянияСотрудников.Сотрудник
+			И ВТСостояние.Период = СостоянияСотрудников.Период
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.РодственникиФизическихЛиц КАК СоставыСемейФизическихЛиц
+		ПО (СостоянияСотрудников.Сотрудник.ФизическоеЛицо = СоставыСемейФизическихЛиц.Владелец)
+ГДЕ
+	НЕ СостоянияСотрудников.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияСотрудника.Увольнение)
+	И (СоставыСемейФизическихЛиц.СтепеньРодства.Наименование = "Дочь"
+			ИЛИ СоставыСемейФизическихЛиц.СтепеньРодства.Наименование = "Сын"
+			ИЛИ СоставыСемейФизическихЛиц.СтепеньРодства.Наименование = "Взят на воспитание")
+
+УПОРЯДОЧИТЬ ПО
+	СостоянияСотрудников.Сотрудник.ФизическоеЛицо.ФИО</query>
+		</dataSet>
+		<parameter>
+			<name>Период</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>false</useRestriction>
+			<inputParameters/>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дети сотрудников</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ТабельныйНомер</field>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табельный номер</v8:content>
+				</v8:item>
+			</lwsTitle>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаПриема</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ТекущееПодразделение</field>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</lwsTitle>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ТекущаяДолжность</field>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность</v8:content>
+				</v8:item>
+			</lwsTitle>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>СтепеньРодства</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ИмяРодственника</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаРождения</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Состояние</field>
+		</item>
+	</selection>
+	<dataParameters/>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Сотрудник</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Заголовок</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">Список сотрудников</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<outputParameters/>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

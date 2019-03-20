@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>Запрос</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФССНесчастныеСлучаи</dataPath>
+				<field>ФССНесчастныеСлучаи</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФСС</dataPath>
+				<field>ФСС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФРСтраховая</dataPath>
+				<field>ПФРСтраховая</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФССЕНВД</dataPath>
+				<field>ФССЕНВД</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФРПоСуммарномуТарифу</dataPath>
+				<field>ПФРПоСуммарномуТарифу</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизическоеЛицо</dataPath>
+				<field>ФизическоеЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФФОМСЕНВД</dataPath>
+				<field>ФФОМСЕНВД</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТФОМСЕНВД</dataPath>
+				<field>ТФОМСЕНВД</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФРНакопительнаяЕНВД</dataPath>
+				<field>ПФРНакопительнаяЕНВД</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПФРСтраховаяЕНВД</dataPath>
+				<field>ПФРСтраховаяЕНВД</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФФОМС</dataPath>
+				<field>ФФОМС</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДФЛ</dataPath>
+				<field>НДФЛ</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>НДФЛ</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Код</dataPath>
+				<field>Код</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Код</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаРождения</dataPath>
+				<field>ДатаРождения</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Дата рождения</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>НДФЛ2</dataPath>
+				<field>НДФЛ2</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>НДФЛ2</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	Данные2.ФизическоеЛицо,
+	Данные2.ФизическоеЛицо.Код КАК Код,
+	Данные2.ФизическоеЛицо.ДатаРождения КАК ДатаРождения,
+	СУММА(Данные2.ФФОМС) КАК ФФОМС,
+	СУММА(Данные2.ФФОМСЕНВД) КАК ФФОМСЕНВД,
+	СУММА(Данные2.ТФОМСЕНВД) КАК ТФОМСЕНВД,
+	СУММА(Данные2.ФСС) КАК ФСС,
+	СУММА(Данные2.ФССЕНВД) КАК ФССЕНВД,
+	СУММА(Данные2.ФССНесчастныеСлучаи) КАК ФССНесчастныеСлучаи,
+	СУММА(Данные2.ПФРНакопительнаяЕНВД) КАК ПФРНакопительнаяЕНВД,
+	СУММА(Данные2.ПФРСтраховая) КАК ПФРСтраховая,
+	СУММА(Данные2.ПФРСтраховаяЕНВД) КАК ПФРСтраховаяЕНВД,
+	СУММА(Данные2.ПФРПоСуммарномуТарифу) КАК ПФРПоСуммарномуТарифу,
+	СУММА(Данные2.НДФЛ) КАК НДФЛ,
+	СУММА(Данные2.НДФЛ2) КАК НДФЛ2
+ИЗ
+	(ВЫБРАТЬ
+		Данные.ФизическоеЛицо КАК ФизическоеЛицо,
+		СУММА(Данные.ФФОМС) КАК ФФОМС,
+		СУММА(Данные.ФФОМСЕНВД) КАК ФФОМСЕНВД,
+		СУММА(Данные.ТФОМСЕНВД) КАК ТФОМСЕНВД,
+		СУММА(Данные.ФСС) КАК ФСС,
+		СУММА(Данные.ФССЕНВД) КАК ФССЕНВД,
+		СУММА(Данные.ФССНесчастныеСлучаи) КАК ФССНесчастныеСлучаи,
+		СУММА(Данные.ПФРНакопительнаяЕНВД) КАК ПФРНакопительнаяЕНВД,
+		СУММА(Данные.ПФРСтраховая) КАК ПФРСтраховая,
+		СУММА(Данные.ПФРСтраховаяЕНВД) КАК ПФРСтраховаяЕНВД,
+		СУММА(Данные.ПФРПоСуммарномуТарифу) КАК ПФРПоСуммарномуТарифу,
+		0 КАК НДФЛ,
+		0 КАК НДФЛ2
+	ИЗ
+		(ВЫБРАТЬ
+			НачислениеЗарплатыВзносы.ФизическоеЛицо КАК ФизическоеЛицо,
+			СУММА(НачислениеЗарплатыВзносы.ФФОМС) КАК ФФОМС,
+			СУММА(НачислениеЗарплатыВзносы.ФФОМСЕНВД) КАК ФФОМСЕНВД,
+			СУММА(НачислениеЗарплатыВзносы.ТФОМСЕНВД) КАК ТФОМСЕНВД,
+			СУММА(НачислениеЗарплатыВзносы.ФСС) КАК ФСС,
+			СУММА(НачислениеЗарплатыВзносы.ФССЕНВД) КАК ФССЕНВД,
+			СУММА(НачислениеЗарплатыВзносы.ФССНесчастныеСлучаи) КАК ФССНесчастныеСлучаи,
+			СУММА(НачислениеЗарплатыВзносы.ПФРНакопительнаяЕНВД) КАК ПФРНакопительнаяЕНВД,
+			СУММА(НачислениеЗарплатыВзносы.ПФРСтраховая) КАК ПФРСтраховая,
+			СУММА(НачислениеЗарплатыВзносы.ПФРСтраховаяЕНВД) КАК ПФРСтраховаяЕНВД,
+			СУММА(ЕСТЬNULL(НачислениеЗарплатыВзносы.ПФРДоПредельнойВеличины, 0) + ЕСТЬNULL(НачислениеЗарплатыВзносы.ПФРСПревышения, 0)) КАК ПФРПоСуммарномуТарифу
+		ИЗ
+			Документ.НачислениеЗарплаты.Взносы КАК НачислениеЗарплатыВзносы
+		ГДЕ
+			НачислениеЗарплатыВзносы.Ссылка.МесяцНачисления МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			И НачислениеЗарплатыВзносы.Ссылка.Проведен = ИСТИНА
+		
+		СГРУППИРОВАТЬ ПО
+			НачислениеЗарплатыВзносы.ФизическоеЛицо
+		
+		ОБЪЕДИНИТЬ ВСЕ
+		
+		ВЫБРАТЬ
+			УвольнениеВзносы.ФизическоеЛицо,
+			УвольнениеВзносы.ФФОМС,
+			УвольнениеВзносы.ФФОМСЕНВД,
+			УвольнениеВзносы.ТФОМСЕНВД,
+			УвольнениеВзносы.ФСС,
+			УвольнениеВзносы.ФССЕНВД,
+			УвольнениеВзносы.ФССНесчастныеСлучаи,
+			УвольнениеВзносы.ПФРНакопительнаяЕНВД,
+			УвольнениеВзносы.ПФРСтраховая,
+			УвольнениеВзносы.ПФРСтраховаяЕНВД,
+			УвольнениеВзносы.ПФРПоСуммарномуТарифу
+		ИЗ
+			Документ.Увольнение.Взносы КАК УвольнениеВзносы
+		ГДЕ
+			УвольнениеВзносы.Ссылка.Проведен = ИСТИНА
+			И УвольнениеВзносы.Ссылка.ПериодРегистрации МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания) КАК Данные
+	
+	СГРУППИРОВАТЬ ПО
+		Данные.ФизическоеЛицо
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		СУММА(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Сумма),
+		0
+	ИЗ
+		РегистрНакопления.РасчетыНалогоплательщиковСБюджетомПоНДФЛ КАК РасчетыНалогоплательщиковСБюджетомПоНДФЛ
+	ГДЕ
+		РасчетыНалогоплательщиковСБюджетомПоНДФЛ.МесяцНалоговогоПериода МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+		И РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+	
+	СГРУППИРОВАТЬ ПО
+		РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		0,
+		СУММА(РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Сумма)
+	ИЗ
+		РегистрНакопления.РасчетыНалогоплательщиковСБюджетомПоНДФЛ КАК РасчетыНалогоплательщиковСБюджетомПоНДФЛ
+	ГДЕ
+		РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Период МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+		И РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+	
+	СГРУППИРОВАТЬ ПО
+		РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо) КАК Данные2
+
+СГРУППИРОВАТЬ ПО
+	Данные2.ФизическоеЛицо,
+	Данные2.ФизическоеЛицо.Код,
+	Данные2.ФизическоеЛицо.ДатаРождения</query>
+		</dataSet>
+		<totalField>
+			<dataPath>ПФРНакопительнаяЕНВД</dataPath>
+			<expression>Сумма(ПФРНакопительнаяЕНВД)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФРПоСуммарномуТарифу</dataPath>
+			<expression>Сумма(ПФРПоСуммарномуТарифу)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФРСтраховая</dataPath>
+			<expression>Сумма(ПФРСтраховая)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ПФРСтраховаяЕНВД</dataPath>
+			<expression>Сумма(ПФРСтраховаяЕНВД)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ТФОМСЕНВД</dataPath>
+			<expression>Сумма(ТФОМСЕНВД)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФСС</dataPath>
+			<expression>Сумма(ФСС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФССЕНВД</dataPath>
+			<expression>Сумма(ФССЕНВД)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФССНесчастныеСлучаи</dataPath>
+			<expression>Сумма(ФССНесчастныеСлучаи)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФФОМС</dataPath>
+			<expression>Сумма(ФФОМС)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ФФОМСЕНВД</dataPath>
+			<expression>Сумма(ФФОМСЕНВД)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НДФЛ</dataPath>
+			<expression>Сумма(НДФЛ)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>НДФЛ2</dataPath>
+			<expression>Сумма(НДФЛ2)</expression>
+		</totalField>
+		<parameter>
+			<name>ДатаНачала</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дата начала</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>Date</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;Период.ДатаНачала</expression>
+			<availableAsField>false</availableAsField>
+		</parameter>
+		<parameter>
+			<name>ДатаОкончания</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дата окончания</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>Date</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;Период.ДатаОкончания</expression>
+			<availableAsField>false</availableAsField>
+		</parameter>
+		<parameter>
+			<name>Период</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">StandardPeriod</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:StandardPeriod">
+				<d4p1:variant xsi:type="d4p1:StandardPeriodVariant">Custom</d4p1:variant>
+				<d4p1:startDate>0001-01-01T00:00:00</d4p1:startDate>
+				<d4p1:endDate>0001-01-01T00:00:00</d4p1:endDate>
+			</value>
+			<useRestriction>false</useRestriction>
+			<availableAsField>false</availableAsField>
+			<use>Always</use>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Анализ начисленных налогов и взносов</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>ФизическоеЛицо</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Код</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаРождения</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПФРПоСуммарномуТарифу</field>
+			<title>ПФР</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ФСС</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ФФОМС</field>
+			<title>ФОМС</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ФССНесчастныеСлучаи</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>НДФЛ</field>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДФЛ (по дате получения дохода)</v8:content>
+				</v8:item>
+			</lwsTitle>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>НДФЛ2</field>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДФЛ (По месяцу начисления)</v8:content>
+				</v8:item>
+			</lwsTitle>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Период</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+			</dcscor:value>
+			<userSettingID>0c120052-516f-4fb2-9921-8c679cff369b</userSettingID>
+			<userSettingPresentation xsi:type="xs:string">Период</userSettingPresentation>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>ФизическоеЛицо.Наименование</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>ДатаРождения</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Заголовок</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">Анализ начисленных налогов и взносов</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

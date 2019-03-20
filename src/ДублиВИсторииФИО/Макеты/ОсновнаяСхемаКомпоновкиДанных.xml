@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизическоеЛицо</dataPath>
+				<field>ФизическоеЛицо</field>
+				<role>
+					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Количество</dataPath>
+				<field>Количество</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Количество</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ФИОФизическихЛиц.ФизическоеЛицо,
+	ФИОФизическихЛиц.Фамилия,
+	ФИОФизическихЛиц.Имя,
+	ФИОФизическихЛиц.Отчество,
+	1 КАК Количество
+ПОМЕСТИТЬ ВТ_ДУБЛИ_ФИО
+ИЗ
+	РегистрСведений.ФИОФизическихЛиц КАК ФИОФизическихЛиц
+	
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДУБЛИ_ФИО.ФизическоеЛицо КАК ФизическоеЛицо,
+	СУММА(ВТ_ДУБЛИ_ФИО.Количество) КАК Количество,
+	ВТ_ДУБЛИ_ФИО.Фамилия КАК Фамилия,
+	ВТ_ДУБЛИ_ФИО.Имя КАК Имя,
+	ВТ_ДУБЛИ_ФИО.Отчество КАК Отчество
+ПОМЕСТИТЬ ВТ_ДАННЫЕ
+ИЗ
+	ВТ_ДУБЛИ_ФИО КАК ВТ_ДУБЛИ_ФИО
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ДУБЛИ_ФИО.ФизическоеЛицо,
+	ВТ_ДУБЛИ_ФИО.Фамилия,
+	ВТ_ДУБЛИ_ФИО.Имя,
+	ВТ_ДУБЛИ_ФИО.Отчество
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Данные.ФизическоеЛицо,
+	Данные.Количество
+ИЗ
+	(ВЫБРАТЬ
+		ВТ_ДАННЫЕ.ФизическоеЛицо КАК ФизическоеЛицо,
+		ВТ_ДАННЫЕ.Количество КАК Количество,
+		ВТ_ДАННЫЕ.Фамилия КАК Фамилия,
+		ВТ_ДАННЫЕ.Имя КАК Имя,
+		ВТ_ДАННЫЕ.Отчество КАК Отчество
+	ИЗ
+		ВТ_ДАННЫЕ КАК ВТ_ДАННЫЕ) КАК Данные
+ГДЕ
+	Данные.Количество &lt;&gt; 1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_ДУБЛИ_ФИО
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_ДАННЫЕ</query>
+		</dataSet>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дубли в истории изменении ФИО</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>СистемныеПоля.НомерПоПорядку</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ФизическоеЛицо</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Количество</field>
+		</item>
+	</selection>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Количество</field>
+			<orderType>Desc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>ФизическоеЛицо</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

@@ -1,0 +1,13 @@
+﻿0f3d2619-823d-48d5-a64c-2c086d9e20ee-->und\0f3d2619-823d-48d5-a64c-2c086d9e20ee
+0f3d2619-823d-48d5-a64c-2c086d9e20ee.0-->und\0f3d2619-823d-48d5-a64c-2c086d9e20ee.0
+3be1cbda-43e0-44e8-b47f-dfa5c201c06a-->und\3be1cbda-43e0-44e8-b47f-dfa5c201c06a
+3be1cbda-43e0-44e8-b47f-dfa5c201c06a.0-->und\3be1cbda-43e0-44e8-b47f-dfa5c201c06a.0
+4126214c-cf00-4718-a088-7337a95e3589.0\info-->und\4126214c-cf00-4718-a088-7337a95e3589.0\info
+4126214c-cf00-4718-a088-7337a95e3589.0\text-->ObjectModule.bsl
+4afc506d-b793-44ed-bfd1-57e8440868df-->und\4afc506d-b793-44ed-bfd1-57e8440868df
+copyinfo-->und\copyinfo
+deb362b2-cf61-414d-a46f-c49c06ada211-->und\deb362b2-cf61-414d-a46f-c49c06ada211
+deb362b2-cf61-414d-a46f-c49c06ada211.0-->und\deb362b2-cf61-414d-a46f-c49c06ada211.0
+root-->und\root
+version-->und\version
+versions-->und\versions

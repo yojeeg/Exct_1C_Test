@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЧасовТабель</dataPath>
+				<field>ЧасовТабель</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Часов табель</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник</dataPath>
+				<field>Сотрудник</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДнейТабель</dataPath>
+				<field>ДнейТабель</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Дней табель</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОтработаноДней</dataPath>
+				<field>ОтработаноДней</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Отработано дней</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОтработаноЧасов</dataPath>
+				<field>ОтработаноЧасов</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Отработано часов</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ДанныеТабельногоУчетаРабочегоВремениСотрудников.Сотрудник КАК Сотрудник,
+	СУММА(ДанныеТабельногоУчетаРабочегоВремениСотрудников.Дни) КАК Дни,
+	СУММА(ДанныеТабельногоУчетаРабочегоВремениСотрудников.Часы) КАК Часы,
+	ПРЕДСТАВЛЕНИЕССЫЛКИ(ДанныеТабельногоУчетаРабочегоВремениСотрудников.Сотрудник) КАК СотрудникПредставление
+ПОМЕСТИТЬ ВТ_ДАННЫЕ_ТАБЕЛЯ
+ИЗ
+	РегистрНакопления.ДанныеТабельногоУчетаРабочегоВремениСотрудников КАК ДанныеТабельногоУчетаРабочегоВремениСотрудников
+ГДЕ
+	ДанныеТабельногоУчетаРабочегоВремениСотрудников.ВидУчетаВремени = ЗНАЧЕНИЕ(Справочник.ВидыИспользованияРабочегоВремени.Явка)
+	И ДанныеТабельногоУчетаРабочегоВремениСотрудников.Период МЕЖДУ НАЧАЛОПЕРИОДА(&amp;ПериодДействия, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;ПериодДействия, МЕСЯЦ)
+
+СГРУППИРОВАТЬ ПО
+	ДанныеТабельногоУчетаРабочегоВремениСотрудников.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОтработанноеВремяПоСотрудникамАвансом.Сотрудник КАК Сотрудник,
+	СУММА(ОтработанноеВремяПоСотрудникамАвансом.ОтработаноДней) КАК ОтработаноДней,
+	СУММА(ОтработанноеВремяПоСотрудникамАвансом.ОтработаноЧасов) КАК ОтработаноЧасов
+ПОМЕСТИТЬ ВТ_ОТРАБОТАННОЕ_ВРЕМЯ_АВАНС
+ИЗ
+	РегистрНакопления.ОтработанноеВремяПоСотрудникамАвансом КАК ОтработанноеВремяПоСотрудникамАвансом
+ГДЕ
+	ОтработанноеВремяПоСотрудникамАвансом.ПериодДействия = &amp;ПериодДействия
+
+СГРУППИРОВАТЬ ПО
+	ОтработанноеВремяПоСотрудникамАвансом.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОтработанноеВремяПоСотрудникам.Сотрудник КАК Сотрудник,
+	СУММА(ОтработанноеВремяПоСотрудникам.ОтработаноДней) КАК ОтработаноДней,
+	СУММА(ОтработанноеВремяПоСотрудникам.ОтработаноЧасов) КАК ОтработаноЧасов
+ПОМЕСТИТЬ ВТ_ОТРАБОТАННОЕ_ВРЕМЯ
+ИЗ
+	РегистрНакопления.ОтработанноеВремяПоСотрудникам КАК ОтработанноеВремяПоСотрудникам
+ГДЕ
+	ОтработанноеВремяПоСотрудникам.ПериодДействия = &amp;ПериодДействия
+	И ОтработанноеВремяПоСотрудникам.Регистратор ССЫЛКА Документ.НачислениеЗарплаты
+
+СГРУППИРОВАТЬ ПО
+	ОтработанноеВремяПоСотрудникам.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДАННЫЕ_ТАБЕЛЯ.Сотрудник КАК Сотрудник,
+	ВТ_ДАННЫЕ_ТАБЕЛЯ.Дни КАК ДнейТабель,
+	ВТ_ДАННЫЕ_ТАБЕЛЯ.Часы КАК ЧасовТабель,
+	ВЫБОР
+		КОГДА &amp;Аванс
+			ТОГДА ВТ_ОТРАБОТАННОЕ_ВРЕМЯ_АВАНС.ОтработаноДней
+		ИНАЧЕ ВТ_ОТРАБОТАННОЕ_ВРЕМЯ.ОтработаноДней
+	КОНЕЦ КАК ОтработаноДней,
+	ВЫБОР
+		КОГДА &amp;Аванс
+			ТОГДА ВТ_ОТРАБОТАННОЕ_ВРЕМЯ_АВАНС.ОтработаноЧасов
+		ИНАЧЕ ВТ_ОТРАБОТАННОЕ_ВРЕМЯ.ОтработаноЧасов
+	КОНЕЦ КАК ОтработаноЧасов
+ИЗ
+	ВТ_ДАННЫЕ_ТАБЕЛЯ КАК ВТ_ДАННЫЕ_ТАБЕЛЯ
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ОТРАБОТАННОЕ_ВРЕМЯ_АВАНС КАК ВТ_ОТРАБОТАННОЕ_ВРЕМЯ_АВАНС
+		ПО ВТ_ДАННЫЕ_ТАБЕЛЯ.Сотрудник = ВТ_ОТРАБОТАННОЕ_ВРЕМЯ_АВАНС.Сотрудник
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ОТРАБОТАННОЕ_ВРЕМЯ КАК ВТ_ОТРАБОТАННОЕ_ВРЕМЯ
+		ПО ВТ_ДАННЫЕ_ТАБЕЛЯ.Сотрудник = ВТ_ОТРАБОТАННОЕ_ВРЕМЯ.Сотрудник
+
+УПОРЯДОЧИТЬ ПО
+	ВТ_ДАННЫЕ_ТАБЕЛЯ.СотрудникПредставление</query>
+		</dataSet>
+		<parameter>
+			<name>ПериодДействия</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период действия</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;Период.ДатаНачала</expression>
+			<inputParameters/>
+		</parameter>
+		<parameter>
+			<name>Период</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">StandardPeriod</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:StandardPeriod">
+				<d4p1:variant xsi:type="d4p1:StandardPeriodVariant">Custom</d4p1:variant>
+				<d4p1:startDate>0001-01-01T00:00:00</d4p1:startDate>
+				<d4p1:endDate>0001-01-01T00:00:00</d4p1:endDate>
+			</value>
+			<useRestriction>false</useRestriction>
+			<inputParameters/>
+		</parameter>
+		<parameter>
+			<name>Аванс</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Аванс</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:boolean</Type>
+			</valueType>
+			<value xsi:type="xs:boolean">false</value>
+			<useRestriction>false</useRestriction>
+			<inputParameters/>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Проверка отработанного времени</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник</field>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табель</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemField">
+				<field>ДнейТабель</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дней</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ЧасовТабель</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Часов</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<placement>Auto</placement>
+		</item>
+		<item xsi:type="SelectedItemFolder">
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчет</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<item xsi:type="SelectedItemField">
+				<field>ОтработаноДней</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дней</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ОтработаноЧасов</field>
+				<lwsTitle>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Часов</v8:content>
+					</v8:item>
+				</lwsTitle>
+			</item>
+			<placement>Auto</placement>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Период</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</dcscor:value>
+			<userSettingID>8345d376-e2ef-4064-aa40-709da7a93371</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Аванс</dcscor:parameter>
+			<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			<userSettingID>3a79aa82-3e3f-44f5-9a81-8b56ce4a16f7</userSettingID>
+			<userSettingPresentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это Аванс</v8:content>
+				</v8:item>
+			</userSettingPresentation>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Сотрудник</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<conditionalAppearance>
+		<item>
+			<selection>
+				<item>
+					<field>ДнейТабель</field>
+				</item>
+				<item>
+					<field>ОтработаноДней</field>
+				</item>
+				<item>
+					<field>Сотрудник</field>
+				</item>
+				<item>
+					<field>ЧасовТабель</field>
+				</item>
+				<item>
+					<field>ОтработаноЧасов</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemGroup">
+					<groupType>OrGroup</groupType>
+					<item xsi:type="FilterItemComparison">
+						<left xsi:type="dcscor:Field">ДнейТабель</left>
+						<comparisonType>NotEqual</comparisonType>
+						<right xsi:type="dcscor:Field">ОтработаноДней</right>
+					</item>
+					<item xsi:type="FilterItemComparison">
+						<left xsi:type="dcscor:Field">ЧасовТабель</left>
+						<comparisonType>NotEqual</comparisonType>
+						<right xsi:type="dcscor:Field">ОтработаноЧасов</right>
+					</item>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ДнейТабель</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДнейТабель</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ЧасовТабель</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ЧасовТабель</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ОтработаноДней</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ОтработаноДней</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>ОтработаноЧасов</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ОтработаноЧасов</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+	</conditionalAppearance>
+	<outputParameters/>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<outputParameters/>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

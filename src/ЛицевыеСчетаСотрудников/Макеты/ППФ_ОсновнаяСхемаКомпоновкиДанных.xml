@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>Данные</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НачисленияУдержания</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МесяцНачисления</dataPath>
+				<field>МесяцНачисления</field>
+				<appearance>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="dcsset:SettingsParameterValue">
+						<use>false</use>
+						<parameter>Формат</parameter>
+						<value xsi:type="xs:string">ДФ='ММММ гггг'</value>
+					</item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<appearance/>
+				<inputParameters>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+						<parameter>СвязиПараметровВыбора</parameter>
+						<value xsi:type="ChoiceParameterLinks">
+							<item>
+								<choiceParameter>Отбор.Владелец</choiceParameter>
+								<value>Организация</value>
+								<mode xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d9p1:LinkedValueChangeMode">Clear</mode>
+							</item>
+						</value>
+					</item>
+				</inputParameters>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник</dataPath>
+				<field>Сотрудник</field>
+				<appearance/>
+				<inputParameters>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+						<parameter>СвязиПараметровВыбора</parameter>
+						<value xsi:type="ChoiceParameterLinks">
+							<item>
+								<choiceParameter>Отбор.ТекущаяОрганизация</choiceParameter>
+								<value>Организация</value>
+								<mode xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d9p1:LinkedValueChangeMode">Clear</mode>
+							</item>
+							<item>
+								<choiceParameter>Отбор.ТекущееПодразделение</choiceParameter>
+								<value>Подразделение</value>
+								<mode xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d9p1:LinkedValueChangeMode">Clear</mode>
+							</item>
+						</value>
+					</item>
+				</inputParameters>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизическоеЛицо</dataPath>
+				<field>ФизическоеЛицо</field>
+				<appearance/>
+				<inputParameters>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+						<parameter>СвязиПараметровВыбора</parameter>
+						<value xsi:type="ChoiceParameterLinks">
+							<item>
+								<choiceParameter>Отбор.Организация</choiceParameter>
+								<value>Организация</value>
+								<mode xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d9p1:LinkedValueChangeMode">Clear</mode>
+							</item>
+						</value>
+					</item>
+				</inputParameters>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ГоловнаяОрганизация</dataPath>
+				<field>ГоловнаяОрганизация</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник.ДатаРождения</dataPath>
+				<field>ДатаРождения</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник.ИНН</dataPath>
+				<field>ИНН</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МестоРождения</dataPath>
+				<field>МестоРождения</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Пол</dataPath>
+				<field>Пол</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПроцентСевернойНадбавки</dataPath>
+				<field>ПроцентСевернойНадбавки</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник.СтраховойНомерПФР</dataPath>
+				<field>СтраховойНомерПФР</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник.ТабельныйНомер</dataPath>
+				<field>ТабельныйНомер</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник.ДатаПриема</dataPath>
+				<field>ДатаПриема</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник.ДатаУвольнения</dataPath>
+				<field>ДатаУвольнения</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник.СНИЛС</dataPath>
+				<field>СНИЛС</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник.ФИОПолные</dataPath>
+				<field>ФИОПолные</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ГодНачисления</dataPath>
+				<field>ГодНачисления</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник.СостояниеВБраке</dataPath>
+				<field>СостояниеВБраке</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник.КоличествоДетей</dataPath>
+				<field>КоличествоДетей</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Количество детей</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<dataSource>Данные</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Сотрудники.Ссылка КАК Сотрудник,
+	&amp;КонецПериода КАК Период
+ПОМЕСТИТЬ ВТСотрудникиОрганизаций
+{ВЫБРАТЬ
+	Сотрудник.*}
+ИЗ
+	Справочник.Сотрудники КАК Сотрудники
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ТекущиеКадровыеДанныеСотрудников КАК ТекущиеКадровыеДанныеСотрудников
+		ПО (ТекущиеКадровыеДанныеСотрудников.Сотрудник = Сотрудники.Ссылка)
+			И (ТекущиеКадровыеДанныеСотрудников.ФизическоеЛицо = Сотрудники.ФизическоеЛицо)
+ГДЕ
+	ТекущиеКадровыеДанныеСотрудников.ОформленПоТрудовомуДоговору
+{ГДЕ
+	Сотрудники.Ссылка.* КАК Сотрудник,
+	Сотрудники.Код КАК ТабельныйНомер,
+	Сотрудники.ФизическоеЛицо.*,
+	Сотрудники.ГоловнаяОрганизация.*,
+	Сотрудники.ТекущийПроцентСевернойНадбавки КАК ПроцентСевернойНадбавки,
+	Сотрудники.ФизическоеЛицо.Пол КАК Пол,
+	Сотрудники.ФизическоеЛицо.ДатаРождения КАК ДатаРождения,
+	Сотрудники.ФизическоеЛицо.ИНН КАК ИНН,
+	Сотрудники.ФизическоеЛицо.СтраховойНомерПФР КАК СтраховойНомерПФР,
+	Сотрудники.ФизическоеЛицо.МестоРождения КАК МестоРождения}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДАТАВРЕМЯ(1, 1, 1) КАК Период
+ПОМЕСТИТЬ Представления_Периоды_Месяца
+ГДЕ
+	"НачалоИнтервала" = НАЧАЛОПЕРИОДА(&amp;НачалоПериода, ГОД)
+	И "ОкончаниеИнтервала" = КОНЕЦПЕРИОДА(&amp;КонецПериода, МЕСЯЦ)
+	И "Периодичность" = "МЕСЯЦ"
+	И "ИспользоватьКонецПериода" = ЛОЖЬ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка) КАК Организация,
+	ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка) КАК Подразделение,
+	ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка) КАК Сотрудник,
+	ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка) КАК ФизическоеЛицо,
+	ВЫРАЗИТЬ("" КАК СТРОКА) КАК ФИОПолные,
+	"" КАК ТабельныйНомер,
+	ДАТАВРЕМЯ(1, 1, 1) КАК ДатаРождения,
+	ВЫРАЗИТЬ("" КАК СТРОКА) КАК ИНН,
+	ВЫРАЗИТЬ("" КАК СТРОКА) КАК СтраховойНомерПФР,
+	ЗНАЧЕНИЕ(Справочник.СостояниеВБраке.ПустаяСсылка) КАК СостояниеВБраке,
+	ДАТАВРЕМЯ(1, 1, 1) КАК ДатаПриема,
+	ДАТАВРЕМЯ(1, 1, 1) КАК ДатаУвольнения,
+	0 КАК КоличествоДетей
+ПОМЕСТИТЬ Представления_КадровыеДанныеСотрудников_ВсеКадровыеДанные
+ИЗ
+	ВТСотрудникиОрганизаций КАК СотрудникиОрганизаций
+ГДЕ
+	"ТолькоРазрешенные" = ИСТИНА
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Представления_Периоды_Месяца.Период КАК МесяцНачисления,
+	КадровыеДанныеСотрудников.Организация КАК Организация,
+	КадровыеДанныеСотрудников.Подразделение КАК Подразделение,
+	КадровыеДанныеСотрудников.Сотрудник КАК Сотрудник,
+	КадровыеДанныеСотрудников.ФизическоеЛицо КАК ФизическоеЛицо,
+	КадровыеДанныеСотрудников.ФИОПолные КАК ФИОПолные,
+	КадровыеДанныеСотрудников.ТабельныйНомер КАК ТабельныйНомер,
+	КадровыеДанныеСотрудников.ДатаРождения КАК ДатаРождения,
+	КадровыеДанныеСотрудников.ИНН КАК ИНН,
+	КадровыеДанныеСотрудников.СтраховойНомерПФР КАК СтраховойНомерПФР,
+	КадровыеДанныеСотрудников.СостояниеВБраке КАК СостояниеВБраке,
+	КадровыеДанныеСотрудников.ДатаПриема КАК ДатаПриема,
+	КадровыеДанныеСотрудников.ДатаУвольнения КАК ДатаУвольнения,
+	КадровыеДанныеСотрудников.КоличествоДетей КАК КоличествоДетей
+ПОМЕСТИТЬ ВТСотрудникиСПериодами
+ИЗ
+	Представления_Периоды_Месяца КАК Представления_Периоды_Месяца
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Представления_КадровыеДанныеСотрудников_ВсеКадровыеДанные КАК КадровыеДанныеСотрудников
+		ПО (ИСТИНА)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	НАЧАЛОПЕРИОДА(КадровыеДанныеСотрудников.МесяцНачисления, ГОД) КАК ГодНачисления,
+	КадровыеДанныеСотрудников.МесяцНачисления КАК МесяцНачисления,
+	КадровыеДанныеСотрудников.Организация КАК Организация,
+	КадровыеДанныеСотрудников.Подразделение КАК Подразделение,
+	КадровыеДанныеСотрудников.Сотрудник КАК Сотрудник,
+	КадровыеДанныеСотрудников.ФизическоеЛицо КАК ФизическоеЛицо,
+	КадровыеДанныеСотрудников.ФИОПолные КАК ФИОПолные,
+	КадровыеДанныеСотрудников.ТабельныйНомер КАК ТабельныйНомер,
+	КадровыеДанныеСотрудников.ДатаРождения КАК ДатаРождения,
+	КадровыеДанныеСотрудников.ИНН КАК ИНН,
+	КадровыеДанныеСотрудников.СтраховойНомерПФР КАК СНИЛС,
+	КадровыеДанныеСотрудников.СостояниеВБраке КАК СостояниеВБраке,
+	КадровыеДанныеСотрудников.ДатаПриема КАК ДатаПриема,
+	КадровыеДанныеСотрудников.ДатаУвольнения КАК ДатаУвольнения,
+	КадровыеДанныеСотрудников.КоличествоДетей КАК КоличествоДетей
+{ВЫБРАТЬ
+	МесяцНачисления,
+	Организация.*,
+	Подразделение.*,
+	Сотрудник.*,
+	ФизическоеЛицо.*,
+	ФИОПолные,
+	ТабельныйНомер,
+	ДатаРождения,
+	ИНН,
+	СНИЛС,
+	СостояниеВБраке.*,
+	ДатаПриема,
+	ДатаУвольнения,
+	ГодНачисления,
+	КоличествоДетей}
+ИЗ
+	ВТСотрудникиСПериодами КАК КадровыеДанныеСотрудников
+{ГДЕ
+	КадровыеДанныеСотрудников.МесяцНачисления,
+	КадровыеДанныеСотрудников.Организация.*,
+	КадровыеДанныеСотрудников.Подразделение.*,
+	КадровыеДанныеСотрудников.Сотрудник.*,
+	КадровыеДанныеСотрудников.ФизическоеЛицо.*,
+	КадровыеДанныеСотрудников.ФИОПолные,
+	КадровыеДанныеСотрудников.ТабельныйНомер,
+	КадровыеДанныеСотрудников.ДатаРождения,
+	КадровыеДанныеСотрудников.ИНН,
+	КадровыеДанныеСотрудников.СтраховойНомерПФР,
+	КадровыеДанныеСотрудников.СостояниеВБраке.*,
+	КадровыеДанныеСотрудников.ДатаПриема,
+	КадровыеДанныеСотрудников.ДатаУвольнения,
+	(НАЧАЛОПЕРИОДА(КадровыеДанныеСотрудников.МесяцНачисления, ГОД)) КАК ГодНачисления,
+	КадровыеДанныеСотрудников.КоличествоДетей}</query>
+			<autoFillFields>false</autoFillFields>
+		</dataSet>
+		<calculatedField>
+			<dataPath>Сотрудник.ТабельныйНомер</dataPath>
+			<expression>ПрефиксацияОбъектовКлиентСервер.УдалитьПрефиксыИзНомераОбъекта(Сотрудник.ТабельныйНомер, Истина, Истина)</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Табельный номер</d4p1:content>
+				</d4p1:item>
+			</title>
+			<appearance/>
+		</calculatedField>
+		<parameter>
+			<name>КонецПериода</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Конец периода</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;Период.ДатаОкончания</expression>
+		</parameter>
+		<parameter>
+			<name>НачалоПериода</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Начало периода</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;Период.ДатаНачала</expression>
+		</parameter>
+		<parameter>
+			<name>Период</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">StandardPeriod</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:StandardPeriod">
+				<d4p1:variant xsi:type="d4p1:StandardPeriodVariant">ThisYear</d4p1:variant>
+			</value>
+			<useRestriction>false</useRestriction>
+			<availableAsField>false</availableAsField>
+			<use>Always</use>
+		</parameter>
+		<parameter>
+			<name>Бухгалтер</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Бухгалтер</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<TypeId xmlns="http://v8.1c.ru/8.1/data/core">0b5b297d-c294-4d60-ba38-bfc84bea70aa</TypeId>
+			</valueType>
+			<value xsi:nil="true"/>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<parameter>
+			<name>КлючВарианта</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Ключ варианта</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:string</Type>
+				<StringQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Length>0</Length>
+					<AllowedLength>Variable</AllowedLength>
+				</StringQualifiers>
+			</valueType>
+			<value xsi:type="xs:string"/>
+			<useRestriction>true</useRestriction>
+			<availableAsField>false</availableAsField>
+			<use>Always</use>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Т54</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Лицевой счет (Т-54)</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Т54а</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Лицевой счет (Т-54а)</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>МесяцНачисления</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Организация</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник.ИНН</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник.ТабельныйНомер</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник.ДатаРождения</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПараметрыДанных.НачалоПериода</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПараметрыДанных.КонецПериода</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник.ФизическоеЛицо</field>
+		</item>
+	</selection>
+	<filter>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Сотрудник</left>
+			<comparisonType>InList</comparisonType>
+			<right xsi:type="v8:ValueListType">
+				<v8:valueType/>
+				<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+			</right>
+			<userSettingID>20b507f4-ef0f-4de3-9d1c-5fc9eebbf4b3</userSettingID>
+			<userSettingPresentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудники</v8:content>
+				</v8:item>
+			</userSettingPresentation>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Организация</left>
+			<comparisonType>Equal</comparisonType>
+			<userSettingID>e79abd21-59ec-4df5-9838-085f60439faa</userSettingID>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Подразделение</left>
+			<comparisonType>InHierarchy</comparisonType>
+			<viewMode>Normal</viewMode>
+			<userSettingID>29695229-3f37-4a0a-ade2-6994a4f2efa5</userSettingID>
+		</item>
+	</filter>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>НачалоПериода</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardBeginningDate">
+				<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+				<v8:date>0001-01-01T00:00:00</v8:date>
+			</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Период</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">FromBeginningOfThisYear</v8:variant>
+			</dcscor:value>
+			<userSettingID>27bad657-a126-4c87-b082-6a548921e8b3</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>Бухгалтер</dcscor:parameter>
+			<dcscor:value xsi:nil="true"/>
+			<viewMode>Normal</viewMode>
+			<userSettingID>9d72105e-0835-443d-bcf7-70e642b3b86e</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>КлючВарианта</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">Т54</dcscor:value>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>МесяцНачисления</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Организация.Наименование</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Сотрудник.Наименование</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<outputParameters/>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>ГодНачисления</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>Year</periodAdditionType>
+				<periodAdditionBegin xsi:type="dcscor:Field">ПараметрыДанных.НачалоПериода</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="dcscor:Field">ПараметрыДанных.КонецПериода</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemField">
+				<field>ГодНачисления</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ПараметрыДанных.КонецПериода</field>
+			</item>
+		</selection>
+		<outputParameters/>
+		<item xsi:type="StructureItemGroup">
+			<groupItems>
+				<item xsi:type="GroupItemField">
+					<field>Организация</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<outputParameters/>
+			<item xsi:type="StructureItemGroup">
+				<groupItems>
+					<item xsi:type="GroupItemField">
+						<field>Подразделение</field>
+						<groupType>Items</groupType>
+						<periodAdditionType>None</periodAdditionType>
+						<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+						<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+					</item>
+				</groupItems>
+				<order>
+					<item xsi:type="OrderItemAuto"/>
+				</order>
+				<selection>
+					<item xsi:type="SelectedItemAuto"/>
+				</selection>
+				<outputParameters/>
+				<item xsi:type="StructureItemGroup">
+					<groupItems>
+						<item xsi:type="GroupItemField">
+							<field>Сотрудник</field>
+							<groupType>Items</groupType>
+							<periodAdditionType>None</periodAdditionType>
+							<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+							<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+						</item>
+					</groupItems>
+					<order>
+						<item xsi:type="OrderItemAuto"/>
+					</order>
+					<selection>
+						<item xsi:type="SelectedItemAuto"/>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ТабельныйНомер</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ДатаРождения</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ИНН</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.СНИЛС</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ФИОПолные</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.СостояниеВБраке</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ДатаПриема</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ДатаУвольнения</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Организация.НаименованиеПолное</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Организация.КодПоОКПО</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Подразделение.Наименование</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>ПараметрыДанных.НачалоПериода</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>ПараметрыДанных.КонецПериода</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ФизическоеЛицо</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.КоличествоДетей</field>
+						</item>
+					</selection>
+					<outputParameters/>
+					<item xsi:type="StructureItemGroup">
+						<groupItems>
+							<item xsi:type="GroupItemAuto"/>
+						</groupItems>
+						<order>
+							<item xsi:type="OrderItemAuto"/>
+						</order>
+						<selection>
+							<item xsi:type="SelectedItemAuto"/>
+						</selection>
+						<outputParameters/>
+					</item>
+				</item>
+			</item>
+		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>МесяцНачисления</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Организация</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник.ИНН</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник.ТабельныйНомер</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник.ДатаРождения</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПараметрыДанных.НачалоПериода</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПараметрыДанных.КонецПериода</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник.ФизическоеЛицо</field>
+		</item>
+	</selection>
+	<filter>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Сотрудник</left>
+			<comparisonType>InList</comparisonType>
+			<right xsi:type="v8:ValueListType">
+				<v8:valueType/>
+				<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+			</right>
+			<userSettingID>bd50da54-ccf1-4c16-aa19-835619052f78</userSettingID>
+			<userSettingPresentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудники</v8:content>
+				</v8:item>
+			</userSettingPresentation>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Организация</left>
+			<comparisonType>Equal</comparisonType>
+			<userSettingID>4c5f5f0a-4541-4339-88b3-120c17f58b98</userSettingID>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Подразделение</left>
+			<comparisonType>InHierarchy</comparisonType>
+			<viewMode>Normal</viewMode>
+			<userSettingID>df756cdf-268d-40b5-b4a6-aa63fa185e8b</userSettingID>
+		</item>
+	</filter>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Период</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">FromBeginningOfThisYear</v8:variant>
+			</dcscor:value>
+			<userSettingID>ff533013-babf-4924-83f8-19bf8a31b2fa</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>Бухгалтер</dcscor:parameter>
+			<dcscor:value xsi:nil="true"/>
+			<viewMode>Normal</viewMode>
+			<userSettingID>ae38d5b8-02c7-42f1-b341-b3d056c740ef</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>КлючВарианта</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">Т54а</dcscor:value>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>МесяцНачисления</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Организация.Наименование</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Сотрудник.Наименование</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<outputParameters/>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>ГодНачисления</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemField">
+				<field>ГодНачисления</field>
+			</item>
+			<item xsi:type="SelectedItemField">
+				<field>ПараметрыДанных.КонецПериода</field>
+			</item>
+		</selection>
+		<outputParameters/>
+		<item xsi:type="StructureItemGroup">
+			<groupItems>
+				<item xsi:type="GroupItemField">
+					<field>Организация</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<outputParameters/>
+			<item xsi:type="StructureItemGroup">
+				<groupItems>
+					<item xsi:type="GroupItemField">
+						<field>Подразделение</field>
+						<groupType>Items</groupType>
+						<periodAdditionType>None</periodAdditionType>
+						<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+						<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+					</item>
+				</groupItems>
+				<order>
+					<item xsi:type="OrderItemAuto"/>
+				</order>
+				<selection>
+					<item xsi:type="SelectedItemAuto"/>
+				</selection>
+				<outputParameters/>
+				<item xsi:type="StructureItemGroup">
+					<groupItems>
+						<item xsi:type="GroupItemField">
+							<field>Сотрудник</field>
+							<groupType>Items</groupType>
+							<periodAdditionType>None</periodAdditionType>
+							<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+							<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+						</item>
+					</groupItems>
+					<order>
+						<item xsi:type="OrderItemAuto"/>
+					</order>
+					<selection>
+						<item xsi:type="SelectedItemAuto"/>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ТабельныйНомер</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ДатаРождения</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ИНН</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.СНИЛС</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ФИОПолные</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.СостояниеВБраке</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ДатаПриема</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ДатаУвольнения</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Организация.НаименованиеПолное</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Организация.КодПоОКПО</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Подразделение.Наименование</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>ПараметрыДанных.НачалоПериода</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>ПараметрыДанных.КонецПериода</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ФизическоеЛицо</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.КоличествоДетей</field>
+						</item>
+					</selection>
+					<outputParameters/>
+					<item xsi:type="StructureItemGroup">
+						<order>
+							<item xsi:type="OrderItemAuto"/>
+						</order>
+						<selection>
+							<item xsi:type="SelectedItemAuto"/>
+						</selection>
+						<outputParameters/>
+					</item>
+				</item>
+			</item>
+		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<template>
+			<name>Макет3</name>
+			<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+				<dcsat:item xsi:type="dcsat:TableRow">
+					<dcsat:tableCell>
+						<dcsat:item xsi:type="dcsat:Field">
+							<dcsat:value xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xsi:type="dcscor:Parameter">ВидРасчета</dcsat:value>
+						</dcsat:item>
+						<dcsat:appIndex>0</dcsat:appIndex>
+					</dcsat:tableCell>
+				</dcsat:item>
+			</template>
+			<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+				<dcsat:name>ВидРасчета</dcsat:name>
+				<dcsat:expression>Представление(ВидРасчета)</dcsat:expression>
+			</parameter>
+		</template>
+		<groupTemplate>
+			<groupName>АнализВидРасчета</groupName>
+			<templateType>Header</templateType>
+			<template>Макет3</template>
+		</groupTemplate>
+	</dataCompositionSchema>
+	<appearance xmlns="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="TableCellAppearance">
+		<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+			<parameter>Размещение</parameter>
+			<value xsi:type="DataCompositionTextPlacementType">Wrap</value>
+		</item>
+		<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+			<parameter>МинимальнаяШирина</parameter>
+			<value xsi:type="xs:decimal">11.875</value>
+		</item>
+		<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+			<parameter>МаксимальнаяШирина</parameter>
+			<value xsi:type="xs:decimal">11.875</value>
+		</item>
+	</appearance>
+</SchemaFile>

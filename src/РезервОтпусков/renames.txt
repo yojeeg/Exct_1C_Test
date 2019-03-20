@@ -1,0 +1,9 @@
+﻿2bdd3b66-1c52-4269-be15-02c48b2665e5-->und\2bdd3b66-1c52-4269-be15-02c48b2665e5
+copyinfo-->und\copyinfo
+e662dff1-119f-49b4-b233-2ffc2a41f619-->und\e662dff1-119f-49b4-b233-2ffc2a41f619
+e662dff1-119f-49b4-b233-2ffc2a41f619.0-->und\e662dff1-119f-49b4-b233-2ffc2a41f619.0
+f7a89c93-623f-42f1-afce-1465ffbf034c.0\info-->und\f7a89c93-623f-42f1-afce-1465ffbf034c.0\info
+f7a89c93-623f-42f1-afce-1465ffbf034c.0\text-->ObjectModule.bsl
+root-->und\root
+version-->und\version
+versions-->und\versions

@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НаборДанных1</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РегистрацияВНалоговомОргане</dataPath>
+				<field>РегистрацияВНалоговомОргане</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сумма</dataPath>
+				<field>Сумма</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Период</dataPath>
+				<field>Период</field>
+				<role>
+					<periodNumber xmlns="http://v8.1c.ru/8.1/data-composition-system/common">2</periodNumber>
+					<periodType xmlns="http://v8.1c.ru/8.1/data-composition-system/common">Main</periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+				<role>
+					<periodNumber xmlns="http://v8.1c.ru/8.1/data-composition-system/common">1</periodNumber>
+					<periodType xmlns="http://v8.1c.ru/8.1/data-composition-system/common">Main</periodType>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МесяцНалоговогоПериода</dataPath>
+				<field>МесяцНалоговогоПериода</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизическоеЛицо</dataPath>
+				<field>ФизическоеЛицо</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДокументОснование</dataPath>
+				<field>ДокументОснование</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидДвижения</dataPath>
+				<field>ВидДвижения</field>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Период,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.НомерСтроки,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Активность,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВидДвижения,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ГоловнаяОрганизация,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.СтавкаНалогообложенияРезидента,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.МесяцНалоговогоПериода,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.КодДохода,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.РегистрацияВНалоговомОргане,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Организация,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.УдалитьКодДохода,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Сумма,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Подразделение,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ДокументОснование,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВариантУдержания,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВключатьВДекларациюПоНалогуНаПрибыль,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.РасчетМежрасчетногоПериода,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.УдалитьОрганизация,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.СуммаВыплаченногоДохода,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.СрокПеречисления,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.КрайнийСрокУплаты,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.УчитыватьВыплаченныйДоходВ6НДФЛ
+ПОМЕСТИТЬ ВТ_Приход
+ИЗ
+	РегистрНакопления.РасчетыНалогоплательщиковСБюджетомПоНДФЛ КАК РасчетыНалогоплательщиковСБюджетомПоНДФЛ
+ГДЕ
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо = &amp;ФизическоеЛицо
+	И РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВидДвижения = &amp;ВидДвиженияПриход
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Период,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Регистратор,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.НомерСтроки,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Активность,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВидДвижения,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ГоловнаяОрганизация,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.СтавкаНалогообложенияРезидента,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.МесяцНалоговогоПериода,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.КодДохода,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.РегистрацияВНалоговомОргане,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Организация,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.УдалитьКодДохода,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Сумма,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.Подразделение,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ДокументОснование,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВариантУдержания,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВключатьВДекларациюПоНалогуНаПрибыль,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.РасчетМежрасчетногоПериода,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.УдалитьОрганизация,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.СуммаВыплаченногоДохода,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.СрокПеречисления,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.КрайнийСрокУплаты,
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.УчитыватьВыплаченныйДоходВ6НДФЛ
+ПОМЕСТИТЬ ВТ_Расход
+ИЗ
+	РегистрНакопления.РасчетыНалогоплательщиковСБюджетомПоНДФЛ КАК РасчетыНалогоплательщиковСБюджетомПоНДФЛ
+ГДЕ
+	РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ВидДвижения = &amp;ВидДвиженияРасход
+	И РасчетыНалогоплательщиковСБюджетомПоНДФЛ.ФизическоеЛицо = &amp;ФизическоеЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Приход.Период,
+	ВТ_Приход.Регистратор,
+	ВТ_Приход.НомерСтроки,
+	ВТ_Приход.Активность,
+	ВТ_Приход.ВидДвижения,
+	ВТ_Приход.ГоловнаяОрганизация,
+	ВТ_Приход.ФизическоеЛицо,
+	ВТ_Приход.СтавкаНалогообложенияРезидента,
+	ВТ_Приход.МесяцНалоговогоПериода,
+	ВТ_Приход.КодДохода,
+	ВТ_Приход.РегистрацияВНалоговомОргане,
+	ВТ_Приход.Организация,
+	ВТ_Приход.УдалитьКодДохода,
+	ВТ_Приход.Сумма,
+	ВТ_Приход.Подразделение,
+	ВТ_Приход.ДокументОснование,
+	ВТ_Приход.ВариантУдержания,
+	ВТ_Приход.ВключатьВДекларациюПоНалогуНаПрибыль,
+	ВТ_Приход.РасчетМежрасчетногоПериода,
+	ВТ_Приход.УдалитьОрганизация,
+	ВТ_Приход.СуммаВыплаченногоДохода,
+	ВТ_Приход.СрокПеречисления,
+	ВТ_Приход.КрайнийСрокУплаты,
+	ВТ_Приход.УчитыватьВыплаченныйДоходВ6НДФЛ,
+	ВТ_Расход.Период КАК Период1,
+	ВТ_Расход.Регистратор КАК Регистратор1,
+	ВТ_Расход.НомерСтроки КАК НомерСтроки1,
+	ВТ_Расход.Активность КАК Активность1,
+	ВТ_Расход.ВидДвижения КАК ВидДвижения1,
+	ВТ_Расход.ГоловнаяОрганизация КАК ГоловнаяОрганизация1,
+	ВТ_Расход.ФизическоеЛицо КАК ФизическоеЛицо1,
+	ВТ_Расход.СтавкаНалогообложенияРезидента КАК СтавкаНалогообложенияРезидента1,
+	ВТ_Расход.МесяцНалоговогоПериода КАК МесяцНалоговогоПериода1,
+	ВТ_Расход.КодДохода КАК КодДохода1,
+	ВТ_Расход.РегистрацияВНалоговомОргане КАК РегистрацияВНалоговомОргане1,
+	ВТ_Расход.Организация КАК Организация1,
+	ВТ_Расход.УдалитьКодДохода КАК УдалитьКодДохода1,
+	ВТ_Расход.Сумма КАК Сумма1,
+	ВТ_Расход.Подразделение КАК Подразделение1,
+	ВТ_Расход.ДокументОснование КАК ДокументОснование1,
+	ВТ_Расход.ВариантУдержания КАК ВариантУдержания1,
+	ВТ_Расход.ВключатьВДекларациюПоНалогуНаПрибыль КАК ВключатьВДекларациюПоНалогуНаПрибыль1,
+	ВТ_Расход.РасчетМежрасчетногоПериода КАК РасчетМежрасчетногоПериода1,
+	ВТ_Расход.УдалитьОрганизация КАК УдалитьОрганизация1,
+	ВТ_Расход.СуммаВыплаченногоДохода КАК СуммаВыплаченногоДохода1,
+	ВТ_Расход.СрокПеречисления КАК СрокПеречисления1,
+	ВТ_Расход.КрайнийСрокУплаты КАК КрайнийСрокУплаты1,
+	ВТ_Расход.УчитыватьВыплаченныйДоходВ6НДФЛ КАК УчитыватьВыплаченныйДоходВ6НДФЛ1
+ПОМЕСТИТЬ ВТ_ПриходРасходСовпадающие
+ИЗ
+	ВТ_Приход КАК ВТ_Приход
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Расход КАК ВТ_Расход
+		ПО ВТ_Приход.ФизическоеЛицо = ВТ_Расход.ФизическоеЛицо
+			И ВТ_Приход.ДокументОснование = ВТ_Расход.ДокументОснование
+			И ВТ_Приход.РегистрацияВНалоговомОргане = ВТ_Расход.РегистрацияВНалоговомОргане
+			И ВТ_Приход.Сумма = ВТ_Расход.Сумма
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Приход.Период,
+	ВТ_Приход.Регистратор,
+	ВТ_Приход.ФизическоеЛицо,
+	ВТ_Приход.МесяцНалоговогоПериода,
+	ВТ_Приход.РегистрацияВНалоговомОргане,
+	ВТ_Приход.Сумма,
+	ВТ_Приход.ДокументОснование,
+	ВТ_Приход.ВидДвижения
+ИЗ
+	ВТ_Приход КАК ВТ_Приход
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПриходРасходСовпадающие КАК ВТ_ПриходРасходСовпадающие
+		ПО ВТ_Приход.ВидДвижения = ВТ_ПриходРасходСовпадающие.ВидДвижения
+			И ВТ_Приход.ФизическоеЛицо = ВТ_ПриходРасходСовпадающие.ФизическоеЛицо
+			И ВТ_Приход.ДокументОснование = ВТ_ПриходРасходСовпадающие.ДокументОснование
+			И ВТ_Приход.РегистрацияВНалоговомОргане = ВТ_ПриходРасходСовпадающие.РегистрацияВНалоговомОргане
+			И ВТ_Приход.Сумма = ВТ_ПриходРасходСовпадающие.Сумма
+ГДЕ
+	ВТ_ПриходРасходСовпадающие.Сумма ЕСТЬ NULL
+	И ВТ_ПриходРасходСовпадающие.ВидДвижения ЕСТЬ NULL
+	И ВТ_ПриходРасходСовпадающие.ФизическоеЛицо ЕСТЬ NULL
+	И ВТ_ПриходРасходСовпадающие.ДокументОснование ЕСТЬ NULL
+	И ВТ_ПриходРасходСовпадающие.РегистрацияВНалоговомОргане ЕСТЬ NULL
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_Расход.Период,
+	ВТ_Расход.Регистратор,
+	ВТ_Расход.ФизическоеЛицо,
+	ВТ_Расход.МесяцНалоговогоПериода,
+	ВТ_Расход.РегистрацияВНалоговомОргане,
+	ВТ_Расход.Сумма,
+	ВТ_Расход.ДокументОснование,
+	ВТ_Расход.ВидДвижения
+ИЗ
+	ВТ_Расход КАК ВТ_Расход
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПриходРасходСовпадающие КАК ВТ_ПриходРасходСовпадающие
+		ПО ВТ_Расход.ВидДвижения = ВТ_ПриходРасходСовпадающие.ВидДвижения1
+			И ВТ_Расход.ФизическоеЛицо = ВТ_ПриходРасходСовпадающие.ФизическоеЛицо1
+			И ВТ_Расход.ДокументОснование = ВТ_ПриходРасходСовпадающие.ДокументОснование1
+			И ВТ_Расход.РегистрацияВНалоговомОргане = ВТ_ПриходРасходСовпадающие.РегистрацияВНалоговомОргане1
+			И ВТ_Расход.Сумма = ВТ_ПриходРасходСовпадающие.Сумма1
+ГДЕ
+	ВТ_ПриходРасходСовпадающие.Сумма1 ЕСТЬ NULL
+	И ВТ_ПриходРасходСовпадающие.ВидДвижения1 ЕСТЬ NULL
+	И ВТ_ПриходРасходСовпадающие.ФизическоеЛицо1 ЕСТЬ NULL
+	И ВТ_ПриходРасходСовпадающие.РегистрацияВНалоговомОргане1 ЕСТЬ NULL
+	И ВТ_ПриходРасходСовпадающие.ДокументОснование1 ЕСТЬ NULL</query>
+		</dataSet>
+		<totalField>
+			<dataPath>Сумма</dataPath>
+			<expression>Сумма(Сумма)</expression>
+			<group>ВидДвижения</group>
+		</totalField>
+		<parameter>
+			<name>ФизическоеЛицо</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Физическое лицо</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core" xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ФизическиеЛица</Type>
+			</valueType>
+			<value xsi:nil="true"/>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<parameter>
+			<name>ВидДвиженияПриход</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Вид движения приход</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core" xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise">d5p1:AccumulationRecordType</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d4p1:AccumulationRecordType">Receipt</value>
+			<useRestriction>true</useRestriction>
+		</parameter>
+		<parameter>
+			<name>ВидДвиженияРасход</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Вид движения расход</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core" xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise">d5p1:AccumulationRecordType</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d4p1:AccumulationRecordType">Expense</value>
+			<useRestriction>true</useRestriction>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="xs:string">Основной</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>ФизическоеЛицо</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>РегистрацияВНалоговомОргане</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ВидДвижения</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Регистратор</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сумма</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДокументОснование</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>МесяцНалоговогоПериода</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Период</field>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>ФизическоеЛицо</dcscor:parameter>
+			<dcscor:value xsi:nil="true"/>
+			<userSettingID>f8242971-bf9e-420d-890a-7f85b9b0e869</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>ВидДвижения</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Период</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Сумма</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>ФизическоеЛицо</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<item xsi:type="StructureItemGroup">
+			<groupItems>
+				<item xsi:type="GroupItemField">
+					<field>РегистрацияВНалоговомОргане</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<item xsi:type="StructureItemGroup">
+				<groupItems>
+					<item xsi:type="GroupItemField">
+						<field>ВидДвижения</field>
+						<groupType>Items</groupType>
+						<periodAdditionType>None</periodAdditionType>
+						<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+						<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+					</item>
+				</groupItems>
+				<order>
+					<item xsi:type="OrderItemAuto"/>
+				</order>
+				<selection>
+					<item xsi:type="SelectedItemAuto"/>
+				</selection>
+				<item xsi:type="StructureItemGroup">
+					<order>
+						<item xsi:type="OrderItemAuto"/>
+					</order>
+					<selection>
+						<item xsi:type="SelectedItemAuto"/>
+					</selection>
+				</item>
+			</item>
+		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

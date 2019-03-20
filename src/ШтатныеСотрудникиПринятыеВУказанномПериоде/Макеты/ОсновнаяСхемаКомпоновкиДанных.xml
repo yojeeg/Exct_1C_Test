@@ -1,0 +1,1076 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>Запрос</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник</dataPath>
+				<field>Сотрудник</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Сотрудник</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаПриема</dataPath>
+				<field>ДатаПриема</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизическоеЛицо</dataPath>
+				<field>ФизическоеЛицо</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Отчество</dataPath>
+				<field>Отчество</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТабНомер</dataPath>
+				<field>ТабНомер</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Таб номер</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаРождения</dataPath>
+				<field>ДатаРождения</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Дата рождения</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаУвольнения</dataPath>
+				<field>ДатаУвольнения</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Фамилия</dataPath>
+				<field>Фамилия</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Пол</dataPath>
+				<field>Пол</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Пол</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Имя</dataPath>
+				<field>Имя</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаПеревода</dataPath>
+				<field>ДатаПеревода</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Дата перевода</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ГрафикРаботы</dataPath>
+				<field>ГрафикРаботы</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Состояние</dataPath>
+				<field>Состояние</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ставка</dataPath>
+				<field>Ставка</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Ставка</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="dcsset:SettingsParameterValue">
+						<parameter>Формат</parameter>
+						<value xsi:type="xs:string">ЧЦ=12; ЧДЦ=3</value>
+					</item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПодразделениеРодительРодитель</dataPath>
+				<field>ПодразделениеРодительРодитель</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПодразделениеРодитель</dataPath>
+				<field>ПодразделениеРодитель</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПроцентСевернойНадбавки</dataPath>
+				<field>ПроцентСевернойНадбавки</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Процент северной надбавки</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="dcsset:SettingsParameterValue">
+						<parameter>Формат</parameter>
+						<value xsi:type="xs:string">ЧЦ=2; ЧДЦ=</value>
+					</item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РайонныйКоэффициент</dataPath>
+				<field>РайонныйКоэффициент</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Районный коэффициент</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="dcsset:SettingsParameterValue">
+						<parameter>Формат</parameter>
+						<value xsi:type="xs:string">ЧЦ=4</value>
+					</item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КатегорияЗанятости</dataPath>
+				<field>КатегорияЗанятости</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Категория занятости</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Оклад</dataPath>
+				<field>Оклад</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Оклад</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МСФОСтавка</dataPath>
+				<field>МСФОСтавка</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>МСФОСтавка</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>MBM</dataPath>
+				<field>MBM</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>MBM</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>CostCenter</dataPath>
+				<field>CostCenter</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Cost center</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ReportingCode</dataPath>
+				<field>ReportingCode</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Reporting code</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>SalesNonSales</dataPath>
+				<field>SalesNonSales</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Sales non sales</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Начисление</dataPath>
+				<field>Начисление</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДокументОснование</dataPath>
+				<field>ДокументОснование</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ГоловнаяОрганизация</dataPath>
+				<field>ГоловнаяОрганизация</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Показатель</dataPath>
+				<field>Показатель</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+				<appearance/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Год</dataPath>
+				<field>Год</field>
+				<appearance/>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	СостоянияСотрудниковСрезПоследних.Сотрудник КАК Сотрудник,
+	МАКСИМУМ(СостоянияСотрудниковСрезПоследних.Период) КАК Период
+ПОМЕСТИТЬ ВТ_СостоянияМаксПериод
+ИЗ
+	РегистрСведений.СостоянияСотрудников.СрезПоследних КАК СостоянияСотрудниковСрезПоследних
+
+СГРУППИРОВАТЬ ПО
+	СостоянияСотрудниковСрезПоследних.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_СостоянияМаксПериод.Сотрудник КАК Сотрудник,
+	СостоянияСотрудниковСрезПоследних.Состояние КАК Состояние
+ПОМЕСТИТЬ ВТ_Состояния
+ИЗ
+	ВТ_СостоянияМаксПериод КАК ВТ_СостоянияМаксПериод
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияСотрудников.СрезПоследних КАК СостоянияСотрудниковСрезПоследних
+		ПО ВТ_СостоянияМаксПериод.Сотрудник = СостоянияСотрудниковСрезПоследних.Сотрудник
+			И ВТ_СостоянияМаксПериод.Период = СостоянияСотрудниковСрезПоследних.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Начисления.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ВТ_ВИДЫ_НАЧИСЛЕНИЙ
+ИЗ
+	ПланВидовРасчета.Начисления КАК Начисления
+ГДЕ
+	(Начисления.Код = "ОКЛ"
+			ИЛИ Начисления.Код = "ОКЛЧС")
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПлановыеНачисленияСрезПоследних.Сотрудник КАК Сотрудник,
+	МАКСИМУМ(ПлановыеНачисленияСрезПоследних.Период) КАК Период
+ПОМЕСТИТЬ ВТ_ПОСЛЕДНИЕ_ПЛАНОВЫЕ_НАЧИСЛЕНИЯ
+ИЗ
+	РегистрСведений.ПлановыеНачисления.СрезПоследних(
+			{(КОНЕЦПЕРИОДА(&amp;ДатаОкончания, ДЕНЬ))},
+			Начисление В
+				(ВЫБРАТЬ
+					ВТ_ВИДЫ_НАЧИСЛЕНИЙ.Ссылка
+				ИЗ
+					ВТ_ВИДЫ_НАЧИСЛЕНИЙ КАК ВТ_ВИДЫ_НАЧИСЛЕНИЙ)) КАК ПлановыеНачисленияСрезПоследних
+
+СГРУППИРОВАТЬ ПО
+	ПлановыеНачисленияСрезПоследних.Сотрудник
+
+ИНДЕКСИРОВАТЬ ПО
+	Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ПриемНаРаботу.ДатаПриема КАК ДатаПриема,
+	ПриемНаРаботу.Сотрудник КАК Сотрудник,
+	ПриемНаРаботу.ВидЗанятости КАК ВидЗанятости
+ПОМЕСТИТЬ ВТ_ПРИЕМ_НА_РАБОТУ
+ИЗ
+	Документ.ПриемНаРаботу КАК ПриемНаРаботу
+ГДЕ
+	ПриемНаРаботу.Проведен = ИСТИНА
+
+ИНДЕКСИРОВАТЬ ПО
+	Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	КадровыеПереводы.Сотрудник КАК Сотрудник,
+	МАКСИМУМ(КадровыеПереводы.ДатаНачала) КАК ДатаНачала
+ПОМЕСТИТЬ ВТ_КАДРОВЫЕ_ПЕРЕВОДЫ
+ИЗ
+	(ВЫБРАТЬ РАЗЛИЧНЫЕ
+		КадровыйПеревод.Сотрудник КАК Сотрудник,
+		КадровыйПеревод.ДатаНачала КАК ДатаНачала
+	ИЗ
+		Документ.КадровыйПеревод КАК КадровыйПеревод
+	ГДЕ
+		КадровыйПеревод.Проведен = ИСТИНА
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ РАЗЛИЧНЫЕ
+		КадровыйПереводСпискомСотрудники.Сотрудник,
+		КадровыйПереводСпискомСотрудники.ДатаНачала
+	ИЗ
+		Документ.КадровыйПереводСписком.Сотрудники КАК КадровыйПереводСпискомСотрудники
+	ГДЕ
+		КадровыйПереводСпискомСотрудники.Ссылка.Проведен = ИСТИНА) КАК КадровыеПереводы
+
+СГРУППИРОВАТЬ ПО
+	КадровыеПереводы.Сотрудник
+
+ИНДЕКСИРОВАТЬ ПО
+	Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ТекущиеКадровыеДанныеСотрудников.Сотрудник КАК Сотрудник,
+	ТекущиеКадровыеДанныеСотрудников.ДатаУвольнения КАК ДатаУвольнения
+ПОМЕСТИТЬ ВТ_УВОЛЬНЕНИЯ
+ИЗ
+	РегистрСведений.ТекущиеКадровыеДанныеСотрудников КАК ТекущиеКадровыеДанныеСотрудников
+
+ИНДЕКСИРОВАТЬ ПО
+	Сотрудник
+;
+
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПроцентыСевернойНадбавкиФизическихЛицСрезПоследних.ПроцентСевернойНадбавки КАК ПроцентСевернойНадбавки,
+	ПроцентыСевернойНадбавкиФизическихЛицСрезПоследних.ФизическоеЛицо КАК ФизическоеЛицо
+ПОМЕСТИТЬ ВТ_ПРОЦЕНТЫ_СЕВЕРНОЙ_НАДБАВКИ
+ИЗ
+	РегистрСведений.ПроцентыСевернойНадбавкиФизическихЛиц.СрезПоследних(&amp;ДатаОкончания, ) КАК ПроцентыСевернойНадбавкиФизическихЛицСрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЗначенияПериодическихПоказателейРасчетаЗарплатыСотрудниковСрезПоследних.Сотрудник КАК Сотрудник,
+	ЗначенияПериодическихПоказателейРасчетаЗарплатыСотрудниковСрезПоследних.Показатель КАК Показатель,
+	ЗначенияПериодическихПоказателейРасчетаЗарплатыСотрудниковСрезПоследних.Значение КАК Значение
+ПОМЕСТИТЬ ВТ_ДОПОЛНИТЕЛЬНЫЕ_ПОКАЗАТЕЛИ
+ИЗ
+	РегистрСведений.ЗначенияПериодическихПоказателейРасчетаЗарплатыСотрудников.СрезПоследних(
+			{(&amp;ДатаОкончания)},
+			Показатель = ЗНАЧЕНИЕ(Справочник.ПоказателиРасчетаЗарплаты.СевернаяНадбавка)
+				ИЛИ Показатель = ЗНАЧЕНИЕ(Справочник.ПоказателиРасчетаЗарплаты.РайонныйКоэффициент)) КАК ЗначенияПериодическихПоказателейРасчетаЗарплатыСотрудниковСрезПоследних
+
+ИНДЕКСИРОВАТЬ ПО
+	Сотрудник,
+	Показатель
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ППФ_КодировкаМСФО.Объект КАК Объект,
+	ППФ_КодировкаМСФО.МВЗ КАК МВЗ,
+	ППФ_КодировкаМСФО.КодОтчета КАК КодОтчета,
+	ППФ_КодировкаМСФО.Куратор КАК Куратор,
+	ППФ_КодировкаМСФО.Продает КАК Продает,
+	ППФ_КодировкаМСФО.Ставка КАК Ставка
+ПОМЕСТИТЬ ВТ_МСФО_ДОЛЖНОСТИ
+ИЗ
+	РегистрСведений.ППФ_КодировкаМСФО КАК ППФ_КодировкаМСФО
+ГДЕ
+	ППФ_КодировкаМСФО.Объект ССЫЛКА Справочник.Должности
+	И ППФ_КодировкаМСФО.Ставка &lt;&gt; 1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ППФ_КодировкаМСФО.Объект КАК Объект,
+	ППФ_КодировкаМСФО.МВЗ КАК МВЗ,
+	ППФ_КодировкаМСФО.КодОтчета КАК КодОтчета,
+	ППФ_КодировкаМСФО.Куратор КАК Куратор,
+	ППФ_КодировкаМСФО.Продает КАК Продает,
+	ППФ_КодировкаМСФО.Ставка КАК Ставка
+ПОМЕСТИТЬ ВТ_МСФО_ДОЛЖНОСТИ_1
+ИЗ
+	РегистрСведений.ППФ_КодировкаМСФО КАК ППФ_КодировкаМСФО
+ГДЕ
+	ППФ_КодировкаМСФО.Объект ССЫЛКА Справочник.Должности
+	И ППФ_КодировкаМСФО.Ставка = 1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ППФ_КодировкаМСФО.Объект КАК Объект,
+	ППФ_КодировкаМСФО.МВЗ КАК МВЗ,
+	ППФ_КодировкаМСФО.КодОтчета КАК КодОтчета,
+	ППФ_КодировкаМСФО.Куратор КАК Куратор,
+	ППФ_КодировкаМСФО.Продает КАК Продает,
+	ППФ_КодировкаМСФО.Ставка КАК Ставка
+ПОМЕСТИТЬ ВТ_МСФО_СОТРУДНИКИ
+ИЗ
+	РегистрСведений.ППФ_КодировкаМСФО КАК ППФ_КодировкаМСФО
+ГДЕ
+	ППФ_КодировкаМСФО.Объект ССЫЛКА Справочник.Сотрудники
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ППФ_КодировкаМСФО.Объект КАК Объект,
+	ППФ_КодировкаМСФО.МВЗ КАК МВЗ,
+	ППФ_КодировкаМСФО.КодОтчета КАК КодОтчета,
+	ППФ_КодировкаМСФО.Куратор КАК Куратор,
+	ППФ_КодировкаМСФО.Продает КАК Продает,
+	ППФ_КодировкаМСФО.Ставка КАК Ставка
+ПОМЕСТИТЬ ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ
+ИЗ
+	РегистрСведений.ППФ_КодировкаМСФО КАК ППФ_КодировкаМСФО
+ГДЕ
+	ППФ_КодировкаМСФО.Объект ССЫЛКА Справочник.ПодразделенияОрганизаций
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Данные.Сотрудник КАК Сотрудник,
+	Данные.ФизическоеЛицо КАК ФизическоеЛицо,
+	Данные.ТабНомер КАК ТабНомер,
+	Данные.Фамилия КАК Фамилия,
+	Данные.Имя КАК Имя,
+	Данные.Отчество КАК Отчество,
+	Данные.ДатаРождения КАК ДатаРождения,
+	Данные.Пол КАК Пол,
+	Данные.ДатаПриема КАК ДатаПриема,
+	Данные.ДатаПеревода КАК ДатаПеревода,
+	Данные.ДатаУвольнения КАК ДатаУвольнения,
+	Данные.ГрафикРаботы КАК ГрафикРаботы,
+	Данные.Состояние КАК Состояние,
+	Данные.Ставка КАК Ставка,
+	Данные.Должность КАК Должность,
+	Данные.Подразделение КАК Подразделение,
+	Данные.ПодразделениеРодитель КАК ПодразделениеРодитель,
+	Данные.ПодразделениеРодительРодитель КАК ПодразделениеРодительРодитель,
+	Данные.ПроцентСевернойНадбавки КАК ПроцентСевернойНадбавки,
+	Данные.РайонныйКоэффициент КАК РайонныйКоэффициент,
+	Данные.КатегорияЗанятости КАК КатегорияЗанятости,
+	ЗначенияПериодическихПоказателейРасчетаЗарплатыСотрудниковСрезПоследних.Значение КАК Оклад,
+	ВЫБОР
+		КОГДА ВТ_МСФО_СОТРУДНИКИ.Объект ЕСТЬ NULL
+			ТОГДА ВЫБОР
+					КОГДА ВТ_МСФО_ДОЛЖНОСТИ.Объект ЕСТЬ NULL
+						ТОГДА ВЫБОР
+								КОГДА ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.Объект ЕСТЬ NULL
+									ТОГДА ""
+								ИНАЧЕ ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.МВЗ
+							КОНЕЦ
+					ИНАЧЕ ВЫБОР
+							КОГДА ВТ_МСФО_ДОЛЖНОСТИ.МВЗ = ЗНАЧЕНИЕ(Справочник.ППФ_КостЦентры.ПустаяСсылка)
+								ТОГДА ВЫБОР
+										КОГДА ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.Объект ЕСТЬ NULL
+											ТОГДА ""
+										ИНАЧЕ ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.МВЗ
+									КОНЕЦ
+							ИНАЧЕ ВТ_МСФО_ДОЛЖНОСТИ.МВЗ
+						КОНЕЦ
+				КОНЕЦ
+		ИНАЧЕ ВТ_МСФО_СОТРУДНИКИ.МВЗ
+	КОНЕЦ КАК CostCenter,
+	ВЫБОР
+		КОГДА ВТ_МСФО_СОТРУДНИКИ.Объект ЕСТЬ NULL
+			ТОГДА ВЫБОР
+					КОГДА НЕ ВТ_МСФО_ДОЛЖНОСТИ_1.Объект ЕСТЬ NULL
+							И Данные.Ставка = ВТ_МСФО_ДОЛЖНОСТИ_1.Ставка
+						ТОГДА ВТ_МСФО_ДОЛЖНОСТИ_1.КодОтчета
+					ИНАЧЕ ВЫБОР
+							КОГДА ВТ_МСФО_ДОЛЖНОСТИ.Объект ЕСТЬ NULL
+								ТОГДА ВЫБОР
+										КОГДА ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.Объект ЕСТЬ NULL
+											ТОГДА ""
+										ИНАЧЕ ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.КодОтчета
+									КОНЕЦ
+							ИНАЧЕ ВТ_МСФО_ДОЛЖНОСТИ.КодОтчета
+						КОНЕЦ
+				КОНЕЦ
+		ИНАЧЕ ВТ_МСФО_СОТРУДНИКИ.КодОтчета
+	КОНЕЦ КАК ReportingCode,
+	ВЫБОР
+		КОГДА ВТ_МСФО_СОТРУДНИКИ.Объект ЕСТЬ NULL
+			ТОГДА ВЫБОР
+					КОГДА ВТ_МСФО_ДОЛЖНОСТИ.Объект ЕСТЬ NULL
+						ТОГДА ВЫБОР
+								КОГДА ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.Объект ЕСТЬ NULL
+									ТОГДА ""
+								ИНАЧЕ ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.Куратор
+							КОНЕЦ
+					ИНАЧЕ ВТ_МСФО_ДОЛЖНОСТИ.Куратор
+				КОНЕЦ
+		ИНАЧЕ ВТ_МСФО_СОТРУДНИКИ.Куратор
+	КОНЕЦ КАК MBM,
+	ВЫБОР
+		КОГДА ВТ_МСФО_СОТРУДНИКИ.Объект ЕСТЬ NULL
+			ТОГДА ВЫБОР
+					КОГДА ВТ_МСФО_ДОЛЖНОСТИ.Объект ЕСТЬ NULL
+						ТОГДА ВЫБОР
+								КОГДА ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.Объект ЕСТЬ NULL
+									ТОГДА ""
+								ИНАЧЕ ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.Продает
+							КОНЕЦ
+					ИНАЧЕ ВТ_МСФО_ДОЛЖНОСТИ.Продает
+				КОНЕЦ
+		ИНАЧЕ ВТ_МСФО_СОТРУДНИКИ.Продает
+	КОНЕЦ КАК SalesNonSales,
+	ВЫБОР
+		КОГДА ВТ_МСФО_СОТРУДНИКИ.Объект ЕСТЬ NULL
+			ТОГДА ВЫБОР
+					КОГДА НЕ ВТ_МСФО_ДОЛЖНОСТИ_1.Объект ЕСТЬ NULL
+							И Данные.Ставка = ВТ_МСФО_ДОЛЖНОСТИ_1.Ставка
+						ТОГДА ВТ_МСФО_ДОЛЖНОСТИ_1.Ставка
+					ИНАЧЕ ВЫБОР
+							КОГДА ВТ_МСФО_ДОЛЖНОСТИ.Объект ЕСТЬ NULL
+								ТОГДА ВЫБОР
+										КОГДА ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.Объект ЕСТЬ NULL
+											ТОГДА ""
+										ИНАЧЕ ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.Ставка
+									КОНЕЦ
+							ИНАЧЕ ВТ_МСФО_ДОЛЖНОСТИ.Ставка
+						КОНЕЦ
+				КОНЕЦ
+		ИНАЧЕ ВТ_МСФО_СОТРУДНИКИ.Ставка
+	КОНЕЦ КАК МСФОСтавка
+ПОМЕСТИТЬ ВТ_ПРЕДРЕЗУЛЬТАТ
+ИЗ
+	(ВЫБРАТЬ
+		Сотрудники.Ссылка КАК Сотрудник,
+		Сотрудники.ФизическоеЛицо КАК ФизическоеЛицо,
+		Сотрудники.Код КАК ТабНомер,
+		ФИОФизическихЛицСрезПоследних.Фамилия КАК Фамилия,
+		ФИОФизическихЛицСрезПоследних.Имя КАК Имя,
+		ФИОФизическихЛицСрезПоследних.Отчество КАК Отчество,
+		Сотрудники.ФизическоеЛицо.ДатаРождения КАК ДатаРождения,
+		ВЫБОР
+			КОГДА Сотрудники.ФизическоеЛицо.Пол = ЗНАЧЕНИЕ(Перечисление.ПолФизическогоЛица.Мужской)
+				ТОГДА "М"
+			ИНАЧЕ "Ж"
+		КОНЕЦ КАК Пол,
+		ВТ_ПРИЕМ_НА_РАБОТУ.ДатаПриема КАК ДатаПриема,
+		ВТ_КАДРОВЫЕ_ПЕРЕВОДЫ.ДатаНачала КАК ДатаПеревода,
+		ВТ_УВОЛЬНЕНИЯ.ДатаУвольнения КАК ДатаУвольнения,
+		ГрафикРаботыСотрудниковСрезПоследних.ГрафикРаботы КАК ГрафикРаботы,
+		ВТ_Состояния.Состояние КАК Состояние,
+		КадроваяИсторияСотрудниковСрезПоследних.КоличествоСтавок КАК Ставка,
+		КадроваяИсторияСотрудниковСрезПоследних.Должность КАК Должность,
+		КадроваяИсторияСотрудниковСрезПоследних.Подразделение КАК Подразделение,
+		КадроваяИсторияСотрудниковСрезПоследних.Подразделение.Родитель КАК ПодразделениеРодитель,
+		КадроваяИсторияСотрудниковСрезПоследних.Подразделение.Родитель.Родитель КАК ПодразделениеРодительРодитель,
+		ЕСТЬNULL(ВТ_ПРОЦЕНТЫ_СЕВЕРНЫХ_НАДБАВОК.Значение, ВТ_ПРОЦЕНТЫ_СЕВЕРНОЙ_НАДБАВКИ.ПроцентСевернойНадбавки) КАК ПроцентСевернойНадбавки,
+		ВЫБОР
+			КОГДА ВТ_РАЙОННЫЕ_КОЭФФИЦИЕНТЫ.Значение &gt; 0
+				ТОГДА (ВТ_РАЙОННЫЕ_КОЭФФИЦИЕНТЫ.Значение - 1) * 100
+			ИНАЧЕ 0
+		КОНЕЦ КАК РайонныйКоэффициент,
+		ВЫБОР
+			КОГДА ВТ_ПРИЕМ_НА_РАБОТУ.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятости.ОсновноеМестоРаботы)
+				ТОГДА "Штатный"
+			КОГДА ВТ_ПРИЕМ_НА_РАБОТУ.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятости.ВнутреннееСовместительство)
+				ТОГДА "Внутренний совместитель"
+			КОГДА ВТ_ПРИЕМ_НА_РАБОТУ.ВидЗанятости = ЗНАЧЕНИЕ(Перечисление.ВидыЗанятости.Совместительство)
+				ТОГДА "Внешний совместитель"
+		КОНЕЦ КАК КатегорияЗанятости
+	ИЗ
+		Справочник.Сотрудники КАК Сотрудники
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФИОФизическихЛиц.СрезПоследних({(&amp;ДатаОкончания)}, ) КАК ФИОФизическихЛицСрезПоследних
+			ПО Сотрудники.ФизическоеЛицо = ФИОФизическихЛицСрезПоследних.ФизическоеЛицо
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПРИЕМ_НА_РАБОТУ КАК ВТ_ПРИЕМ_НА_РАБОТУ
+			ПО Сотрудники.Ссылка = ВТ_ПРИЕМ_НА_РАБОТУ.Сотрудник
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_УВОЛЬНЕНИЯ КАК ВТ_УВОЛЬНЕНИЯ
+			ПО Сотрудники.Ссылка = ВТ_УВОЛЬНЕНИЯ.Сотрудник
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПРОЦЕНТЫ_СЕВЕРНОЙ_НАДБАВКИ КАК ВТ_ПРОЦЕНТЫ_СЕВЕРНОЙ_НАДБАВКИ
+			ПО Сотрудники.ФизическоеЛицо = ВТ_ПРОЦЕНТЫ_СЕВЕРНОЙ_НАДБАВКИ.ФизическоеЛицо
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПОСЛЕДНИЕ_ПЛАНОВЫЕ_НАЧИСЛЕНИЯ КАК ВТ_ПОСЛЕДНИЕ_ПЛАНОВЫЕ_НАЧИСЛЕНИЯ
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПлановыеНачисления КАК ПлановыеНачисления
+				ПО ВТ_ПОСЛЕДНИЕ_ПЛАНОВЫЕ_НАЧИСЛЕНИЯ.Сотрудник = ПлановыеНачисления.Сотрудник
+					И ВТ_ПОСЛЕДНИЕ_ПЛАНОВЫЕ_НАЧИСЛЕНИЯ.Период = ПлановыеНачисления.Период
+					И (ПлановыеНачисления.Размер &lt;&gt; 0)
+					И (ПлановыеНачисления.Начисление В
+						(ВЫБРАТЬ
+							ВТ_ВИДЫ_НАЧИСЛЕНИЙ.Ссылка
+						ИЗ
+							ВТ_ВИДЫ_НАЧИСЛЕНИЙ КАК ВТ_ВИДЫ_НАЧИСЛЕНИЙ))
+			ПО Сотрудники.Ссылка = ВТ_ПОСЛЕДНИЕ_ПЛАНОВЫЕ_НАЧИСЛЕНИЯ.Сотрудник
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_КАДРОВЫЕ_ПЕРЕВОДЫ КАК ВТ_КАДРОВЫЕ_ПЕРЕВОДЫ
+			ПО Сотрудники.Ссылка = ВТ_КАДРОВЫЕ_ПЕРЕВОДЫ.Сотрудник
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ГрафикРаботыСотрудников.СрезПоследних({(&amp;ДатаОкончания)}, ) КАК ГрафикРаботыСотрудниковСрезПоследних
+			ПО Сотрудники.Ссылка = ГрафикРаботыСотрудниковСрезПоследних.Сотрудник
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КадроваяИсторияСотрудников.СрезПоследних({(&amp;ДатаОкончания)}, ) КАК КадроваяИсторияСотрудниковСрезПоследних
+			ПО Сотрудники.Ссылка = КадроваяИсторияСотрудниковСрезПоследних.Сотрудник
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДОПОЛНИТЕЛЬНЫЕ_ПОКАЗАТЕЛИ КАК ВТ_ПРОЦЕНТЫ_СЕВЕРНЫХ_НАДБАВОК
+			ПО Сотрудники.Ссылка = ВТ_ПРОЦЕНТЫ_СЕВЕРНЫХ_НАДБАВОК.Сотрудник
+				И (ВТ_ПРОЦЕНТЫ_СЕВЕРНЫХ_НАДБАВОК.Показатель = ЗНАЧЕНИЕ(Справочник.ПоказателиРасчетаЗарплаты.СевернаяНадбавка))
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДОПОЛНИТЕЛЬНЫЕ_ПОКАЗАТЕЛИ КАК ВТ_РАЙОННЫЕ_КОЭФФИЦИЕНТЫ
+			ПО Сотрудники.Ссылка = ВТ_РАЙОННЫЕ_КОЭФФИЦИЕНТЫ.Сотрудник
+				И (ВТ_РАЙОННЫЕ_КОЭФФИЦИЕНТЫ.Показатель = ЗНАЧЕНИЕ(Справочник.ПоказателиРасчетаЗарплаты.РайонныйКоэффициент))
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Состояния КАК ВТ_Состояния
+			ПО (ВТ_Состояния.Сотрудник = Сотрудники.Ссылка)) КАК Данные
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗначенияПериодическихПоказателейРасчетаЗарплатыСотрудников.СрезПоследних({(&amp;ДатаОкончания)}, ) КАК ЗначенияПериодическихПоказателейРасчетаЗарплатыСотрудниковСрезПоследних
+		ПО Данные.Сотрудник = ЗначенияПериодическихПоказателейРасчетаЗарплатыСотрудниковСрезПоследних.Сотрудник
+			И (ЗначенияПериодическихПоказателейРасчетаЗарплатыСотрудниковСрезПоследних.Показатель = ЗНАЧЕНИЕ(Справочник.ПоказателиРасчетаЗарплаты.Оклад))
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_МСФО_СОТРУДНИКИ КАК ВТ_МСФО_СОТРУДНИКИ
+		ПО Данные.Сотрудник = ВТ_МСФО_СОТРУДНИКИ.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_МСФО_ДОЛЖНОСТИ КАК ВТ_МСФО_ДОЛЖНОСТИ
+		ПО Данные.Должность = ВТ_МСФО_ДОЛЖНОСТИ.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_МСФО_ДОЛЖНОСТИ_1 КАК ВТ_МСФО_ДОЛЖНОСТИ_1
+		ПО Данные.Должность = ВТ_МСФО_ДОЛЖНОСТИ_1.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ КАК ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ
+		ПО Данные.Подразделение = ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ.Объект
+ГДЕ
+	Данные.ДатаПриема &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+	И Данные.ДатаПриема МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПРЕДРЕЗУЛЬТАТ.Сотрудник КАК Сотрудник,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.ФизическоеЛицо КАК ФизическоеЛицо,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.ТабНомер КАК ТабНомер,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.Фамилия КАК Фамилия,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.Имя КАК Имя,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.Отчество КАК Отчество,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.ДатаРождения КАК ДатаРождения,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.Пол КАК Пол,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.ДатаПриема КАК ДатаПриема,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.ДатаПеревода КАК ДатаПеревода,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.ДатаУвольнения КАК ДатаУвольнения,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.ГрафикРаботы КАК ГрафикРаботы,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.Состояние КАК Состояние,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.Ставка КАК Ставка,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.Должность КАК Должность,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.Подразделение КАК Подразделение,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.ПодразделениеРодитель КАК ПодразделениеРодитель,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.ПодразделениеРодительРодитель КАК ПодразделениеРодительРодитель,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.ПроцентСевернойНадбавки КАК ПроцентСевернойНадбавки,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.РайонныйКоэффициент КАК РайонныйКоэффициент,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.КатегорияЗанятости КАК КатегорияЗанятости,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.Оклад КАК Оклад,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.CostCenter КАК CostCenter,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.ReportingCode КАК ReportingCode,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.MBM КАК MBM,
+	ВЫБОР
+		КОГДА ВТ_ПРЕДРЕЗУЛЬТАТ.SalesNonSales ЕСТЬ NULL
+			ТОГДА ""
+		ИНАЧЕ ВЫБОР
+				КОГДА ВТ_ПРЕДРЕЗУЛЬТАТ.SalesNonSales = ИСТИНА
+					ТОГДА "Sales"
+				ИНАЧЕ "Non sales"
+			КОНЕЦ
+	КОНЕЦ КАК SalesNonSales,
+	ВТ_ПРЕДРЕЗУЛЬТАТ.МСФОСтавка КАК МСФОСтавка
+ИЗ
+	ВТ_ПРЕДРЕЗУЛЬТАТ КАК ВТ_ПРЕДРЕЗУЛЬТАТ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_ВИДЫ_НАЧИСЛЕНИЙ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_ПОСЛЕДНИЕ_ПЛАНОВЫЕ_НАЧИСЛЕНИЯ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_ПРИЕМ_НА_РАБОТУ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_КАДРОВЫЕ_ПЕРЕВОДЫ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_УВОЛЬНЕНИЯ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_ДОПОЛНИТЕЛЬНЫЕ_ПОКАЗАТЕЛИ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_ПРОЦЕНТЫ_СЕВЕРНОЙ_НАДБАВКИ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_МСФО_ДОЛЖНОСТИ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_МСФО_СОТРУДНИКИ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_МСФО_ПОДАРЗДЕЛЕНИЯ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_ПРЕДРЕЗУЛЬТАТ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ ВТ_МСФО_ДОЛЖНОСТИ_1</query>
+		</dataSet>
+		<parameter>
+			<name>ДатаОкончания</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дата окончания</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;ВыбранныйПериод.ДатаОкончания</expression>
+			<denyIncompleteValues>true</denyIncompleteValues>
+		</parameter>
+		<parameter>
+			<name>ВыбранныйПериод</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">StandardPeriod</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:StandardPeriod">
+				<d4p1:variant xsi:type="d4p1:StandardPeriodVariant">Custom</d4p1:variant>
+				<d4p1:startDate>0001-01-01T00:00:00</d4p1:startDate>
+				<d4p1:endDate>0001-01-01T00:00:00</d4p1:endDate>
+			</value>
+			<useRestriction>false</useRestriction>
+			<availableAsField>false</availableAsField>
+			<use>Always</use>
+		</parameter>
+		<parameter>
+			<name>ДатаНачала</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дата начала</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>Date</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;ВыбранныйПериод.ДатаНачала</expression>
+			<denyIncompleteValues>true</denyIncompleteValues>
+		</parameter>
+		<parameter>
+			<name>Период</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>принятые в указанном периоде</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">ДляРассылки</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>принятые в указанном периоде - для рассылки</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>СистемныеПоля.НомерПоПорядку</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ТабНомер</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Фамилия</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Имя</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Отчество</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаРождения</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаПриема</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаУвольнения</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Пол</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Должность</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Оклад</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ФОТ</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>РайонныйКоэффициент</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПроцентСевернойНадбавки</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПодразделениеРодительРодитель</field>
+			<title>Подразделение-&gt;Родитель-&gt;Родитель</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПодразделениеРодитель</field>
+			<title>Подразделение-&gt;Родитель</title>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Подразделение</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>КатегорияЗанятости</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаПеревода</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Ставка</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ГрафикРаботы</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Состояние</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>CostCenter</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>MBM</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ReportingCode</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>SalesNonSales</field>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Sales/Non Sales</v8:content>
+				</v8:item>
+			</lwsTitle>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>МСФОСтавка</field>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>МСФО Ставка</v8:content>
+				</v8:item>
+			</lwsTitle>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыбранныйПериод</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+			</dcscor:value>
+			<userSettingID>c76dd053-1402-4ea3-a0a9-fc9bb628a21d</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Фамилия</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Имя</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Отчество</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<outputParameters/>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>СистемныеПоля.НомерПоПорядку</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ТабНомер</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаПриема</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сотрудник</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Подразделение</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Должность</field>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыбранныйПериод</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+			</dcscor:value>
+			<userSettingID>c76dd053-1402-4ea3-a0a9-fc9bb628a21d</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Фамилия</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Имя</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Отчество</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<outputParameters/>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>

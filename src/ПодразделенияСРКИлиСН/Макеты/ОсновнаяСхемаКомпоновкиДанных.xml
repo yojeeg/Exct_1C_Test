@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>ИсточникДанных1</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>Запрос</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РайонныйКоэффициентРФ</dataPath>
+				<field>РайонныйКоэффициентРФ</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РайонныйКоэффициент</dataPath>
+				<field>РайонныйКоэффициент</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Подразделение</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТерриториальныеУсловияПФР</dataPath>
+				<field>ТерриториальныеУсловияПФР</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПроцентСевернойНадбавки</dataPath>
+				<field>ПроцентСевернойНадбавки</field>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ
+	ПодразделенияОрганизаций.Ссылка КАК Подразделение,
+	ПодразделенияОрганизаций.РайонныйКоэффициент КАК РайонныйКоэффициент,
+	ПодразделенияОрганизаций.РайонныйКоэффициентРФ КАК РайонныйКоэффициентРФ,
+	ПодразделенияОрганизаций.ПроцентСевернойНадбавки КАК ПроцентСевернойНадбавки,
+	ТерриториальныеУсловияПФРСрезПоследних.ТерриториальныеУсловияПФР КАК ТерриториальныеУсловияПФР
+ИЗ
+	Справочник.ПодразделенияОрганизаций КАК ПодразделенияОрганизаций
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ТерриториальныеУсловияПФР.СрезПоследних({(&amp;Дата)}, ) КАК ТерриториальныеУсловияПФРСрезПоследних
+		ПО (ТерриториальныеУсловияПФРСрезПоследних.СтруктурнаяЕдиница = ПодразделенияОрганизаций.Ссылка)
+ГДЕ
+	(ПодразделенияОрганизаций.РайонныйКоэффициент &lt;&gt; 1
+			ИЛИ ПодразделенияОрганизаций.РайонныйКоэффициентРФ &lt;&gt; 1
+			ИЛИ ПодразделенияОрганизаций.ПроцентСевернойНадбавки &lt;&gt; 0
+			ИЛИ НЕ ТерриториальныеУсловияПФРСрезПоследних.ТерриториальныеУсловияПФР ЕСТЬ NULL )
+	И ПодразделенияОрганизаций.Расформировано = ЛОЖЬ</query>
+		</dataSet>
+		<parameter>
+			<name>Дата</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Дата</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Подразделения с РК или СН</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>Подразделение</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>РайонныйКоэффициент</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>РайонныйКоэффициентРФ</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ТерриториальныеУсловияПФР</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПроцентСевернойНадбавки</field>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Дата</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardBeginningDate">
+				<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+			</dcscor:value>
+			<userSettingID>9c957417-ef52-4e14-adbd-95d7922723a0</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>Подразделение</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Заголовок</dcscor:parameter>
+			<dcscor:value xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделения с РК или СН</v8:content>
+				</v8:item>
+			</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema"/>
+</SchemaFile>
